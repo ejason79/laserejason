@@ -415,6 +415,52 @@ a:hover {
 
     .logo-area:hover{opacity:0.8}.logo-svg{width:32px;height:32px;flex-shrink:0;stroke:currentColor}.nav-links a.active{color:var(--laser-red)}header{margin-top:80px;padding:3rem 2rem;background:linear-gradient(135deg,rgba(255,69,0,0.05) 0%,rgba(255,107,53,0.02) 100%);border-bottom:1px solid rgba(255,69,0,0.1)}.header-inner{max-width:900px;margin:0 auto}h1{font-size:2.5rem;font-weight:800;line-height:1.2;margin-bottom:1rem}.header-meta{display:flex;gap:2rem;font-size:0.9rem;color:var(--text-secondary);margin-top:1rem}main { margin-top: 110px; padding: 2rem; }section{margin:3rem 0}h2{font-size:1.8rem;font-weight:700;margin:2.5rem 0 1rem 0}h3{font-size:1.3rem;font-weight:600;margin:1.5rem 0 0.75rem 0}p{margin-bottom:1rem;line-height:1.8}a{color:var(--laser-red);text-decoration:none}a:hover{opacity:0.8;text-decoration:underline}.mission-box{background-color:var(--bg-elevated);border-left:4px solid var(--laser-red);padding:2rem;margin:2rem 0;border-radius:4px}.mission-box h3{margin-top:0;color:var(--laser-red)}.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin:2rem 0}.team-member{background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);border-radius:4px;padding:2rem;text-align:center}.member-avatar{width:120px;height:120px;border-radius:50%;background-color:var(--bg-elevated);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:3rem;color:var(--laser-red);margin:0 auto 1.5rem;flex-shrink:0}.member-name{font-size:1.3rem;font-weight:700;margin-bottom:0.5rem}.member-role{font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--laser-orange);margin-bottom:1rem;text-transform:uppercase;letter-spacing:0.05em}.member-bio{font-size:0.95rem;color:var(--text-secondary);line-height:1.7}.methodology-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:1.5rem 0}.methodology-card{background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);border-radius:4px;padding:1.5rem}.methodology-card h4{color:var(--laser-orange);margin-bottom:0.75rem;font-family:'JetBrains Mono',monospace;font-size:0.9rem;text-transform:uppercase}.methodology-card p{font-size:0.95rem}.transparency-box{background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);border-radius:4px;padding:2rem;margin:2rem 0}.transparency-box h3{color:var(--laser-red);margin-top:0}.cta-box{background:linear-gradient(135deg,rgba(255,69,0,0.1) 0%,rgba(255,107,53,0.05) 100%);border:1px solid rgba(255,69,0,0.2);border-radius:4px;padding:2rem;margin:2rem 0;text-align:center}.cta-box h3{color:var(--laser-orange);margin-top:0}.cta-box a{background-color:var(--laser-red);color:var(--bg-void);padding:0.75rem 1.5rem;border-radius:4px;display:inline-block;margin-top:1rem;transition:opacity 0.3s ease}.cta-box a:hover{opacity:0.8;text-decoration:none}.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2rem}.footer-section h4{color:var(--text-primary);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.05em}@media(max-width:768px){h1{font-size:1.8rem}h2{font-size:1.4rem}.team-grid{grid-template-columns:1fr}.methodology-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}}
   
+
+/* ── SCROLL TO TOP BUTTON ── */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--laser-red);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease,
+              border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  border-color: var(--laser-red);
+  background: var(--bg-elevated);
+  box-shadow: 0 0 16px var(--laser-glow);
+  color: var(--laser-orange);
+}
+
+.scroll-top-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+}
+
 </style>
 </head>
 <body>
@@ -588,6 +634,12 @@ a:hover {
 
   
 <!-- ═══════════════ FOOTER ═══════════════ -->
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Nach oben scrollen" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -676,6 +728,18 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll, { passive: true });
+
+// ── SCROLL TO TOP BUTTON ──
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+if (scrollTopBtn) {
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+}
 </script>
 </body>
 </html>

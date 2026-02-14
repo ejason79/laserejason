@@ -1420,6 +1420,84 @@ a:hover {
             }
         }
     
+
+/* ── SCROLL TO TOP BUTTON ── */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--laser-red);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease,
+              border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  border-color: var(--laser-red);
+  background: var(--bg-elevated);
+  box-shadow: 0 0 16px var(--laser-glow);
+  color: var(--laser-orange);
+}
+
+.scroll-top-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+
+/* ── CLICKABLE TABLE ROWS ── */
+table tbody tr[data-href] {
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+table tbody tr[data-href]:hover {
+  background: var(--bg-hover) !important;
+  border-color: var(--laser-red);
+}
+
+table tbody tr[data-href]:hover td {
+  color: var(--text-primary);
+}
+
+table tbody tr[data-href] td:last-child::after {
+  content: ' →';
+  color: var(--laser-red);
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+table tbody tr[data-href]:hover td:last-child::after {
+  opacity: 1;
+}
+
+table tbody tr.no-link {
+  opacity: 0.6;
+}
+
 </style>
 </head>
 <body>
@@ -1533,53 +1611,53 @@ a:hover {
                                     <th>Bewertung</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
+                                                        <tbody>
+                                <tr data-href="https://amzn.to/3M7MQ5m" title="xTool S1 40W bei Amazon kaufen*">
                                     <td>1 🏆</td>
                                     <td><strong>xTool S1 40W</strong></td>
                                     <td>Diode</td>
                                     <td>40W</td>
                                     <td>498 × 319</td>
-                                    <td><strong>899 €</strong></td>
+                                    <td><strong>899 €*</strong></td>
                                     <td><strong>9,3/10</strong></td>
                                 </tr>
-                                <tr>
+                                <tr data-href="https://atomstack.com/products/atomstack-s30-pro?ref=laserlotse" title="Atomstack S30 Pro kaufen*">
                                     <td>2 💰</td>
                                     <td><strong>Atomstack S30 Pro</strong></td>
                                     <td>Diode</td>
                                     <td>33W</td>
                                     <td>410 × 400</td>
-                                    <td><strong>399 €</strong></td>
+                                    <td><strong>399 €*</strong></td>
                                     <td><strong>9,0/10</strong></td>
                                 </tr>
-                                <tr>
+                                <tr data-href="https://amzn.to/4tyXbIc" title="Sculpfun S30 Ultra bei Amazon kaufen*">
                                     <td>3</td>
                                     <td><strong>Sculpfun S30 Ultra</strong></td>
                                     <td>Diode</td>
                                     <td>33W</td>
                                     <td>600 × 600</td>
-                                    <td><strong>469 €</strong></td>
+                                    <td><strong>469 €*</strong></td>
                                     <td><strong>8,8/10</strong></td>
                                 </tr>
-                                <tr>
+                                <tr data-href="https://amzn.to/3ZBtkkO" title="Creality Falcon2 Pro bei Amazon kaufen*">
                                     <td>4</td>
                                     <td>Creality Falcon2 Pro</td>
                                     <td>Diode</td>
                                     <td>22W</td>
                                     <td>400 × 415</td>
-                                    <td>359 €</td>
+                                    <td>359 €*</td>
                                     <td><strong>8,6/10</strong></td>
                                 </tr>
-                                <tr>
+                                <tr data-href="https://www.xtool.com/products/xtool-d1-pro-20w?ref=laserlotse" title="xTool D1 Pro 20W kaufen*">
                                     <td>5</td>
                                     <td>xTool D1 Pro 20W</td>
                                     <td>Diode</td>
                                     <td>20W</td>
                                     <td>432 × 406</td>
-                                    <td>449 €</td>
+                                    <td>449 €*</td>
                                     <td><strong>8,4/10</strong></td>
                                 </tr>
-                                <tr>
+                                <tr class="no-link" title="Noch kein Affiliate-Link verfügbar">
                                     <td>6</td>
                                     <td>AlgoLaser Delta 40W</td>
                                     <td>Diode</td>
@@ -1588,7 +1666,7 @@ a:hover {
                                     <td>549 €</td>
                                     <td><strong>8,2/10</strong></td>
                                 </tr>
-                                <tr>
+                                <tr class="no-link" title="Noch kein Affiliate-Link verfügbar">
                                     <td>7</td>
                                     <td>OMTech K40</td>
                                     <td>CO2</td>
@@ -1597,16 +1675,16 @@ a:hover {
                                     <td>499 €</td>
                                     <td><strong>8,0/10</strong></td>
                                 </tr>
-                                <tr>
+                                <tr data-href="https://amzn.to/4tHbuL4" title="Two Trees TS2 bei Amazon kaufen*">
                                     <td>8</td>
                                     <td>Two Trees TS2</td>
                                     <td>Diode</td>
                                     <td>10W</td>
                                     <td>450 × 450</td>
-                                    <td>249 €</td>
+                                    <td>249 €*</td>
                                     <td><strong>7,8/10</strong></td>
                                 </tr>
-                                <tr>
+                                <tr class="no-link" title="Noch kein Affiliate-Link verfügbar">
                                     <td>9</td>
                                     <td>ACMER P2 33W</td>
                                     <td>Diode</td>
@@ -1615,40 +1693,18 @@ a:hover {
                                     <td>379 €</td>
                                     <td><strong>7,6/10</strong></td>
                                 </tr>
-                                <tr>
+                                <tr data-href="https://amzn.to/4ayJgsW" title="LaserPecker LP4 bei Amazon kaufen*">
                                     <td>10</td>
                                     <td>LaserPecker LP4</td>
                                     <td>Diode</td>
                                     <td>10W</td>
                                     <td>160 × 120</td>
-                                    <td>699 €</td>
+                                    <td>699 €*</td>
                                     <td><strong>7,4/10</strong></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-
-                    <!-- Affiliate-Links Platz 6-10 -->
-                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2rem;">
-
-                      <div style="text-align:center; padding:16px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:8px;">
-                        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-secondary); margin-bottom:8px;">#8 Two Trees TS2 — 249 €</div>
-                        <a href="https://amzn.to/4tHbuL4" target="_blank" rel="nofollow sponsored" class="tldr-button" style="font-size:11px; padding:10px 20px;">BEI AMAZON KAUFEN* →</a>
-                      </div>
-
-                      <div style="text-align:center; padding:16px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:8px;">
-                        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-secondary); margin-bottom:8px;">#10 LaserPecker LP4 — 699 €</div>
-                        <a href="https://amzn.to/4ayJgsW" target="_blank" rel="nofollow sponsored" class="tldr-button" style="font-size:11px; padding:10px 20px;">BEI AMAZON KAUFEN* →</a>
-                      </div>
-
-                      <!-- TODO: AlgoLaser Delta 40W — nicht auf Amazon gefunden, nur T150 Pro 6W (amzn.to/4kHdq24). Link einpflegen wenn Delta verfügbar wird oder Produkt im Artikel durch verfügbares Modell ersetzen. -->
-
-                      <!-- TODO: ACMER P2 33W — nicht auf Amazon, nur ACMER S2 12W (amzn.to/3Me2ImS). Link einpflegen wenn P2 verfügbar wird oder Produkt im Artikel durch verfügbares Modell ersetzen. -->
-
-                      <!-- TODO: OMTech K40 — Amazon-Link fehlt, muss manuell gesucht werden. -->
-
-                    </div>
-                    <div style="margin-top:8px; font-size:10px; color:var(--text-muted); font-family:'JetBrains Mono',monospace; text-align:center;">* Affiliate-Links — für dich kein Aufpreis</div>
                 </section>
 
                 <!-- Individual Product Reviews -->
@@ -2269,6 +2325,12 @@ a:hover {
 
     
 <!-- ═══════════════ FOOTER ═══════════════ -->
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Nach oben scrollen" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -2396,6 +2458,25 @@ window.addEventListener('scroll', handleScroll, { passive: true });
 
         // Analytics tracking (optional)
         console.log('LaserLotse Article Page loaded successfully - Beste Laser Engraver 2026');
+
+// ── SCROLL TO TOP BUTTON ──
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+if (scrollTopBtn) {
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+}
+
+// ── CLICKABLE TABLE ROWS ──
+document.querySelectorAll('table tbody tr[data-href]').forEach(function(row) {
+  row.addEventListener('click', function() {
+    window.open(this.dataset.href, '_blank', 'noopener,noreferrer');
+  });
+});
 </script>
 </body>
 </html>

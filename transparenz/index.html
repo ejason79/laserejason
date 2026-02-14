@@ -726,6 +726,52 @@ a:hover {
             }
         }
     
+
+/* ── SCROLL TO TOP BUTTON ── */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--laser-red);
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease,
+              border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  border-color: var(--laser-red);
+  background: var(--bg-elevated);
+  box-shadow: 0 0 16px var(--laser-glow);
+  color: var(--laser-orange);
+}
+
+.scroll-top-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+}
+
 </style>
 </head>
 <body>
@@ -957,6 +1003,12 @@ a:hover {
 
     
 <!-- ═══════════════ FOOTER ═══════════════ -->
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Nach oben scrollen" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
@@ -1044,6 +1096,18 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll, { passive: true });
+
+// ── SCROLL TO TOP BUTTON ──
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+if (scrollTopBtn) {
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('visible');
+    } else {
+      scrollTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+}
 </script>
 </body>
 </html>
