@@ -521,6 +521,107 @@ a:hover {
   fill: none;
 }
 
+
+/* ═══ Produkt-Links: dezenter Hover-Effekt ═══ */
+a.product-link {
+    color: #CC5500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    font-weight: 600;
+}
+a.product-link:hover {
+    color: #FF8C42;
+    border-bottom-color: #FF8C42;
+}
+a.product-link::after {
+    content: " ↗";
+    font-size: 0.75em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+a.product-link:hover::after {
+    opacity: 0.6;
+}
+
+
+
+
+        .pro-contra {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 24px 0;
+        }
+        @media (max-width: 600px) {
+            .pro-contra { grid-template-columns: 1fr; }
+        }
+        .pro-contra > div {
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .pro-contra > div:first-child {
+            background: rgba(76, 175, 80, 0.06);
+            border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+        .pro-contra > div:last-child {
+            background: rgba(255, 107, 53, 0.04);
+            border: 1px solid rgba(255, 107, 53, 0.15);
+        }
+        .pro-contra h4 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+        }
+        .pro-contra > div:first-child h4 {
+            color: #4CAF50;
+            border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+        }
+        .pro-contra > div:last-child h4 {
+            color: #FF8C42;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.15);
+        }
+        .pro-list, .contra-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pro-list li, .contra-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 8px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.5;
+            transition: background 0.2s ease;
+        }
+        .pro-list li:hover {
+            background: rgba(76, 175, 80, 0.08);
+        }
+        .contra-list li:hover {
+            background: rgba(255, 107, 53, 0.06);
+        }
+        .pro-list li::before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: 700;
+            min-width: 18px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .contra-list li::before {
+            content: "✗";
+            color: #FF8C42;
+            font-weight: 700;
+            min-width: 18px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
 </style>
 </head>
 <body>
@@ -590,7 +691,7 @@ a:hover {
     <section class="tl-dr">
       <h3>TL;DR — Die wichtigsten Erkenntnisse</h3>
       <p>Die <strong>xTool D1 Pro 20W</strong> ist unser klarer Testsieger für Anfänger: beste Bedienoberfläche in der xTool Creative Space Software, aktive Community, solide Verarbeitung und ein gutes Preis-Leistungs-Verhältnis bei 1.093 €.</p>
-      <p>Für Budget-bewusste Anfänger ist die <strong>Creality Falcon2 Pro</strong> (549 €) eine hervorragende Alternative mit Luftassist. Wer absolute Sicherheit bevorzugt, sollte die <strong>xTool S1 40W</strong> (Klasse 1, eingehaust) in Betracht ziehen.</p>
+      <p>Für Budget-bewusste Anfänger ist die <strong>Creality Falcon2 Pro</strong> (549 €) eine hervorragende Alternative mit Luftassist. Wer absolute Sicherheit bevorzugt, sollte die <strong><a href="https://amzn.to/3M7MQ5m" class="product-link" rel="nofollow sponsored" target="_blank">xTool S1 40W</a></strong> (Klasse 1, eingehaust) in Betracht ziehen.</p>
     </section>
 
     <section>
@@ -618,7 +719,7 @@ a:hover {
       <p>Die Bedienoberfläche ist so benutzerfreundlich, dass selbst absolute Anfänger innerhalb von 15 Minuten ihre erste Gravur erstellen können. Für fortgeschrittene Nutzer funktioniert auch LightBurn perfekt.</p>
 
       <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
-        <a href="https://www.xtool.com/products/xtool-d1-pro-20w?ref=laserlotse" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">XTOOL D1 PRO 20W — 1.093 € BEI XTOOL KAUFEN* →</a>
+        <a href="https://www.xtool.com/pages/d1-announcement" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">XTOOL D1 PRO 20W — 1.093 € BEI XTOOL KAUFEN* →</a>
         <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
       </div>
 
@@ -747,7 +848,7 @@ a:hover {
     <section>
       <h2>Fazit</h2>
       <p>Für Anfänger empfehlen wir klar die <strong>xTool D1 Pro 20W</strong>. Sie ist das beste Preis-Leistungs-Verhältnis mit der sanftesten Lernkurve und aktivsten Community in deutschsprachigen Ländern.</p>
-      <p>Wenn du 150€ sparen möchtest: <strong>Creality Falcon2 Pro</strong> ist die beste Alternative. Wenn du maximale Sicherheit möchtest: <strong>xTool S1 40W</strong> mit Klasse 1 Zertifizierung.</p>
+      <p>Wenn du 150€ sparen möchtest: <strong>Creality Falcon2 Pro</strong> ist die beste Alternative. Wenn du maximale Sicherheit möchtest: <strong><a href="https://amzn.to/3M7MQ5m" class="product-link" rel="nofollow sponsored" target="_blank">xTool S1 40W</a></strong> mit Klasse 1 Zertifizierung.</p>
       <p>Kaufe nicht die billigste Option. Die 100-200€ mehr für eine bessere Maschine sparen dir Wochen an Frust und liefern bessere Ergebnisse von Tag 1.</p>
     </section>
 

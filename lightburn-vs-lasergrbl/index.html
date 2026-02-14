@@ -521,6 +521,107 @@ a:hover {
   fill: none;
 }
 
+
+/* ═══ Produkt-Links: dezenter Hover-Effekt ═══ */
+a.product-link {
+    color: #CC5500;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    font-weight: 600;
+}
+a.product-link:hover {
+    color: #FF8C42;
+    border-bottom-color: #FF8C42;
+}
+a.product-link::after {
+    content: " ↗";
+    font-size: 0.75em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+a.product-link:hover::after {
+    opacity: 0.6;
+}
+
+
+
+
+        .pro-contra {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 24px 0;
+        }
+        @media (max-width: 600px) {
+            .pro-contra { grid-template-columns: 1fr; }
+        }
+        .pro-contra > div {
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .pro-contra > div:first-child {
+            background: rgba(76, 175, 80, 0.06);
+            border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+        .pro-contra > div:last-child {
+            background: rgba(255, 107, 53, 0.04);
+            border: 1px solid rgba(255, 107, 53, 0.15);
+        }
+        .pro-contra h4 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 14px;
+            padding-bottom: 8px;
+        }
+        .pro-contra > div:first-child h4 {
+            color: #4CAF50;
+            border-bottom: 1px solid rgba(76, 175, 80, 0.2);
+        }
+        .pro-contra > div:last-child h4 {
+            color: #FF8C42;
+            border-bottom: 1px solid rgba(255, 107, 53, 0.15);
+        }
+        .pro-list, .contra-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pro-list li, .contra-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 8px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            line-height: 1.5;
+            transition: background 0.2s ease;
+        }
+        .pro-list li:hover {
+            background: rgba(76, 175, 80, 0.08);
+        }
+        .contra-list li:hover {
+            background: rgba(255, 107, 53, 0.06);
+        }
+        .pro-list li::before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: 700;
+            min-width: 18px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .contra-list li::before {
+            content: "✗";
+            color: #FF8C42;
+            font-weight: 700;
+            min-width: 18px;
+            font-size: 16px;
+            line-height: 1.4;
+        }
 </style>
 <script type="application/ld+json">
 {
@@ -688,7 +789,7 @@ a:hover {
       <p>Die Software ist nur so gut wie der Laser, mit dem sie arbeitet. Hier sind unsere Top-Empfehlungen für Laser, die perfekt mit LightBurn kompatibel sind:</p>
 
       <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
-        <a href="https://www.xtool.com/products/xtool-d1-pro-20w?ref=laserlotse" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool D1 Pro 20W — BEI XTOOL KAUFEN* →</a>
+        <a href="https://www.xtool.com/pages/d1-announcement" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool D1 Pro 20W — BEI XTOOL KAUFEN* →</a>
         <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
       </div>
 
@@ -752,7 +853,47 @@ a:hover {
           <p>Detaillierter Test unseres Testsiegers mit Praxis-Beispielen.</p>
         </div>
       </div>
-    </section>
+    
+                <div class="pro-contra">
+                    <div>
+                        <h4>LightBurn — Stärken</h4>
+                        <ul class="pro-list">
+                            <li>Beste Kompatibilität mit fast allen Lasern</li>
+                            <li>Professionelle Features (Kamera, Rotary, Array)</li>
+                            <li>Regelmäßige Updates und aktiver Support</li>
+                            <li>Windows, Mac und Linux</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>LightBurn — Schwächen</h4>
+                        <ul class="contra-list">
+                            <li>Kostenpflichtig (60 € einmalig)</li>
+                            <li>Steilere Lernkurve für Anfänger</li>
+                            <li>Keine mobile App</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pro-contra" style="margin-top: 24px;">
+                    <div>
+                        <h4>LaserGRBL — Stärken</h4>
+                        <ul class="pro-list">
+                            <li>Komplett kostenlos und Open Source</li>
+                            <li>Einfacher Einstieg für Anfänger</li>
+                            <li>Leichtgewichtig — läuft auf alten PCs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>LaserGRBL — Schwächen</h4>
+                        <ul class="contra-list">
+                            <li>Nur Windows (kein Mac/Linux)</li>
+                            <li>Keine Vektor-Unterstützung (nur Raster)</li>
+                            <li>Weniger Features und veraltete UI</li>
+                            <li>Keine Kamera-Unterstützung</li>
+                        </ul>
+                    </div>
+                </div>
+</section>
   </main>
 
   <footer>
