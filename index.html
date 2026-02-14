@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LaserLotse — Finde deinen perfekten Laser Engraver</title>
+<meta name="description" content="Unabhängige Kaufberatung für Lasergraviermaschinen & Laser Cutter. Tests, Vergleiche und Empfehlungen für den DACH-Raum.">
+<!-- Plausible Analytics – DSGVO-konform, kein Cookie-Banner nötig -->
+<!-- [TRACKING: Plausible Analytics Code hier einfügen wenn Account erstellt] -->
+<!-- <script defer data-domain="laserlotse.de" src="https://plausible.io/js/script.js"></script> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   LASERLOTSE V3 — RADAR SCANNER DESIGN SYSTEM
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* Core Colors */
+  --laser-red: #FF4500;
+  --laser-orange: #FF6B35;
+  --laser-amber: #FFA500;
+  --laser-glow: #FF450040;
+
+  /* Backgrounds */
+  --bg-void: #07070A;
+  --bg-panel: #0C0C10;
+  --bg-card: #101016;
+  --bg-elevated: #16161E;
+  --bg-hover: #1A1A24;
+
+  /* Text */
+  --text-primary: #E8E8EC;
+  --text-secondary: #888892;
+  --text-muted: #555560;
+  --text-ghost: #333340;
+
+  /* Borders */
+  --border-subtle: #1A1A22;
+  --border-active: #FF450050;
+  --border-glow: #FF450030;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Fonts */
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--laser-red) var(--bg-void);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--laser-orange);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+a:hover {
+  color: var(--laser-amber);
+}
+
+/* ── CUSTOM SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-void); }
+::-webkit-scrollbar-thumb { background: var(--laser-red); border-radius: 3px; }
+
+/* ═══════════════════════════════════════════════
+   NAVIGATION — PIXEL-PERFECT SMOOTH TRANSITION
+   Screen 1: Centered logo + nav below (tall)
+   Screen 2: Compact sticky bar (logo left, nav right)
+   All elements animate smoothly, no show/hide!
+   ═══════════════════════════════════════════════ */
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-wrapper.scrolled {
+  background: rgba(7, 7, 10, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom-color: var(--border-subtle);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.6);
+}
+
+/* Inner flexbox — always row, wraps in big state */
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px 0 40px;
+  transition: padding 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+
+.nav-wrapper.scrolled .nav-inner {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 58px;
+}
+
+/* Logo — always visible, shrinks on scroll */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  /* In big state: centered, takes full basis to force wrap */
+  flex-basis: 100%;
+  justify-content: center;
+  padding-bottom: 12px;
+  transition: flex-basis 0.5s cubic-bezier(0.16,1,0.3,1),
+              padding 0.5s cubic-bezier(0.16,1,0.3,1),
+              gap 0.5s ease;
+}
+
+.nav-wrapper.scrolled .logo-area {
+  flex-basis: auto;
+  justify-content: flex-start;
+  padding-bottom: 0;
+  gap: 10px;
+}
+
+.logo-radar {
+  width: 48px;
+  height: 48px;
+  transition: width 0.5s cubic-bezier(0.16,1,0.3,1),
+              height 0.5s cubic-bezier(0.16,1,0.3,1);
+  flex-shrink: 0;
+}
+
+.nav-wrapper.scrolled .logo-radar {
+  width: 30px;
+  height: 30px;
+}
+
+.logo-text {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.logo-text .laser {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 3px;
+  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
+              letter-spacing 0.5s ease;
+}
+
+.logo-text .lotse {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 3px;
+  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
+              letter-spacing 0.5s ease;
+}
+
+.nav-wrapper.scrolled .logo-text .laser,
+.nav-wrapper.scrolled .logo-text .lotse {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* Nav links — same elements, just reposition */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 14px;
+  transition: padding 0.5s cubic-bezier(0.16,1,0.3,1),
+              gap 0.5s ease;
+}
+
+.nav-wrapper.scrolled .nav-links {
+  padding-bottom: 0;
+  gap: 2px;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background 0.2s ease,
+              font-size 0.4s ease, padding 0.4s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-wrapper.scrolled .nav-links a {
+  font-size: 10px;
+  padding: 6px 10px;
+  letter-spacing: 1.5px;
+}
+
+.nav-links a:hover {
+  color: var(--laser-orange);
+  background: var(--laser-glow);
+}
+
+.nav-links a.active {
+  color: var(--laser-red);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--laser-red);
+  border-radius: 1px;
+  box-shadow: 0 0 8px var(--laser-glow);
+  transition: width 0.3s ease;
+}
+
+.nav-wrapper.scrolled .nav-links a.active::after {
+  width: 14px;
+}
+
+.nav-search {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, padding 0.4s ease;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.nav-wrapper.scrolled .nav-search {
+  padding: 5px 10px;
+  font-size: 9px;
+}
+
+.nav-search:hover {
+  border-color: var(--laser-red);
+  color: var(--laser-orange);
+}
+
+
+/* ═══════════════════════════════════════════════
+   HERO SECTION
+   ═══════════════════════════════════════════════ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+}
+
+/* Matrix / Scanner Background */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,69,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,69,0,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Vertical scan line */
+.hero-scanline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  background: linear-gradient(90deg, transparent, rgba(255,69,0,0.06), transparent);
+  animation: heroScan 8s linear infinite;
+  z-index: 1;
+}
+
+@keyframes heroScan {
+  0% { left: -100px; }
+  100% { left: 100%; }
+}
+
+/* Horizontal scan */
+.hero-hscan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,69,0,0.15), transparent);
+  animation: heroHScan 6s linear infinite;
+  z-index: 1;
+}
+
+@keyframes heroHScan {
+  0% { top: -2px; }
+  100% { top: 100%; }
+}
+
+/* Code rain effect (like matrix) */
+.code-rain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.07;
+  z-index: 0;
+}
+
+.code-column {
+  position: absolute;
+  top: -100%;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--laser-red);
+  line-height: 1.4;
+  animation: codeRain linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes codeRain {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200vh); }
+}
+
+/* Gradient overlays */
+.hero-gradient-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(180deg, var(--bg-void), transparent);
+  z-index: 2;
+}
+
+.hero-gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(0deg, var(--bg-void), transparent);
+  z-index: 2;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 var(--space-xl);
+}
+
+.hero-logo-large {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto var(--space-xl);
+  position: relative;
+}
+
+.hero-logo-large svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 30px rgba(255,69,0,0.2));
+}
+
+.hero-title {
+  font-family: var(--font-mono);
+  font-size: clamp(22px, 4vw, 38px);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.3;
+  margin-bottom: var(--space-lg);
+  color: var(--text-primary);
+}
+
+.hero-title .highlight {
+  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto var(--space-2xl);
+  font-weight: 300;
+}
+
+.hero-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  margin-bottom: var(--space-2xl);
+}
+
+.hero-status .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--laser-red);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+  box-shadow: 0 0 8px var(--laser-glow);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}
+
+.scroll-indicator {
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid var(--border-active);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  animation: scrollBounce 3s ease-in-out infinite;
+}
+
+.scroll-indicator:hover {
+  border-color: var(--laser-red);
+  background: var(--laser-glow);
+}
+
+.scroll-indicator svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--laser-orange);
+}
+
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+
+/* ═══════════════════════════════════════════════
+   SECTION STYLES
+   ═══════════════════════════════════════════════ */
+
+.section {
+  padding: var(--space-4xl) var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-label::before {
+  content: '//';
+  color: var(--laser-red);
+  opacity: 0.5;
+}
+
+.section-title {
+  font-family: var(--font-mono);
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-lg);
+  line-height: 1.2;
+}
+
+.section-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 700px;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Divider with grid aesthetic */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-subtle);
+  margin: var(--space-4xl) 0;
+  position: relative;
+}
+
+.section-divider::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--laser-red), transparent);
+}
+
+
+/* ═══════════════════════════════════════════════
+   ABOUT / INTRO SECTION
+   ═══════════════════════════════════════════════ */
+
+.about-section {
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--laser-red) 0%, var(--laser-amber) 30%, transparent 60%);
+  opacity: 0.6;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-4xl) var(--space-xl);
+}
+
+.about-text {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  max-width: 800px;
+  font-weight: 300;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Author Cards */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: var(--space-xl);
+  text-align: center;
+  transition: var(--transition-fast);
+}
+
+.team-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-2px);
+}
+
+.team-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto var(--space-md);
+  background: var(--bg-elevated);
+  border: 2px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  overflow: hidden;
+  position: relative;
+}
+
+.team-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, var(--laser-red), var(--laser-amber)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+}
+
+.team-name {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.team-name svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--laser-orange);
+}
+
+.team-role {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.team-cta {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--laser-orange);
+  padding: 8px 20px;
+  border: 1px solid var(--border-active);
+  border-radius: 4px;
+  transition: var(--transition-fast);
+}
+
+.team-cta:hover {
+  background: var(--laser-glow);
+  color: var(--laser-amber);
+}
+
+
+/* ═══════════════════════════════════════════════
+   FEATURES / USP SECTION
+   ═══════════════════════════════════════════════ */
+
+.features-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.features-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,69,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,69,0,0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+  position: relative;
+  z-index: 1;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--laser-red), transparent);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.feature-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(255,69,0,0.08);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto var(--space-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+}
+
+.feature-icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--laser-orange);
+  fill: none;
+  stroke-width: 1.5;
+}
+
+.feature-title {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.feature-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+
+/* ═══════════════════════════════════════════════
+   LATEST TESTS / ARTICLES SECTION
+   ═══════════════════════════════════════════════ */
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-2xl);
+}
+
+.article-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.article-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255,69,0,0.06);
+}
+
+.article-thumb {
+  width: 100%;
+  height: 200px;
+  background: var(--bg-elevated);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.article-thumb-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,69,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,69,0,0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.article-thumb-icon {
+  font-size: 48px;
+  z-index: 1;
+  filter: drop-shadow(0 0 20px rgba(255,69,0,0.2));
+}
+
+.article-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  z-index: 2;
+}
+
+.badge-testsieger {
+  background: var(--laser-red);
+  color: #fff;
+}
+
+.badge-vergleich {
+  background: rgba(255,69,0,0.15);
+  color: var(--laser-orange);
+  border: 1px solid var(--border-active);
+}
+
+.badge-guide {
+  background: rgba(255,170,0,0.12);
+  color: var(--laser-amber);
+  border: 1px solid rgba(255,170,0,0.3);
+}
+
+.badge-neu {
+  background: #22c55e20;
+  color: #22c55e;
+  border: 1px solid #22c55e40;
+}
+
+.article-body {
+  padding: var(--space-lg);
+}
+
+.article-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.article-meta .date {
+  color: var(--laser-orange);
+  opacity: 0.7;
+}
+
+.article-title {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  line-height: 1.4;
+}
+
+.article-excerpt {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.article-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  padding: 3px 8px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 3px;
+}
+
+
+/* ═══════════════════════════════════════════════
+   CATEGORIES SECTION
+   ═══════════════════════════════════════════════ */
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-2xl);
+}
+
+.category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: var(--space-lg);
+  text-align: center;
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.category-card:hover {
+  border-color: var(--border-active);
+  transform: translateY(-3px);
+  background: var(--bg-elevated);
+}
+
+.category-icon {
+  font-size: 32px;
+  margin-bottom: var(--space-sm);
+}
+
+.category-name {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.category-count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+
+/* ═══════════════════════════════════════════════
+   CTA SECTION
+   ═══════════════════════════════════════════════ */
+
+.cta-section {
+  text-align: center;
+  padding: var(--space-4xl) var(--space-xl);
+  position: relative;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(255,69,0,0.05), transparent 70%);
+}
+
+.cta-title {
+  font-family: var(--font-mono);
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+
+.cta-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto var(--space-xl);
+  font-weight: 300;
+  position: relative;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, var(--laser-red), var(--laser-orange));
+  padding: 14px 32px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(255,69,0,0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255,69,0,0.35);
+  color: #fff;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--laser-orange);
+  padding: 12px 24px;
+  border: 1px solid var(--border-active);
+  border-radius: 6px;
+  cursor: pointer;
+  background: none;
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: var(--laser-glow);
+  color: var(--laser-amber);
+}
+
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════ */
+
+.footer {
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-3xl) var(--space-xl) var(--space-xl);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.footer-brand .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-md);
+}
+
+.footer-brand .footer-logo svg {
+  width: 28px;
+  height: 28px;
+}
+
+.footer-brand .footer-logo-text {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-col a {
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.footer-col a:hover {
+  color: var(--laser-orange);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: var(--space-2xl) auto 0;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.footer-bottom p {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer-bottom-links a {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+
+/* ═══════════════════════════════════════════════
+   ANIMATIONS
+   ═══════════════════════════════════════════════ */
+
+/* Fade-in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scanner cursor blink */
+.blink {
+  animation: blink 1.2s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Radar rotation */
+@keyframes radarSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-wrapper.scrolled .nav-inner {
+    justify-content: center;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  .hero-title {
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 18px;
+  transition: var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
+  border-color: var(--laser-red);
+  color: var(--laser-orange);
+}
+
+/* TL;DR Box */
+.tldr-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-active);
+  border-radius: 8px;
+  padding: var(--space-xl);
+  margin-top: var(--space-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.tldr-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,69,0,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,69,0,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  pointer-events: none;
+}
+
+.tldr-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--laser-red);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tldr-label .cursor {
+  display: inline-block;
+  width: 7px;
+  height: 14px;
+  background: var(--laser-red);
+  animation: blink 1.2s step-end infinite;
+}
+
+.tldr-content {
+  position: relative;
+  z-index: 1;
+}
+
+.tldr-content p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.tldr-content strong {
+  color: var(--text-primary);
+}
+
+.tldr-product {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tldr-product-name {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.tldr-product-price {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--laser-orange);
+}
+
+/* Progress bar animation at top of page */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px var(--laser-glow);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav-wrapper" id="navWrapper">
+  <div class="nav-inner">
+    <!-- Logo Area (smoothly shrinks on scroll) -->
+    <div class="logo-area">
+      <div class="logo-radar">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
+          <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
+          <line x1="30" y1="2" x2="30" y2="58" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
+          <line x1="2" y1="30" x2="58" y2="30" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
+          <g transform-origin="30 30" style="animation: radarSweep 4s linear infinite">
+            <line x1="30" y1="30" x2="52" y2="14" stroke="#FF4500" stroke-width="1.5" opacity="0.8"/>
+            <path d="M30,30 L52,14 A25,25 0 0,0 48,10 L30,30" fill="#FF4500" opacity="0.1"/>
+          </g>
+          <circle cx="22" cy="20" r="2" fill="#FF6B35" opacity="0.7"/>
+          <circle cx="40" cy="24" r="1.5" fill="#FF4500" opacity="0.5"/>
+          <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
+          <circle cx="30" cy="30" r="1" fill="#fff"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="laser">LASER</span><span class="lotse">LOTSE</span>
+      </div>
+    </div>
+
+    <!-- Single set of nav links — smoothly repositions -->
+    <div class="nav-links">
+      <a href="beste-laser-engraver/" class="active">Tests</a>
+      <a href="xtool-d1-pro-vs-atomstack-s30-pro/">Vergleiche</a>
+      <a href="laser-engraver-fuer-anfaenger/">Kaufberatung</a>
+      <a href="laser-engraver-sicherheit/">Sicherheit</a>
+      <a href="holz-gravieren/">Ratgeber</a>
+      <a href="lightburn-vs-lasergrbl/">Software</a>
+      <button class="nav-search">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        SUCHE
+      </button>
+    </div>
+    <button class="mobile-menu-btn">☰</button>
+  </div>
+</nav>
+
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-scanline"></div>
+    <div class="hero-hscan"></div>
+
+    <!-- Code rain columns -->
+    <div class="code-rain" id="codeRain"></div>
+
+    <div class="hero-gradient-top"></div>
+    <div class="hero-gradient-bottom"></div>
+  </div>
+
+  <div class="hero-content">
+    <!-- Large Animated Radar Logo -->
+    <div class="hero-logo-large">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="heroGlow">
+            <feGaussianBlur stdDeviation="4" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <filter id="heroSoft">
+            <feGaussianBlur stdDeviation="2" result="b"/>
+            <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <linearGradient id="heroBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF2200"/>
+            <stop offset="100%" stop-color="#FFAA00"/>
+          </linearGradient>
+        </defs>
+
+        <!-- Outer ring -->
+        <circle cx="100" cy="100" r="95" fill="none" stroke="#FF4500" stroke-width="0.5" opacity="0.12"/>
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#FF4500" stroke-width="0.5" opacity="0.15"/>
+        <circle cx="100" cy="100" r="60" fill="none" stroke="#FF4500" stroke-width="0.5" opacity="0.18"/>
+        <circle cx="100" cy="100" r="40" fill="none" stroke="#FF6B35" stroke-width="0.5" opacity="0.22"/>
+        <circle cx="100" cy="100" r="20" fill="none" stroke="#FF6B35" stroke-width="0.5" opacity="0.28"/>
+
+        <!-- Cross lines -->
+        <line x1="100" y1="5" x2="100" y2="195" stroke="#FF4500" stroke-width="0.4" opacity="0.12"/>
+        <line x1="5" y1="100" x2="195" y2="100" stroke="#FF4500" stroke-width="0.4" opacity="0.12"/>
+        <line x1="30" y1="30" x2="170" y2="170" stroke="#FF4500" stroke-width="0.3" opacity="0.08"/>
+        <line x1="170" y1="30" x2="30" y2="170" stroke="#FF4500" stroke-width="0.3" opacity="0.08"/>
+
+        <!-- Rotating sweep arm -->
+        <g transform-origin="100 100" style="animation: radarSweep 6s linear infinite">
+          <line x1="100" y1="100" x2="175" y2="40" stroke="url(#heroBeam)" stroke-width="2" opacity="0.9" filter="url(#heroSoft)"/>
+          <path d="M100,100 L175,40 A88,88 0 0,0 160,25 L100,100" fill="#FF4500" opacity="0.06"/>
+          <path d="M100,100 L160,25 A88,88 0 0,0 145,15 L100,100" fill="#FF4500" opacity="0.03"/>
+        </g>
+
+        <!-- Product blips -->
+        <circle cx="68" cy="55" r="4" fill="#FF6B35" opacity="0.8" filter="url(#heroSoft)">
+          <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="145" cy="75" r="3.5" fill="#FF4500" opacity="0.6" filter="url(#heroSoft)">
+          <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="55" cy="130" r="3" fill="#FFAA00" opacity="0.5" filter="url(#heroSoft)">
+          <animate attributeName="opacity" values="0.5;0.15;0.5" dur="3.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="130" cy="145" r="3.5" fill="#FF6B35" opacity="0.7" filter="url(#heroSoft)">
+          <animate attributeName="opacity" values="0.7;0.25;0.7" dur="2.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="80" cy="90" r="2.5" fill="#FFAA00" opacity="0.5">
+          <animate attributeName="opacity" values="0.5;0.1;0.5" dur="4.2s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Center -->
+        <circle cx="100" cy="100" r="5" fill="#FF4500" filter="url(#heroGlow)"/>
+        <circle cx="100" cy="100" r="2.5" fill="#FFA500"/>
+        <circle cx="100" cy="100" r="1" fill="#FFFFFF"/>
+
+        <!-- Pulse ring -->
+        <circle cx="100" cy="100" r="20" fill="none" stroke="#FF4500" stroke-width="1" opacity="0">
+          <animate attributeName="r" values="20;90;20" dur="4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.3;0;0.3" dur="4s" repeatCount="indefinite"/>
+        </circle>
+      </svg>
+    </div>
+
+    <div class="hero-status">
+      <span class="dot"></span>
+      SCANNING · 47 PRODUKTE ERKANNT
+    </div>
+
+    <h1 class="hero-title">
+      Ehrliche Laser-Kaufberatung<br>
+      für <span class="highlight">Maker & Technikfans</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Wir testen Laser Engraver und Laser Cutter, damit du die richtige Entscheidung triffst. Unabhängig, praxisnah und ohne Marketing-Blabla — von Makern für Maker.
+    </p>
+
+    <a href="#latest" class="scroll-indicator">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+
+<!-- ═══════════════ ABOUT SECTION ═══════════════ -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="section-label">Dürfen wir vorstellen</div>
+    <div class="section-title">Der LaserLotse</div>
+
+    <p class="about-text">
+      Hier schreiben keine Theoretiker, sondern <strong>echte Maker, Hardware-Bastler und Laser-Enthusiasten</strong> mit jahrelanger Erfahrung. Wir wissen, wie es sich anfühlt, wenn der erste Laser-Cut perfekt gelingt — oder wenn der Fokus nicht stimmt und das Holz nur ankohlt. Unsere Empfehlungen beruhen nicht auf Datenblättern allein, sondern auf <strong>echtem Testen, Ausprobieren und ehrlicher Meinung</strong>.
+    </p>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">
+          <svg viewBox="0 0 60 60" width="60" height="60">
+            <rect width="60" height="60" fill="#16161E" rx="30"/>
+            <circle cx="30" cy="22" r="10" fill="#333"/>
+            <ellipse cx="30" cy="48" rx="18" ry="14" fill="#333"/>
+            <circle cx="30" cy="22" r="8" fill="#555"/>
+          </svg>
+        </div>
+        <div class="team-name">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+          MAX
+        </div>
+        <p class="team-role">Laser-Tester & Redakteur mit 12+ getesteten Geräten</p>
+        <a href="ueber-uns/" class="team-cta">Mehr erfahren</a>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">
+          <svg viewBox="0 0 60 60" width="60" height="60">
+            <rect width="60" height="60" fill="#16161E" rx="30"/>
+            <circle cx="30" cy="22" r="10" fill="#333"/>
+            <ellipse cx="30" cy="48" rx="18" ry="14" fill="#333"/>
+            <circle cx="30" cy="22" r="8" fill="#555"/>
+          </svg>
+        </div>
+        <div class="team-name">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+          LISA
+        </div>
+        <p class="team-role">Maker, Designerin und Etsy-Sellerin mit Laser-Business</p>
+        <a href="ueber-uns/" class="team-cta">Mehr erfahren</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ FEATURES / USP ═══════════════ -->
+<section class="features-section" id="features">
+  <div class="features-bg"></div>
+  <div class="section" style="padding-top: var(--space-4xl);">
+    <div class="features-grid fade-in">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="feature-title">Unabhängig & Transparent</div>
+        <p class="feature-desc">Unsere Meinung kann man nicht kaufen. Jeder Test basiert auf echten Erfahrungen — mit transparenter Affiliate-Kennzeichnung.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="feature-title">Praxisnah Getestet</div>
+        <p class="feature-desc">Zahlen aus Datenblättern sind nur der Anfang. Wir bauen auf echtes Testen, Messen und Ausprobieren mit verschiedenen Materialien.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div class="feature-title">Klare Kaufberatung</div>
+        <p class="feature-desc">Wir liefern nicht nur Messwerte, sondern übersetzen sie in klare Empfehlungen: Welcher Laser passt zu dir und deinem Budget?</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════ LATEST TESTS ═══════════════ -->
+<section class="section" id="latest">
+  <div class="section-label">Neueste Artikel</div>
+  <div class="section-title">Aktuelle Tests & Vergleiche</div>
+  <p class="section-desc">Unsere neuesten Laser-Tests, Vergleiche und Kaufberatungen — regelmäßig aktualisiert mit den neuesten Modellen und Preisen.</p>
+
+  <div class="articles-grid fade-in">
+    <!-- Article 1 -->
+    <a href="beste-laser-engraver/" class="article-card" style="text-decoration:none;color:inherit;">
+      <div class="article-thumb">
+        <div class="article-thumb-grid"></div>
+        <span class="article-badge badge-testsieger">TESTSIEGER 2026</span>
+        <span class="article-thumb-icon">🏆</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="date">FEB 2026</span>
+          <span>·</span>
+          <span>12 MIN LESEZEIT</span>
+        </div>
+        <h3 class="article-title">Beste Laser Engraver 2026: Unsere Top 10 im Test</h3>
+        <p class="article-excerpt">Wir haben 12 aktuelle Lasergraviermaschinen getestet — von Budget-Geräten ab 199 € bis zu Premium-Modellen mit 40W+. Hier sind unsere Empfehlungen.</p>
+        <div class="article-tags">
+          <span class="article-tag">BESTENLISTE</span>
+          <span class="article-tag">2026</span>
+          <span class="article-tag">DIODENLASER</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 2 -->
+    <a href="xtool-d1-pro-vs-atomstack-s30-pro/" class="article-card" style="text-decoration:none;color:inherit;">
+      <div class="article-thumb">
+        <div class="article-thumb-grid"></div>
+        <span class="article-badge badge-vergleich">VERGLEICH</span>
+        <span class="article-thumb-icon">⚔️</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="date">FEB 2026</span>
+          <span>·</span>
+          <span>8 MIN LESEZEIT</span>
+        </div>
+        <h3 class="article-title">xTool D1 Pro vs Atomstack S30 Pro: Welcher ist besser?</h3>
+        <p class="article-excerpt">Die zwei beliebtesten Diodenlaser im direkten Duell. 20W vs 33W — welcher bietet mehr für dein Geld?</p>
+        <div class="article-tags">
+          <span class="article-tag">VERSUS</span>
+          <span class="article-tag">XTOOL</span>
+          <span class="article-tag">ATOMSTACK</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 3 -->
+    <a href="holz-gravieren/" class="article-card" style="text-decoration:none;color:inherit;">
+      <div class="article-thumb">
+        <div class="article-thumb-grid"></div>
+        <span class="article-badge badge-guide">GUIDE</span>
+        <span class="article-thumb-icon">🪵</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="date">JAN 2026</span>
+          <span>·</span>
+          <span>10 MIN LESEZEIT</span>
+        </div>
+        <h3 class="article-title">Holz gravieren mit dem Laser: Der komplette Guide</h3>
+        <p class="article-excerpt">Birke, Buche, Kirsche oder MDF? Welches Holz liefert die besten Ergebnisse — inklusive Einstellungen für Geschwindigkeit und Leistung.</p>
+        <div class="article-tags">
+          <span class="article-tag">MATERIAL</span>
+          <span class="article-tag">HOLZ</span>
+          <span class="article-tag">ANLEITUNG</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 4 -->
+    <a href="laser-engraver-unter-500-euro/" class="article-card" style="text-decoration:none;color:inherit;">
+      <div class="article-thumb">
+        <div class="article-thumb-grid"></div>
+        <span class="article-badge badge-neu">NEU</span>
+        <span class="article-thumb-icon">💰</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="date">FEB 2026</span>
+          <span>·</span>
+          <span>7 MIN LESEZEIT</span>
+        </div>
+        <h3 class="article-title">Bester Laser Engraver unter 500 Euro (Test 2026)</h3>
+        <p class="article-excerpt">Der Sweet-Spot für Einsteiger: Sieben Laser unter 500 € im Test. Der Atomstack S30 Pro (399 €) liefert 33W Rohpower zum fairen Preis — aber die Konkurrenz schläft nicht.</p>
+        <div class="article-tags">
+          <span class="article-tag">BUDGET</span>
+          <span class="article-tag">UNTER 500€</span>
+          <span class="article-tag">ANFÄNGER</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 5 -->
+    <a href="co2-laser-vs-diodenlaser/" class="article-card" style="text-decoration:none;color:inherit;">
+      <div class="article-thumb">
+        <div class="article-thumb-grid"></div>
+        <span class="article-badge badge-vergleich">VERGLEICH</span>
+        <span class="article-thumb-icon">🔬</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="date">JAN 2026</span>
+          <span>·</span>
+          <span>9 MIN LESEZEIT</span>
+        </div>
+        <h3 class="article-title">CO2-Laser vs Diodenlaser: Was ist der Unterschied?</h3>
+        <p class="article-excerpt">Die wichtigste Grundsatzentscheidung vor dem Kauf: 10.600nm vs 455nm — welche Technologie passt zu deinen Projekten?</p>
+        <div class="article-tags">
+          <span class="article-tag">RATGEBER</span>
+          <span class="article-tag">CO2</span>
+          <span class="article-tag">DIODE</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Article 6 -->
+    <a href="lightburn-vs-lasergrbl/" class="article-card" style="text-decoration:none;color:inherit;">
+      <div class="article-thumb">
+        <div class="article-thumb-grid"></div>
+        <span class="article-badge badge-guide">SOFTWARE</span>
+        <span class="article-thumb-icon">💻</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta">
+          <span class="date">JAN 2026</span>
+          <span>·</span>
+          <span>11 MIN LESEZEIT</span>
+        </div>
+        <h3 class="article-title">LightBurn vs LaserGRBL: Welche Software ist besser?</h3>
+        <p class="article-excerpt">Kostenlos vs. 60 € Lizenz: Ist LightBurn wirklich besser? Wir vergleichen Features, Bedienung und Kompatibilität.</p>
+        <div class="article-tags">
+          <span class="article-tag">SOFTWARE</span>
+          <span class="article-tag">LIGHTBURN</span>
+          <span class="article-tag">LASERGRBL</span>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div style="text-align: center; margin-top: var(--space-2xl);">
+    <a href="beste-laser-engraver/" class="btn-secondary">
+      Alle Artikel anzeigen
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+
+<!-- ═══════════════ TL;DR TESTSIEGER ═══════════════ -->
+<div class="section">
+  <div class="tldr-box fade-in">
+    <div class="tldr-label">
+      TL;DR // TESTSIEGER 2026 <span class="cursor"></span>
+    </div>
+    <div class="tldr-content">
+      <p>
+        Du willst nicht lange lesen? Unser <strong>Testsieger 2026</strong> ist der <strong>xTool S1 40W</strong>: 40W Diodenlaser mit geschlossenem Gehäuse, Kamera, Autofokus und 600 mm/s max. Geschwindigkeit. Laserklasse 1 = sicher ohne Schutzbrille. Für <strong>899 €</strong> das kompletteste Paket auf dem Markt. Budget-Tipp: <strong>Atomstack S30 Pro (399 €)</strong> für maximale Rohpower.
+      </p>
+      <div class="tldr-product">
+        <div>
+          <div class="tldr-product-name">xTool S1 40W</div>
+          <div style="font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">9.3/10 · TESTSIEGER</div>
+        </div>
+        <div style="margin-left: auto;">
+          <div class="tldr-product-price">899 €</div>
+        </div>
+        <a href="beste-laser-engraver/" class="btn-primary" style="margin-left: 16px; font-size: 10px; padding: 10px 20px;">
+          ZUM VERGLEICH →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ CATEGORIES ═══════════════ -->
+<section class="section" id="categories">
+  <div class="section-label">Themen durchsuchen</div>
+  <div class="section-title">Alle Kategorien</div>
+
+  <div class="categories-grid fade-in">
+    <a href="beste-laser-engraver/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">🏆</div>
+      <div class="category-name">Bestenlisten</div>
+      <div class="category-count">3 Artikel</div>
+    </a>
+    <a href="xtool-d1-pro-vs-atomstack-s30-pro/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">⚔️</div>
+      <div class="category-name">Vergleiche</div>
+      <div class="category-count">2 Artikel</div>
+    </a>
+    <a href="xtool-d1-pro-test/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">🔬</div>
+      <div class="category-name">Einzeltests</div>
+      <div class="category-count">1 Artikel</div>
+    </a>
+    <a href="holz-gravieren/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">🪵</div>
+      <div class="category-name">Material-Guides</div>
+      <div class="category-count">1 Artikel</div>
+    </a>
+    <a href="lightburn-vs-lasergrbl/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">💻</div>
+      <div class="category-name">Software</div>
+      <div class="category-count">1 Artikel</div>
+    </a>
+    <a href="laser-engraver-fuer-anfaenger/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">🛒</div>
+      <div class="category-name">Kaufberatung</div>
+      <div class="category-count">2 Artikel</div>
+    </a>
+    <a href="co2-laser-vs-diodenlaser/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">🔧</div>
+      <div class="category-name">Ratgeber</div>
+      <div class="category-count">1 Artikel</div>
+    </a>
+    <a href="laser-engraver-sicherheit/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">⚠️</div>
+      <div class="category-name">Sicherheit</div>
+      <div class="category-count">1 Artikel</div>
+    </a>
+    <a href="ueber-uns/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">💡</div>
+      <div class="category-name">Über uns</div>
+      <div class="category-count">Das Team</div>
+    </a>
+    <a href="transparenz/" class="category-card" style="text-decoration:none;color:inherit;">
+      <div class="category-icon">💰</div>
+      <div class="category-name">Transparenz</div>
+      <div class="category-count">So finanzieren wir uns</div>
+    </a>
+  </div>
+</section>
+
+
+<!-- ═══════════════ CTA SECTION ═══════════════ -->
+<section class="cta-section">
+  <h2 class="cta-title fade-in">Bereit für deinen <span class="highlight">ersten Laser?</span></h2>
+  <p class="cta-desc fade-in">Unser interaktiver Kaufberater findet in 3 Fragen den perfekten Laser für dich — abgestimmt auf Budget, Material und Erfahrungslevel.</p>
+  <a href="laser-engraver-fuer-anfaenger/" class="btn-primary fade-in">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg>
+    KAUFBERATER STARTEN
+  </a>
+</section>
+
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg viewBox="0 0 60 60" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
+          <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
+          <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
+          <circle cx="30" cy="30" r="1" fill="#fff"/>
+        </svg>
+        <span class="footer-logo-text">LASER<span style="background: linear-gradient(90deg, #FF4500, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">LOTSE</span></span>
+      </div>
+      <p>Unabhängige Kaufberatung für Lasergraviermaschinen und Laser Cutter im DACH-Raum. Wir testen, vergleichen und empfehlen — ehrlich und praxisnah.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Kategorien</h4>
+      <ul>
+        <li><a href="beste-laser-engraver/">Bestenlisten</a></li>
+        <li><a href="xtool-d1-pro-vs-atomstack-s30-pro/">Vergleiche</a></li>
+        <li><a href="laser-engraver-fuer-anfaenger/">Kaufberatung</a></li>
+        <li><a href="xtool-d1-pro-test/">Einzeltests</a></li>
+        <li><a href="holz-gravieren/">Material-Guides</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Beliebte Artikel</h4>
+      <ul>
+        <li><a href="beste-laser-engraver/">Beste Laser Engraver 2026</a></li>
+        <li><a href="laser-engraver-unter-500-euro/">Laser unter 500 €</a></li>
+        <li><a href="co2-laser-vs-diodenlaser/">CO2 vs Diodenlaser</a></li>
+        <li><a href="xtool-d1-pro-vs-atomstack-s30-pro/">xTool vs Atomstack</a></li>
+        <li><a href="lightburn-vs-lasergrbl/">LightBurn vs LaserGRBL</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Über uns</h4>
+      <ul>
+        <li><a href="ueber-uns/">Das Team</a></li>
+        <li><a href="transparenz/">So finanzieren wir uns</a></li>
+        <li><a href="ueber-uns/">Kontakt</a></li>
+        <li><a href="impressum/">Impressum</a></li>
+        <li><a href="impressum/">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 LASERLOTSE.DE — ALLE RECHTE VORBEHALTEN</p>
+    <div class="footer-bottom-links">
+      <a href="impressum/">IMPRESSUM</a>
+      <a href="impressum/">DATENSCHUTZ</a>
+      <a href="transparenz/">AFFILIATE-HINWEIS</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════ JAVASCRIPT ═══════════════ -->
+<script>
+// ── SMOOTH NAVBAR TRANSITION ──
+const navWrapper = document.getElementById('navWrapper');
+let lastScroll = 0;
+const scrollThreshold = 80;
+
+function handleScroll() {
+  const currentScroll = window.scrollY;
+
+  // Smooth class toggle — CSS handles ALL the animation
+  if (currentScroll > scrollThreshold) {
+    if (!navWrapper.classList.contains('scrolled')) {
+      navWrapper.classList.add('scrolled');
+    }
+  } else {
+    if (navWrapper.classList.contains('scrolled')) {
+      navWrapper.classList.remove('scrolled');
+    }
+  }
+
+  lastScroll = currentScroll;
+
+  // Progress bar
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = (currentScroll / docHeight) * 100;
+  document.getElementById('progressBar').style.width = scrollPercent + '%';
+}
+
+window.addEventListener('scroll', handleScroll, { passive: true });
+
+// ── CODE RAIN EFFECT ──
+function createCodeRain() {
+  const container = document.getElementById('codeRain');
+  const chars = '01アイウエオカキクケコLASERLOTSE═║╔╗╚╝█▓▒░>>{}[];';
+  const columnCount = Math.floor(window.innerWidth / 40);
+
+  for (let i = 0; i < columnCount; i++) {
+    const col = document.createElement('div');
+    col.className = 'code-column';
+    col.style.left = (i * 40 + Math.random() * 20) + 'px';
+    col.style.animationDuration = (8 + Math.random() * 12) + 's';
+    col.style.animationDelay = (Math.random() * 10) + 's';
+
+    let text = '';
+    const length = 10 + Math.floor(Math.random() * 20);
+    for (let j = 0; j < length; j++) {
+      text += chars[Math.floor(Math.random() * chars.length)] + '\n';
+    }
+    col.textContent = text;
+    container.appendChild(col);
+  }
+}
+
+// ── SCROLL REVEAL ANIMATIONS ──
+function handleFadeIn() {
+  const elements = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  elements.forEach(el => observer.observe(el));
+}
+
+// ── SMOOTH SCROLL FOR ANCHOR LINKS ──
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ── INITIALIZE ──
+document.addEventListener('DOMContentLoaded', () => {
+  createCodeRain();
+  handleFadeIn();
+});
+</script>
+
+</body>
+</html>

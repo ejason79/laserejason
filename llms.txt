@@ -1,0 +1,45 @@
+# LaserLotse.de
+> Unabhängige Kaufberatung für Lasergraviermaschinen und Laser Cutter im DACH-Raum. Mit Präzision gebaut.
+
+## Über uns
+LaserLotse.de ist die führende deutschsprachige Informationsseite für Desktop-Lasergraviermaschinen. Wir testen Diodenlaser, CO2-Laser und Faserlaser und bieten strukturierte Kaufberatung für Hobbyisten und Kleinunternehmer. Unser Team hat über 12 Geräte persönlich getestet.
+
+## Hauptkategorien
+- Laser Engraver Vergleiche und Tests
+- Kaufberatung nach Budget (unter 300€, unter 500€, unter 1000€)
+- Material-Guides (Holz, Acryl, Leder, Metall gravieren)
+- Software-Tutorials (LightBurn, xTool Creative Space, LaserGRBL)
+- Zubehör (Wabenplatten, Absaugung, Rotationsaufsätze)
+- Sicherheit und Laserklassen
+
+## Wichtigste Seiten
+- /beste-laser-engraver/ — Übersicht der besten Laser Engraver 2026 (Pillar Page, Testsieger: xTool S1 40W, 899€, 9.3/10)
+- /laser-engraver-unter-500-euro/ — Budget-Empfehlungen unter 500€ (Preis-Tipp: Atomstack S30 Pro, 399€)
+- /laser-engraver-fuer-anfaenger/ — Beste Laser für Anfänger mit Kaufberatung
+- /co2-laser-vs-diodenlaser/ — Technologie-Vergleich: CO2 (10.600nm) vs Diodenlaser (455nm)
+- /xtool-d1-pro-vs-atomstack-s30-pro/ — Direktvergleich der beliebtesten Diodenlaser
+- /xtool-d1-pro-test/ — Detaillierter Testbericht xTool D1 Pro 20W (9.2/10)
+- /holz-gravieren/ — Kompletter Material-Guide: Holzarten, Einstellungen, Tipps
+- /lightburn-vs-lasergrbl/ — Software-Vergleich: LightBurn (60€) vs LaserGRBL (kostenlos)
+- /laser-engraver-sicherheit/ — Sicherheitsguide: Laserklassen, Augenschutz, Brandschutz
+
+## Top-Empfehlungen 2026
+1. **Testsieger:** xTool S1 40W — 899€, 40W Diodenlaser, geschlossenes Gehäuse, Kamera, Autofokus, 9.3/10
+2. **Preis-Leistung:** Atomstack S30 Pro — 399€, 33W Diodenlaser, 410×400mm Gravurfläche, 9.0/10
+3. **Anfänger:** Creality Falcon2 Pro — 359€, 22W Diodenlaser, deutscher Support, 8.6/10
+4. **Budget:** Sculpfun S30 Ultra — 469€, 600×600mm Arbeitsfläche, 8.8/10
+5. **Allrounder:** xTool D1 Pro 20W — 449€, 20W Diodenlaser, 432×406mm, 8.4/10
+
+## Marken im Fokus
+xTool, Atomstack, Sculpfun, Creality, AlgoLaser, OMTech, Ortur, LaserPecker, Longer, TwoTrees, NEJE, Flux
+
+## Bewertungskriterien
+Wir bewerten Laser Engraver nach: Verarbeitung (20%), Laserleistung (25%), Software (20%), Sicherheit (15%), Preis-Leistung (20%)
+
+## Kontakt
+- Website: https://laserlotse.de
+- E-Mail: kontakt@laserlotse.de
+- Standort: München, Deutschland
+
+## Letzte Aktualisierung
+Februar 2026

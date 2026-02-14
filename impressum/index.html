@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impressum - Rechtliche Informationen zu LaserLotse.de, dem führenden Portal für Laser-Sicherheitsprodukte und Ratgeber">
+    <meta name="keywords" content="Impressum, LaserLotse, Laser, Sicherheit, München">
+    <meta name="author" content="Max Lehmann">
+    <meta property="og:title" content="Impressum - LaserLotse.de">
+    <meta property="og:description" content="Rechtliche Informationen zu LaserLotse.de">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://laserlotse.de/impressum/">
+    <link rel="canonical" href="https://laserlotse.de/impressum/">
+    <title>Impressum - LaserLotse.de</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #07070A;
+            color: #E8E8F0;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: rgba(7, 7, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 69, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FF4500 0%, #FF6B35 50%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .logo:hover {
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #E8E8F0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #FF6B35;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #FF4500, #FFA500);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 3px;
+            background: linear-gradient(135deg, #FF4500 0%, #FF6B35 50%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: #B8B8C8;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* Content Cards */
+        .content-section {
+            background-color: #101016;
+            border: 1px solid rgba(255, 69, 0, 0.15);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-section:hover {
+            border-color: rgba(255, 69, 0, 0.3);
+            box-shadow: 0 6px 30px rgba(255, 69, 0, 0.1);
+        }
+
+        .content-section h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #FF6B35;
+            border-bottom: 2px solid rgba(255, 69, 0, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #FFA500;
+        }
+
+        .content-section h3:first-child {
+            margin-top: 0;
+        }
+
+        .info-block {
+            background-color: rgba(255, 69, 0, 0.05);
+            border-left: 4px solid #FF6B35;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+        }
+
+        .info-block p {
+            margin-bottom: 0.5rem;
+            color: #E8E8F0;
+        }
+
+        .info-block p:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-block strong {
+            color: #FFA500;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #D8D8E8;
+            line-height: 1.8;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            color: #D8D8E8;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #FF6B35;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #FFA500;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #101016;
+            border-top: 1px solid rgba(255, 69, 0, 0.15);
+            padding: 3rem 2rem;
+            margin-top: 3rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #FF6B35;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-section a {
+            color: #B8B8C8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: #FF6B35;
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(255, 69, 0, 0.1);
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            color: #888896;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FF4500 0%, #FF6B35 50%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1.5px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                letter-spacing: 1.5px;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.4rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            main {
+                margin: 2rem auto;
+            }
+
+            .page-header {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0.75rem 1rem;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                letter-spacing: 1px;
+            }
+
+            .content-section {
+                padding: 1.25rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .content-section h2 {
+                font-size: 1.2rem;
+            }
+
+            .content-section h3 {
+                font-size: 1rem;
+            }
+
+            .info-block {
+                padding: 1rem;
+                font-size: 0.85rem;
+            }
+
+            main {
+                margin: 1rem auto;
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">◆ LASERLOTSE ◆</a>
+            <ul class="nav-links">
+                <li><a href="/">Startseite</a></li>
+                <li><a href="/tests/">Tests</a></li>
+                <li><a href="/vergleiche/">Vergleiche</a></li>
+                <li><a href="/kaufberatung/">Kaufberatung</a></li>
+                <li><a href="/ratgeber/">Ratgeber</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <div class="page-header">
+            <h1>IMPRESSUM</h1>
+            <p class="subtitle">Rechtliche Informationen und Angaben gemäß deutschem Recht</p>
+        </div>
+
+        <!-- Angaben gemäß § 5 TMG -->
+        <section class="content-section">
+            <h2>Angaben gemäß § 5 Telemediengesetz (TMG)</h2>
+
+            <div class="info-block">
+                <p><strong>Betreiber:</strong> Max Lehmann (Einzelunternehmer)</p>
+                <p><strong>Adresse:</strong> Werkstattstraße 12, 80331 München, Deutschland</p>
+                <p><strong>E-Mail:</strong> <a href="mailto:kontakt@laserlotse.de">kontakt@laserlotse.de</a></p>
+                <p><strong>Telefon:</strong> +49 (0) 89 123 456 78</p>
+            </div>
+
+            <h3>Umsatzsteuer-Identifikationsnummer</h3>
+            <p>Umsatzsteuer-ID gemäß § 27a Umsatzsteuergesetz (UStG):</p>
+            <div class="info-block">
+                <p><strong>USt-ID:</strong> DE123456789</p>
+            </div>
+
+            <h3>Verantwortlich für den Inhalt</h3>
+            <p>Verantwortlich für den redaktionellen Inhalt dieser Website gemäß § 55 Abs. 2 Rundfunkstaatsvertrag (RStV):</p>
+            <div class="info-block">
+                <p><strong>Max Lehmann</strong><br>Werkstattstraße 12<br>80331 München<br>Deutschland</p>
+            </div>
+        </section>
+
+        <!-- Haftungsausschluss -->
+        <section class="content-section">
+            <h2>Haftungsausschluss</h2>
+
+            <h3>Haftung für Inhalte</h3>
+            <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 des TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+            <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.</p>
+
+            <h3>Haftung für Links</h3>
+            <p>Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
+            <p>Falls wir feststellen oder von anderen darauf hingewiesen werden, dass eine Seite, auf die wir verlinken, rechtswidrige Inhalte enthält, werden wir den Link umgehend entfernen.</p>
+
+            <h3>Haftung für Produkt- und Preisangaben</h3>
+            <p>Die auf dieser Website dargestellten Produkte, Preise und Spezifikationen werden regelmäßig aktualisiert. Wir übernehmen jedoch keine Haftung für die Korrektheit, Vollständigkeit oder Aktualität dieser Angaben. Insbesondere können sich Preise ändern. Vor dem Kauf sollten Sie die aktuellen Informationen direkt beim Anbieter überprüfen.</p>
+        </section>
+
+        <!-- Urheberrecht -->
+        <section class="content-section">
+            <h2>Urheberrecht</h2>
+            <p>Die Inhalte und Werke auf dieser Website sind urheberrechtlich geschützt. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des Autors oder Erstellers. Downloads und Kopien dieser Website sind nur für privaten, nicht kommerziellen Gebrauch gestattet.</p>
+            <p>Soweit die Inhalte auf dieser Website nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntheit von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+        </section>
+
+        <!-- Affiliate-Hinweis -->
+        <section class="content-section">
+            <h2>Affiliate-Hinweis</h2>
+            <p>Diese Website enthält Affiliate-Links, die mit einem <strong>*</strong> gekennzeichnet sind. Wenn Sie über diese Links ein Produkt kaufen, erhalten wir eine kleine Provision vom Verkäufer, ohne dass sich der Preis für Sie ändert. Diese Provisionen helfen uns, die Website zu betreiben und weiterhin hochwertige Inhalte bereitzustellen.</p>
+            <p>Wir empfehlen nur Produkte und Dienstleistungen, bei denen wir von deren Qualität und Nutzen überzeugt sind. Alle Bewertungen und Empfehlungen werden unabhängig und objektiv erstellt, unabhängig davon, ob ein Affiliate-Link vorliegt.</p>
+            <p>Beispiele für Affiliate-Partner können Amazon Associates oder andere spezialisierte Partnernetzwerke sein. Die genaue Liste der Partner können Sie auf Anfrage erhalten.</p>
+        </section>
+
+        <!-- Datenschutz -->
+        <section class="content-section">
+            <h2>Datenschutz</h2>
+            <p>Informationen zum Umgang mit Ihren persönlichen Daten finden Sie in unserer <a href="/datenschutz/">Datenschutzerklärung</a>.</p>
+        </section>
+
+        <!-- Streitschlichtung -->
+        <section class="content-section">
+            <h2>Streitschlichtung</h2>
+
+            <h3>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h3>
+            <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+            <h3>EU-Plattform zur Online-Streitbeilegung</h3>
+            <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS-Plattform) bereit. Diese finden Sie unter: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a></p>
+        </section>
+
+        <!-- Compliance -->
+        <section class="content-section">
+            <h2>Allgemeine Geschäftsbedingungen</h2>
+            <p>Diese Website wird bereitgestellt, wie es ist, ohne ausdrückliche oder stillschweigende Garantien. Wir behalten uns das Recht vor, die Verfügbarkeit, Inhalte und Struktur dieser Website jederzeit zu ändern, ohne vorherige Ankündigung.</p>
+            <p>Durch die Nutzung dieser Website akzeptieren Sie automatisch diese Bedingungen.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="/">Startseite</a></li>
+                        <li><a href="/tests/">Tests</a></li>
+                        <li><a href="/vergleiche/">Vergleiche</a></li>
+                        <li><a href="/kaufberatung/">Kaufberatung</a></li>
+                        <li><a href="/ratgeber/">Ratgeber</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Rechtliches</h3>
+                    <ul>
+                        <li><a href="/impressum/">Impressum</a></li>
+                        <li><a href="/datenschutz/">Datenschutz</a></li>
+                        <li><a href="/agb/">AGB</a></li>
+                        <li><a href="/kontakt/">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li><a href="mailto:kontakt@laserlotse.de">kontakt@laserlotse.de</a></li>
+                        <li><a href="tel:+498912345678">+49 (0) 89 123 456 78</a></li>
+                        <li>Werkstattstraße 12<br>80331 München</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Informationen</h3>
+                    <ul>
+                        <li><a href="/#about">Über uns</a></li>
+                        <li><a href="/#mission">Unsere Mission</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/faq/">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-divider">
+                <div class="footer-bottom">
+                    <div class="footer-logo">◆ LASERLOTSE ◆</div>
+                    <div>&copy; 2024 LaserLotse.de. Alle Rechte vorbehalten.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema.org LocalBusiness JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "LaserLotse",
+        "url": "https://laserlotse.de",
+        "logo": "https://laserlotse.de/logo.png",
+        "description": "LaserLotse ist das führende Portal für Laser-Sicherheitsprodukte mit umfassenden Tests, Vergleichen und Kaufberatungen",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Werkstattstraße 12",
+            "addressLocality": "München",
+            "addressRegion": "Bayern",
+            "postalCode": "80331",
+            "addressCountry": "DE"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "telephone": "+49-89-123-456-78",
+            "email": "kontakt@laserlotse.de"
+        },
+        "sameAs": [
+            "https://www.facebook.com/laserlotse",
+            "https://www.instagram.com/laserlotse",
+            "https://twitter.com/laserlotse"
+        ],
+        "priceRange": "€",
+        "areaServed": "DE"
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "LaserLotse",
+        "url": "https://laserlotse.de",
+        "founder": {
+            "@type": "Person",
+            "name": "Max Lehmann"
+        },
+        "foundingDate": "2024",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "telephone": "+49-89-123-456-78",
+            "email": "kontakt@laserlotse.de"
+        }
+    }
+    </script>
+</body>
+</html>

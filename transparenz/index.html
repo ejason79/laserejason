@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vollständige Transparenzerklärung und Affiliate-Disclosure von LaserLotse.de. Erfahren Sie, wie wir unsere Arbeiten finanzieren und wie wir testen.">
+    <meta name="keywords" content="Transparenz, Affiliate-Links, Offenlegung, LaserLotse, Lasergravur, Laserschneider">
+    <meta name="author" content="LaserLotse">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Transparenzrichtlinie und Affiliate-Disclosure - LaserLotse">
+    <meta property="og:description" content="Erfahren Sie, wie LaserLotse.de transparent arbeitet und wie wir unsere Tests durchführen.">
+    <meta property="og:locale" content="de_DE">
+    <title>Transparenzrichtlinie & Affiliate-Disclosure - LaserLotse.de</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #07070A;
+            color: #E0E0E0;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(7, 7, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 69, 0, 0.1);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #FF4500;
+            text-decoration: none;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo::before {
+            content: '◆';
+            font-size: 1.2rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #E0E0E0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #FF4500, #FF6B35);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #FF6B35;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Main container */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #FF4500, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-top: 0;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #B0B0B0;
+            margin-bottom: 3rem;
+            font-style: italic;
+            border-left: 3px solid #FF6B35;
+            padding-left: 1.5rem;
+        }
+
+        /* Content sections */
+        section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: #101016;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 69, 0, 0.15);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            border-color: rgba(255, 69, 0, 0.3);
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: #FF6B35;
+            border-bottom: 2px solid rgba(255, 69, 0, 0.2);
+            padding-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: #D0D0D0;
+            line-height: 1.8;
+        }
+
+        strong {
+            color: #FFA500;
+            font-weight: 600;
+        }
+
+        em {
+            color: #FF6B35;
+            font-style: italic;
+        }
+
+        /* Lists */
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.7rem;
+            color: #D0D0D0;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: rgba(255, 69, 0, 0.08);
+            border-left: 4px solid #FF6B35;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box strong {
+            color: #FF4500;
+        }
+
+        /* Table */
+        .table-container {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        thead {
+            background: rgba(255, 69, 0, 0.1);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            color: #FF6B35;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(255, 69, 0, 0.2);
+        }
+
+        td {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid rgba(255, 69, 0, 0.1);
+            color: #D0D0D0;
+        }
+
+        tr:hover {
+            background-color: rgba(255, 69, 0, 0.05);
+        }
+
+        /* Partners list */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .partner-card {
+            background: rgba(255, 69, 0, 0.05);
+            border: 1px solid rgba(255, 69, 0, 0.15);
+            padding: 1.5rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .partner-card:hover {
+            background: rgba(255, 69, 0, 0.1);
+            border-color: rgba(255, 69, 0, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .partner-card h3 {
+            color: #FF6B35;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .partner-card p {
+            font-size: 0.95rem;
+            color: #B0B0B0;
+        }
+
+        .provision {
+            color: #FFA500;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Affiliate mark explanation */
+        .affiliate-mark {
+            display: inline-block;
+            color: #FF4500;
+            font-weight: 700;
+            vertical-align: super;
+            font-size: 0.8em;
+            margin-left: 2px;
+        }
+
+        /* Contact section */
+        .contact-info {
+            background: rgba(255, 107, 53, 0.1);
+            border-left: 4px solid #FF4500;
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0F0F14;
+            border-top: 1px solid rgba(255, 69, 0, 0.1);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #FF6B35;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .footer-section a {
+            color: #B0B0B0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 0.7rem;
+        }
+
+        .footer-section a:hover {
+            color: #FF6B35;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 69, 0, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: #808080;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 1.5rem;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 0.7rem 0.5rem;
+            }
+        }
+
+        /* Accessibility */
+        a {
+            outline-offset: 2px;
+        }
+
+        a:focus {
+            outline: 2px solid #FF6B35;
+        }
+
+        button, a {
+            font-family: inherit;
+        }
+
+        /* Print styles */
+        @media print {
+            nav {
+                position: static;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">LASERLOTSE</a>
+            <ul class="nav-links">
+                <li><a href="/#tests">Tests</a></li>
+                <li><a href="/#vergleiche">Vergleiche</a></li>
+                <li><a href="/#guides">Guides</a></li>
+                <li><a href="/transparenz/">Transparenz</a></li>
+                <li><a href="/#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1>SO FINANZIEREN WIR UNS</h1>
+        <p class="hero-subtitle">Vollständige Transparenz über unsere Geschäftsmodelle, Partnerschaften und Testmethoden — weil Vertrauen verdient sein muss.</p>
+
+        <!-- Section 1: Warum Transparenz wichtig ist -->
+        <section>
+            <h2>Warum Transparenz wichtig ist</h2>
+            <p>Bei <strong>LaserLotse.de</strong> glauben wir, dass ehrliche Empfehlungen die Grundlage für Vertrauen sind. Unser Erfolg hängt nicht davon ab, dass Sie einem Affiliate-Link folgen, sondern davon, dass Sie unsere Inhalte als wertvoll, akkurat und unparteiisch empfinden.</p>
+            <p>Deshalb offenbaren wir <em>vollständig und proaktiv</em>, wie wir unsere Arbeiten finanzieren, welche Partnerschaften wir haben und wie unsere Bewertungsprozesse ablaufen. Sie verdienen es zu wissen, welche potentiellen Interessenskonflikte bestehen — und dass diese Konflikte unsere Bewertungen <strong>nicht</strong> beeinflussen.</p>
+            <div class="highlight-box">
+                <strong>Unser Versprechen:</strong> Jede Bewertung basiert auf aufrichtiger, professioneller Analyse. Affiliate-Provisionen sind ein Nebenprodukt unserer Arbeit, nicht ihre Treibkraft.
+            </div>
+        </section>
+
+        <!-- Section 2: Affiliate-Links Erklärung -->
+        <section>
+            <h2>Affiliate-Links: Was bedeutet das?</h2>
+            <p>Viele der Links auf LaserLotse.de sind <strong>Affiliate-Links</strong><span class="affiliate-mark">*</span>. Das bedeutet, dass wir eine kleine Provision verdienen, wenn Sie über diese Links etwas kaufen — ohne dass es Sie etwas extra kostet. Der Kaufpreis bleibt für Sie gleich.</p>
+
+            <div class="highlight-box">
+                <strong>Wie es funktioniert:</strong> Wenn Sie auf einen mit <strong>*</strong> gekennzeichneten Link klicken und anschließend einen Kauf tätigen, erkennt das Affiliate-Netzwerk, dass Sie über LaserLotse.de gekommen sind. Wir erhalten dann eine prozentuale Provision vom Verkauf.
+            </div>
+
+            <p><strong>Wichtig:</strong> Diese Provisionen sind:</p>
+            <ul>
+                <li>Transparent und offengelegt</li>
+                <li>Für Sie kostenfrei (keine versteckten Gebühren)</li>
+                <li>Eine faire Entschädigung für unsere Recherche und Tests</li>
+                <li>Nicht an Bewertungsurteile gekoppelt</li>
+            </ul>
+
+            <p>Wir kennzeichnen Affiliate-Links mit einem <strong>*</strong> neben der URL oder im Text. Achten Sie auf diese Markierung, wenn Sie durch unsere Seiten navigieren.</p>
+        </section>
+
+        <!-- Section 3: Unsere Partner -->
+        <section>
+            <h2>Unsere Partner</h2>
+            <p>Wir arbeiten mit folgenden Partnern zusammen, die unsere Unabhängigkeit respektieren und qualitativ hochwertige Produkte anbieten:</p>
+
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <h3>Amazon PartnerNet</h3>
+                    <p>Links zu Lasergravur- und Laserschneide-Zubehör, Sicherheitsausrüstung und Verbrauchsmaterialien.</p>
+                    <div class="provision">Provision: ~5% (Werkzeug-Kategorie)</div>
+                </div>
+
+                <div class="partner-card">
+                    <h3>xTool Affiliate Program</h3>
+                    <p>Exklusive Links zu xTool Lasern, Zubehör und Ersatzteilen. xTool ist ein führender Hersteller von Desktop-Lasersystemen.</p>
+                    <div class="provision">Provision: 7–10%</div>
+                </div>
+
+                <div class="partner-card">
+                    <h3>Weitere Hersteller</h3>
+                    <p>Wir arbeiten mit weiteren Laserherstellern und Zubehörananbietern zusammen (z. B. Glowforge, Sculpteo, etc.), die direkte oder indirekte Affiliate-Programme anbieten.</p>
+                    <div class="provision">Provision: Variabel je nach Partner</div>
+                </div>
+            </div>
+
+            <p><strong>Besonderheit:</strong> Nicht alle Produkte, die wir empfehlen, sind Teil eines Affiliate-Programms. Wenn wir ein Produkt empfehlen, aber keinen Affiliate-Link haben, werden wir das deutlich machen. Diese Empfehlungen sind genauso wertvoll und ehrlich wie die anderen.</p>
+        </section>
+
+        <!-- Section 4: Was Affiliate-Links NICHT bedeuten -->
+        <section>
+            <h2>Was Affiliate-Links NICHT bedeuten</h2>
+            <p>Es ist wichtig zu verstehen, was Affiliate-Links <em>nicht</em> implizieren:</p>
+
+            <ul>
+                <li><strong>Nicht:</strong> „Wir verdienen mehr, wenn Sie dieses Produkt statt eines anderen kaufen." — Die Provisionsquoten variieren kaum zwischen Kategorien.</li>
+                <li><strong>Nicht:</strong> „Unsere Bewertungen sind gekauft." — Unsere Tests sind unabhängig durchgeführt und folgen strikten Kriterien.</li>
+                <li><strong>Nicht:</strong> „Wir empfehlen teurere Produkte für höhere Provisionen." — Wir empfehlen das beste Produkt für den Einsatzfall, unabhängig vom Provisionsmodell.</li>
+                <li><strong>Nicht:</strong> „Alle empfohlenen Produkte sind getestet." — Manchmal empfehlen wir basierend auf Kundenrückmeldungen und Marktforschung. Das kennzeichnen wir deutlich.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Das Wichtigste:</strong> Wir haben einen finanziellen Anreiz, dass Sie <em>etwas</em> kaufen, nicht <em>was genau</em>. Deshalb hat das Affiliate-Modell die perfekte Ausrichtung mit Ihren Interessen: Wir verdienen nur, wenn Sie mit Ihrer Entscheidung zufrieden sind und wiederkommen.
+            </div>
+        </section>
+
+        <!-- Section 5: Wie wir testen -->
+        <section>
+            <h2>Wie wir testen</h2>
+            <p>Jeder Test auf LaserLotse.de folgt einem strikten, reproduzierbaren Verfahren. Hier ist, wie wir arbeiten:</p>
+
+            <h3 style="color: #FFA500; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.2rem;">Handson-Tests mit echten Materialien</h3>
+            <p>Wir testen Laseranlagen nicht nur im Labor. Wir verwenden echte Materialien wie:</p>
+            <ul>
+                <li>Holz (Sperrholz, Massivholz, unterschiedliche Sorten)</li>
+                <li>Acryl (unterschiedliche Dicken)</li>
+                <li>Metalle (mit und ohne Beschichtung)</li>
+                <li>Stoffe, Leder, Pappe</li>
+            </ul>
+
+            <h3 style="color: #FFA500; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.2rem;">Reproduzierbare Metriken</h3>
+            <p>Jeder Test dokumentiert:</p>
+            <ul>
+                <li>Einstellungen (Leistung, Geschwindigkeit, Fokus)</li>
+                <li>Messbaren Output (Schnittqualität, Gravierfeinheit)</li>
+                <li>Verbrauchsmaterialkosten</li>
+                <li>Sicherheits- und Emissionsaspekte</li>
+            </ul>
+
+            <h3 style="color: #FFA500; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.2rem;">Keine gekauften Bewertungen</h3>
+            <p>Wir akzeptieren <strong>keine Zahlungen von Herstellern für positive Bewertungen</strong>. Hersteller können uns gelegentlich Testgeräte ausleihen, aber:</p>
+            <ul>
+                <li>Wir behalten volle redaktionelle Unabhängigkeit</li>
+                <li>Negative Bewertungen werden genauso veröffentlicht wie positive</li>
+                <li>Geliehene Geräte müssen zurückgegeben werden</li>
+                <li>Wir offenbaren immer, wenn wir ein Testgerät verwendet haben</li>
+            </ul>
+
+            <div class="highlight-box">
+                <strong>Offenlegung:</strong> Wenn ein Produkt durch ein Leih- oder Testgerät-Programm getestet wurde, kennzeichnen wir das deutlich in der Review. Unabhängig davon bleibt die Bewertung unverfälscht.
+            </div>
+        </section>
+
+        <!-- Section 6: Bewertungskriterien -->
+        <section>
+            <h2>Unsere Bewertungskriterien</h2>
+            <p>Jede Laser-Einheit wird anhand eines standardisierten Kriterienkatalogs bewertet. Diese Gewichtung sichert faire, konsistente Vergleiche:</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kategorie</th>
+                            <th>Gewichtung</th>
+                            <th>Was wir prüfen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Verarbeitung</strong></td>
+                            <td><strong>20%</strong></td>
+                            <td>Material, Stabilität, Haptik, Verschleiß von beweglichen Teilen, Montagequalität</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Laserleistung</strong></td>
+                            <td><strong>25%</strong></td>
+                            <td>Gravur- und Schnittqualität auf verschiedenen Materialien, Konsistenz, Brennfleckenverhalten, Fokusgenauigkeit</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Software</strong></td>
+                            <td><strong>20%</strong></td>
+                            <td>Bedienbarkeit, Feature-Umfang, Kompatibilität (Windows/Mac/Linux), Lernkurve, Updates und Support</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sicherheit</strong></td>
+                            <td><strong>15%</strong></td>
+                            <td>Schutzfeatures (Deckelschalter, Lüftung), Laserklasse, Zertifizierungen (CE, etc.), Wartungsfreundlichkeit</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Preis-Leistung</strong></td>
+                            <td><strong>20%</strong></td>
+                            <td>Marktvergleich, Zubehör im Lieferumfang, Wartungskosten, Verfügbarkeit von Ersatzteilen</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #B0B0B0;"><em>Diese Kriterien werden regelmäßig überprüft und können sich ändern, wenn neue Technologien oder Markttrends sie rechtfertigen. Solche Änderungen werden dokumentiert.</em></p>
+        </section>
+
+        <!-- Section 7: Kontakt & Fragen -->
+        <section>
+            <h2>Hast du Fragen?</h2>
+            <p>Transparenz bedeutet, dass wir auch erreichbar sind. Wenn Sie Fragen zu unseren Geschäftspraktiken, Tests oder Partnerschaften haben, kontaktieren Sie uns direkt:</p>
+
+            <div class="contact-info">
+                <p><strong>E-Mail:</strong> <a href="mailto:kontakt@laserlotse.de" style="color: #FF6B35; text-decoration: none;">kontakt@laserlotse.de</a></p>
+                <p><strong>Kontaktformular:</strong> <a href="/#kontakt" style="color: #FF6B35; text-decoration: none;">Besuchen Sie unsere Kontaktseite</a></p>
+                <p><strong>Rechtliche Fragen:</strong> Unser <a href="/impressum" style="color: #FF6B35; text-decoration: none;">Impressum</a> und unsere <a href="/datenschutz" style="color: #FF6B35; text-decoration: none;">Datenschutzerklärung</a> enthalten weitere wichtige Informationen.</p>
+            </div>
+
+            <p style="margin-top: 1.5rem;">Wir antworten auf alle Fragen innerhalb von 48 Stunden. Falls Sie einen Fehler in einer Bewertung finden oder weitere Informationen benötigen, zögern Sie nicht zu schreiben.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3>Über LaserLotse</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/#tests">Laser-Tests</a></li>
+                        <li><a href="/#vergleiche">Vergleiche</a></li>
+                        <li><a href="/#guides">Guides & Tutorials</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Mehr Infos</h3>
+                    <ul>
+                        <li><a href="/transparenz/">Transparenzrichtlinie</a></li>
+                        <li><a href="/impressum">Impressum</a></li>
+                        <li><a href="/datenschutz">Datenschutz</a></li>
+                        <li><a href="/agb">AGB</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="/#newsletter">Newsletter</a></li>
+                        <li><a href="/#kontakt">Kontakt</a></li>
+                        <li><a href="/#feedback">Feedback</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Partner & Affiliate</h3>
+                    <ul>
+                        <li><a href="https://amazon.de" target="_blank">Amazon PartnerNet</a></li>
+                        <li><a href="https://xtool.com" target="_blank">xTool Affiliate</a></li>
+                        <li><a href="/transparenz/#partner">Alle Partner anzeigen</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 LaserLotse.de — Laser-Tests & Guides für Profis und Hobbyisten.</p>
+                <p>Vollständige Transparenz über Affiliate-Links, Tests und Bewertungskriterien. <a href="/transparenz" style="color: #FF6B35; text-decoration: none;">Transparenzerklärung lesen</a>.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

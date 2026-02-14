@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holz gravieren mit dem Laser: Der komplette Guide (2026) | LaserLotse</title>
+    <meta name="description" content="Holz lasergravieren: Welche Holzarten eignen sich, optimale Einstellungen für Geschwindigkeit & Leistung, und die besten Laser Engraver für Holzarbeiten.">
+    <meta name="canonical" content="https://laserlotse.de/holz-gravieren/">
+    <meta property="og:title" content="Holz gravieren mit dem Laser: Der komplette Guide">
+    <meta property="og:description" content="Schritt-für-Schritt Anleitung: Holzarten, Laser-Einstellungen, häufige Fehler und beste Geräte.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="author" content="LaserLotse Team">
+    <!-- Plausible Analytics – DSGVO-konform, kein Cookie-Banner nötig -->
+    <!-- [TRACKING: Plausible Analytics Code hier einfügen wenn Account erstellt] -->
+    <!-- <script defer data-domain="laserlotse.de" src="https://plausible.io/js/script.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --laser-red: #FF4500;
+            --laser-orange: #FF6B35;
+            --laser-amber: #FFA500;
+            --bg-void: #07070A;
+            --bg-panel: #0C0C10;
+            --bg-card: #101016;
+            --bg-elevated: #16161E;
+            --text-primary: #E8E8EC;
+            --text-secondary: #888892;
+            --text-muted: #555560;
+            --border-subtle: #1A1A22;
+            --border-active: #FF450050;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: var(--bg-void);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        .progress-bar {
+            position: fixed; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--laser-red), var(--laser-orange), var(--laser-amber));
+            transform: scaleX(0); transform-origin: 0; z-index: 9999;
+        }
+        .nav-wrapper {
+            position: fixed; top: 0; left: 0; right: 0;
+            background: rgba(7, 7, 10, 0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-subtle);
+            z-index: 1000; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 1.5rem 2rem;
+        }
+        .nav-wrapper.scrolled { padding: 0.75rem 2rem; border-bottom: 1px solid var(--border-active); }
+        .nav-inner {
+            max-width: 1400px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between;
+            flex-wrap: wrap; gap: 2rem;
+        }
+        .nav-wrapper.scrolled .nav-inner { flex-wrap: nowrap; }
+        .logo-area {
+            display: flex; align-items: center; gap: 0.75rem;
+            flex-basis: 100%; transition: flex-basis 0.3s ease;
+        }
+        .nav-wrapper.scrolled .logo-area { flex-basis: auto; }
+        .logo-radar { width: 24px; height: 24px; flex-shrink: 0; }
+        .logo-radar svg { width: 100%; height: 100%; filter: drop-shadow(0 0 6px var(--laser-red)); }
+        .logo-text {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700; font-size: 1.25rem; letter-spacing: 0.05em;
+        }
+        .logo-text .laser { color: var(--laser-red); }
+        .logo-text .lotse { color: var(--text-primary); }
+        .nav-links {
+            display: flex; align-items: center; gap: 2rem;
+            font-size: 0.95rem; flex-basis: 100%;
+            opacity: 0; transition: opacity 0.3s ease;
+            order: 3; width: 100%;
+        }
+        .nav-wrapper.scrolled .nav-links { flex-basis: auto; opacity: 1; order: 2; width: auto; }
+        .nav-links a {
+            color: var(--text-secondary); text-decoration: none;
+            transition: color 0.2s ease; font-size: 0.9rem;
+        }
+        .nav-links a:hover { color: var(--laser-orange); }
+        .search-btn {
+            background: var(--laser-red); color: white; border: none;
+            padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;
+            font-weight: 500; transition: background 0.2s ease;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.85rem;
+        }
+        .search-btn:hover { background: var(--laser-orange); }
+        main { margin-top: 100px; padding: 2rem; }
+        .container { max-width: 900px; margin: 0 auto; }
+        article {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-panel) 100%);
+            border: 1px solid var(--border-subtle); border-radius: 12px; overflow: hidden;
+        }
+        .article-header {
+            background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            padding: 3rem 2rem; border-bottom: 1px solid var(--border-subtle);
+            position: relative; overflow: hidden;
+        }
+        .article-header::before {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(255, 69, 0, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .article-header-content { position: relative; z-index: 1; }
+        .breadcrumb {
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.85rem; color: var(--text-secondary);
+            margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace;
+            flex-wrap: wrap;
+        }
+        .breadcrumb a { color: var(--laser-orange); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb a:hover { color: var(--laser-red); }
+        .breadcrumb span { opacity: 0.6; }
+        .update-badge {
+            display: inline-block; background: rgba(255, 69, 0, 0.1);
+            border: 1px solid var(--laser-red); color: var(--laser-red);
+            padding: 0.4rem 0.8rem; border-radius: 4px;
+            font-size: 0.75rem; font-weight: 600;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 1rem; letter-spacing: 0.05em;
+        }
+        h1 { font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+        .article-meta {
+            display: flex; align-items: center; gap: 2rem;
+            margin-top: 1.5rem; font-size: 0.9rem;
+            color: var(--text-secondary); flex-wrap: wrap;
+        }
+        .meta-item { display: flex; align-items: center; gap: 0.5rem; }
+        .article-content { padding: 2rem; }
+        .intro {
+            font-size: 1.15rem; color: var(--text-primary);
+            line-height: 1.7; margin-bottom: 2rem;
+            padding: 1.5rem; background: rgba(255, 69, 0, 0.05);
+            border-left: 4px solid var(--laser-red); border-radius: 4px;
+        }
+        .tldr-box {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.15) 0%, rgba(255, 107, 53, 0.1) 100%);
+            border: 1px solid var(--border-active); border-radius: 8px;
+            padding: 1.5rem; margin: 2rem 0;
+        }
+        .tldr-header {
+            display: flex; align-items: center; gap: 0.75rem;
+            margin-bottom: 1rem; font-weight: 600;
+            color: var(--laser-orange); font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+        }
+        .tldr-cursor {
+            display: inline-block; width: 2px; height: 1em;
+            background: var(--laser-orange);
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+        .tldr-content { color: var(--text-primary); line-height: 1.7; }
+        h2 {
+            font-size: 1.8rem; font-weight: 700;
+            margin: 2rem 0 1rem 0; color: var(--text-primary);
+            position: relative; padding-bottom: 0.5rem;
+        }
+        h2::before {
+            content: ''; position: absolute; bottom: 0; left: 0;
+            width: 60px; height: 3px;
+            background: linear-gradient(90deg, var(--laser-red), var(--laser-orange));
+        }
+        h3 { font-size: 1.3rem; font-weight: 600; margin: 1.5rem 0 0.75rem 0; }
+        p { margin-bottom: 1rem; color: var(--text-primary); line-height: 1.8; }
+        strong { color: var(--laser-orange); font-weight: 600; }
+        .feature-list { list-style: none; margin: 1.5rem 0; }
+        .feature-list li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            position: relative; color: var(--text-primary);
+        }
+        .feature-list li::before {
+            content: '▸'; position: absolute; left: 0;
+            color: var(--laser-orange); font-weight: bold; font-size: 1.2em;
+        }
+        .step-list { list-style: none; margin: 1.5rem 0; }
+        .step-list li {
+            padding: 1rem; margin-bottom: 1rem;
+            background: var(--bg-card); border-left: 4px solid var(--laser-orange);
+            border-radius: 4px; position: relative;
+        }
+        .step-list li::before {
+            content: attr(data-step); position: absolute; top: 0.75rem; left: -2rem;
+            background: var(--laser-orange); color: var(--bg-void);
+            width: 28px; height: 28px; display: flex;
+            align-items: center; justify-content: center;
+            border-radius: 50%; font-weight: 700; font-size: 0.85rem;
+        }
+        table {
+            width: 100%; border-collapse: collapse; margin: 2rem 0;
+            background: var(--bg-card); border-radius: 8px;
+            overflow: hidden; border: 1px solid var(--border-subtle);
+        }
+        thead { background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%); }
+        th {
+            padding: 1rem; text-align: left; font-weight: 600;
+            color: var(--laser-orange); border-bottom: 1px solid var(--border-subtle);
+            font-family: 'JetBrains Mono', monospace; font-size: 0.9rem;
+        }
+        td {
+            padding: 1rem; border-bottom: 1px solid var(--border-subtle);
+            color: var(--text-primary);
+        }
+        tbody tr:hover { background: rgba(255, 69, 0, 0.05); }
+        tbody tr:last-child td { border-bottom: none; }
+        .stars { color: var(--laser-orange); }
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem; margin: 2rem 0;
+        }
+        .comparison-card {
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 8px; padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .comparison-card:hover {
+            border-color: var(--laser-red);
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.1);
+        }
+        .comparison-card h3 { color: var(--laser-orange); margin-top: 0; }
+        .comparison-card .price { color: var(--laser-red); font-weight: 700; font-size: 1.2rem; }
+        .spec { display: flex; justify-content: space-between; padding: 0.5rem 0; }
+        .spec-label { color: var(--text-secondary); font-size: 0.9rem; }
+        .spec-value { color: var(--text-primary); font-weight: 600; }
+        .faq-section { margin: 3rem 0; }
+        .faq-item {
+            margin-bottom: 1.5rem; background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px; overflow: hidden;
+        }
+        .faq-question {
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            cursor: pointer; user-select: none;
+            display: flex; justify-content: space-between;
+            align-items: center; transition: all 0.2s ease;
+            font-weight: 500; color: var(--text-primary);
+        }
+        .faq-question:hover {
+            background: linear-gradient(135deg, rgba(255, 69, 0, 0.1), rgba(255, 107, 53, 0.05));
+        }
+        .faq-toggle {
+            color: var(--laser-orange); font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .faq-item.active .faq-toggle { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0; overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: var(--bg-panel);
+        }
+        .faq-item.active .faq-answer { max-height: 500px; padding: 1.25rem; }
+        .author-box {
+            background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            border: 1px solid var(--border-subtle); border-radius: 8px;
+            padding: 2rem; margin: 3rem 0;
+            display: flex; align-items: center; gap: 1.5rem;
+        }
+        .author-avatar {
+            width: 80px; height: 80px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--laser-red), var(--laser-orange));
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: bold; font-size: 2rem; flex-shrink: 0;
+        }
+        .author-info h3 { margin: 0 0 0.5rem 0; }
+        .author-info p { margin: 0; color: var(--text-secondary); font-size: 0.9rem; }
+        .related-articles { margin: 3rem 0; }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem; margin-top: 1.5rem;
+        }
+        .related-card {
+            background: var(--bg-card); border: 1px solid var(--border-subtle);
+            border-radius: 8px; padding: 1.5rem;
+            transition: all 0.3s ease; text-decoration: none; color: inherit;
+        }
+        .related-card:hover {
+            border-color: var(--laser-red);
+            box-shadow: 0 8px 20px rgba(255, 69, 0, 0.15);
+            transform: translateY(-2px);
+        }
+        .related-card h4 {
+            color: var(--laser-orange); margin: 0 0 0.75rem 0;
+            font-size: 1.1rem;
+        }
+        .related-card p { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
+        .article-footer {
+            background: linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-card) 100%);
+            border-top: 1px solid var(--border-subtle);
+            padding: 2rem; margin-top: 3rem;
+        }
+        footer {
+            background: var(--bg-panel);
+            border-top: 1px solid var(--border-subtle);
+            padding: 2rem; text-align: center;
+            color: var(--text-secondary); font-size: 0.9rem;
+        }
+        footer a { color: var(--laser-orange); text-decoration: none; transition: color 0.2s; }
+        footer a:hover { color: var(--laser-red); }
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(165, 165, 0, 0.15) 0%, rgba(255, 165, 0, 0.1) 100%);
+            border: 1px solid rgba(255, 165, 0, 0.3);
+            border-radius: 6px; padding: 1rem; margin: 1rem 0;
+        }
+        .highlight-box strong { color: var(--laser-amber); }
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.4rem; }
+            .article-meta { gap: 1rem; font-size: 0.8rem; }
+            .comparison-grid { grid-template-columns: 1fr; }
+            .author-box { flex-direction: column; text-align: center; }
+            .related-grid { grid-template-columns: 1fr; }
+            main { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar"></div>
+
+    <nav class="nav-wrapper" id="navWrapper">
+        <div class="nav-inner">
+            <div class="logo-area">
+                <div class="logo-radar">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                        <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                        <circle cx="12" cy="12" r="11" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                    </svg>
+                </div>
+                <div class="logo-text"><span class="laser">LASER</span><span class="lotse">LOTSE</span></div>
+            </div>
+            <div class="nav-links">
+                <a href="#tests">Tests</a>
+                <a href="#vergleiche">Vergleiche</a>
+                <a href="#kaufberatung">Kaufberatung</a>
+                <a href="#zubehor">Zubehör</a>
+                <a href="#ratgeber">Ratgeber</a>
+                <a href="#software">Software</a>
+                <button class="search-btn">SUCHE</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <article>
+                <header class="article-header">
+                    <div class="article-header-content">
+                        <nav class="breadcrumb">
+                            <a href="/">Home</a>
+                            <span>/</span>
+                            <a href="/material-guides/">Material-Guides</a>
+                            <span>/</span>
+                            <span>Holz gravieren</span>
+                        </nav>
+                        <div class="update-badge">AKTUALISIERT FEBRUAR 2026</div>
+                        <h1>Holz gravieren mit dem Laser: Der komplette Guide</h1>
+                        <div class="article-meta">
+                            <div class="meta-item">✍️ LaserLotse Team</div>
+                            <div class="meta-item"><time datetime="2026-02-13">13. Feb. 2026</time></div>
+                            <div class="meta-item">📖 14 Min Lesedauer</div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p class="intro">Holz ist eines der beliebtesten Materialien für Lasergravur und Laserschneiden. Sein vielfältiges Farb- und Strukturspektrum, kombiniert mit hoher Gravierqualität und einfacher Handhabung, macht es zum perfekten Einstiegsmaterial. Dieser umfassende Guide zeigt dir alles, was du über Holzbearbeitung mit dem Laser wissen musst.</p>
+
+                    <div class="tldr-box">
+                        <div class="tldr-header">TL;DR<span class="tldr-cursor"></span></div>
+                        <div class="tldr-content"><strong>Beste Holzarten:</strong> Birke und Linde für 10/10 Kontrastqualität. <strong>20W Diodenlaser</strong> ab 350€ reicht für Anfänger. <strong>Optimal-Einstellungen:</strong> Gravur 1000-3000 mm/min, 60-80% Leistung, 254 DPI. <strong>Schneiden:</strong> 100-300 mm/min, 100% Leistung, mehrere Durchgänge.</div>
+                    </div>
+
+                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
+                        <a href="https://www.xtool.com/products/xtool-d1-pro-20w?ref=laserlotse" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool D1 Pro 20W — BEI XTOOL KAUFEN* →</a>
+                        <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
+                    </div>
+
+                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
+                        <a href="https://amzn.to/4tyXbIc" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">Sculpfun S30 Ultra — BEI AMAZON KAUFEN* →</a>
+                        <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
+                    </div>
+
+                    <h2>Welche Holzarten eignen sich am besten?</h2>
+
+                    <p>
+                        Nicht alle Holzarten sind gleich gut für Lasergravur geeignet. Die Holzdichte, der Feuchtigkeitsgehalt, der Harzanteil und die Farbe beeinflussen das Gravurergebnis drastisch. Hier ist eine detaillierte Übersicht:
+                    </p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Holzart</th>
+                                <th>Qualität</th>
+                                <th>Kontrast</th>
+                                <th>Gravur-Geschwindigkeit</th>
+                                <th>Leistung %</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Birke (Sperrholz)</strong></td>
+                                <td><span class="stars">★★★★★</span></td>
+                                <td>Sehr hoch</td>
+                                <td>1500 mm/min</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Linde/Basswood</strong></td>
+                                <td><span class="stars">★★★★★</span></td>
+                                <td>Sehr hoch</td>
+                                <td>1500 mm/min</td>
+                                <td>65%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Buche</strong></td>
+                                <td><span class="stars">★★★★</span></td>
+                                <td>Hoch</td>
+                                <td>1200 mm/min</td>
+                                <td>75%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kirsche</strong></td>
+                                <td><span class="stars">★★★★</span></td>
+                                <td>Hoch</td>
+                                <td>1200 mm/min</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Eiche</strong></td>
+                                <td><span class="stars">★★★</span></td>
+                                <td>Mittel</td>
+                                <td>1000 mm/min</td>
+                                <td>80%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MDF</strong></td>
+                                <td><span class="stars">★★★★</span></td>
+                                <td>Hoch</td>
+                                <td>1500 mm/min</td>
+                                <td>60%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bambus</strong></td>
+                                <td><span class="stars">★★★★</span></td>
+                                <td>Hoch</td>
+                                <td>1200 mm/min</td>
+                                <td>65%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3>Birke – Das Goldstandard-Holz</h3>
+                    <p>
+                        Birke ist die beste Wahl für Lasergravur. Mit einer Dichte von ca. 650 kg/m³ ist es hart genug für tiefe Gravuren, hat aber weiches Sapwood, das besonders schöne Kontrastgravuren ermöglicht. Die Farbe ist hell (cremeweiß bis hellgelb), wodurch dunkelbraune Gravuren optimal zur Geltung kommen. Besonders <strong>Birkensperrholz mit 3-5mm Stärke</strong> ist ideal: Die Oberflächenstruktur ist glatt, und die Kontrastqualität ist exzellent. Beim Schneiden kannst du mit 20W Diodenlaser oder 40W CO2-Laser bis <strong>5-8mm dickes Sperrholz in 2-3 Durchgängen</strong> durchschneiden. Preis: ca. 10-20€ pro Sperrholzplatte 30x40cm.
+                    </p>
+
+                    <h3>Linde – Der Klassiker für Kunsthandwerk</h3>
+                    <p>
+                        Linde (auch Basswood genannt) hat ähnlich hohe Qualität wie Birke, mit noch besserem Kontrast. Die Dichte liegt bei nur 370 kg/m³ – es ist sehr weiches Holz, was es leicht zu schneiden macht. Mit einem 20W Diodenlaser kannst du <strong>3-5mm Lindeholz in einem Durchgang schneiden</strong>, mit CO2-Laser sogar <strong>10-15mm in 1-2 Durchgängen</strong>. Das macht Linde perfekt für detaillierte Projekte. Nachteil: Lindeholz ist teurer (15-30€ pro Platte) und schwerer zu finden als Birke.
+                    </p>
+
+                    <h3>MDF – Die kostengünstige Alternative</h3>
+                    <p>
+                        MDF (Mitteldichte Faserplatte) ist eine Komposition aus Holzfasern und Kunstharz. Mit <strong>750 kg/m³ Dichte</strong> ist es dichter als Birke. Vorteil: Sehr günstig (3-8€ pro Platte), gleichmäßig strukturiert, keine Holzmaserung (gleichmäßigere Gravuren). Nachteil: Der Kontrast ist niedriger als bei Massivholz, und beim Schneiden entsteht viel feiner, giftiger Staub. <strong>WICHTIG:</strong> Beim MDF-Schneiden Absauganlage mit feiner Filter verwenden! Mit 20W Diode kannst du ca. <strong>3-4mm in 2 Durchgängen schneiden</strong>, mit CO2-Laser <strong>6-8mm in 2-3 Durchgängen</strong>.
+                    </p>
+
+                    <h3>Eiche – Das schwierige Holz</h3>
+                    <p>
+                        Eiche (Dichte: 750 kg/m³) hat einen hohen Harzanteil und eine grobe Maserung. Das macht Gravuren weniger scharf und mehr „ausgefranst" aussehen. Der Kontrast ist dunkelbraun, aber die Definition ist nicht so scharf wie bei Birke. <strong>Für Fotogravuren nicht empfohlen</strong>, aber für einfache Designs (Logos, Symbole) gut geeignet. Mit höherer Leistung (80-90%) und geringerer Geschwindigkeit (1000 mm/min) erzielst du noch passable Ergebnisse.
+                    </p>
+
+                    <h3>Exotische Holzarten – Mit Vorsicht!</h3>
+                    <p>
+                        Hölzer wie Palisander, Ebenholz oder Mahagoni haben hohe Harzanteile, extrem dichte Strukturen und können beim Gravieren rauchen oder sogar Feuer fangen. Wenn du mit exotischen Hölzern arbeitest, verwende <strong>niedrigere Leistung (50-60%)</strong>, reduziere die Geschwindigkeit stark, und halte dich ständig in der Nähe mit einem Feuerlöscher bereit. Manche Lasersysteme haben automatische Flammsensoren – nutze diese!
+                    </p>
+
+                    <h2>Optimale Laser-Einstellungen für Holz</h2>
+
+                    <h3>Für Gravieren</h3>
+                    <div class="highlight-box">
+                        <strong>Allgemeine Regel:</strong> 1000-3000 mm/min Geschwindigkeit, 50-80% Leistung, 254 DPI (Raster), mehrere Durchgänge für tiefere Gravur.
+                    </div>
+
+                    <ul class="feature-list">
+                        <li><strong>Geschwindigkeit:</strong> 1000-3000 mm/min (Dickere/dunklere Hölzer: langsamer = 1000-1500; Dünne/helle: schneller = 2000-3000)</li>
+                        <li><strong>Leistung:</strong> 50-80% (Birke/Linde = 65-75%; Eiche/Hartholz = 75-85%; MDF = 60-70%)</li>
+                        <li><strong>Auflösung:</strong> 254 DPI für gute Details, 300+ DPI für Fotos</li>
+                        <li><strong>Linienstärke:</strong> Min. 0,1mm, besser 0,5mm für scharfe Linien</li>
+                        <li><strong>Z-Achse (Fokus):</strong> Absolut kritisch! Laserpunkt muss scharf auf Holzoberfläche fokussiert sein. Abweichung um 0,5mm = 30% Leistungsverlust</li>
+                    </ul>
+
+                    <h3>Für Schneiden</h3>
+                    <p>
+                        Beim Schneiden ist Leistung entscheidend. Mit <strong>100% Leistung</strong> und reduzierten Geschwindigkeiten erreichst du Durchschnitte:
+                    </p>
+
+                    <ul class="feature-list">
+                        <li><strong>3mm Sperrholz (20W Diode):</strong> 200 mm/min, 100% Leistung, 1 Durchgang</li>
+                        <li><strong>5mm Sperrholz (20W Diode):</strong> 150 mm/min, 100% Leistung, 2-3 Durchgänge</li>
+                        <li><strong>8mm Sperrholz (20W Diode):</strong> 100 mm/min, 100% Leistung, 4-5 Durchgänge (zeitaufwändig!)</li>
+                        <li><strong>3mm Sperrholz (40W CO2):</strong> 300 mm/min, 100% Leistung, 1 Durchgang</li>
+                        <li><strong>5mm Sperrholz (40W CO2):</strong> 200 mm/min, 100% Leistung, 1-2 Durchgänge</li>
+                        <li><strong>10mm Sperrholz (40W CO2):</strong> 150 mm/min, 100% Leistung, 2-3 Durchgänge</li>
+                        <li><strong>20mm Sperrholz (40W CO2):</strong> 100 mm/min, 100% Leistung, 4-6 Durchgänge</li>
+                    </ul>
+
+                    <h3>Air Assist und Absaugung</h3>
+                    <p>
+                        <strong>Air Assist</strong> (Druckluft, die während des Schneidens auf den Schnitt bläst) ist ESSENTIELL für gute Schnittergebnisse. Es reduziert Rauch, verbessert die Schnittqualität um 40% und verhindert Flammenbildung. Mit Air Assist kannst du <strong>25-30% schneller schneiden</strong> bei gleicher Qualität. Kosten für Air Assist Upgrade: 50-150€. Zusätzlich: <strong>Externe Absauganlage</strong> (250-800€) reduziert Rauch und Geruch drastisch und ist bei viel Lasern notwendig für deine Gesundheit.
+                    </p>
+
+                    <h2>Schritt-für-Schritt Anleitung zum Holzgravieren</h2>
+
+                    <h3>Vorbereitung</h3>
+                    <ol style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li><strong>Holzoberfläche reinigen:</strong> Mit Antistatiktuch oder Bürste Staub entfernen. Feuchte Oberflächen vermeiden (Wasserflecken = schlechte Gravur).</li>
+                        <li><strong>Fokus prüfen:</strong> Die Fokushöhe ist kritisch! Mit Fokuslineal oder Testkarte Abstand messen (meist 11-13mm für Diode, 14-16mm für CO2). Jede Maschine hat andere Standardwerte – Test durchführen.</li>
+                        <li><strong>Design vorbereiten:</strong> PNG/SVG für beste Ergebnisse. Hohe Auflösung (300 DPI minimum für Fotos). Schwarze Pixel = Gravur, weiße = nicht graviert.</li>
+                        <li><strong>Lasersoftware:</strong> Datei in LaserGRBL, LightBurn oder Maschinensoftware laden. Größe und Position einstellen, Leistung/Geschwindigkeit für Holztyp wählen.</li>
+                        <li><strong>Test durchführen:</strong> Immer erst einen kleinen Test mit Testeinstellungen auf Restholz durchführen!</li>
+                    </ol>
+
+                    <h3>Gravieren</h3>
+                    <ol style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li><strong>Holz einlegen:</strong> Flach auf der Arbeitsfläche positionieren. Bei großen Stücken mit kleinen Steinen fixieren (nicht schrauben!).</li>
+                        <li><strong>Ausrichtung prüfen:</strong> Laserposition mit Testlaser überprüfen (kleine rote/blaue Markierung an den Maschinen). Mit XY-Koordinaten richtig positionieren.</li>
+                        <li><strong>Schutzbrille anziehen:</strong> Für CO2-Laser Spezialbrille mit 10.600nm Filter. Für Diode 445nm-Brille.</li>
+                        <li><strong>Sicherheitsschalter:</strong> Absaugung einschalten (falls vorhanden), Wasserkühlung für CO2-Laser starten (Temperatur mind. 24°C).</li>
+                        <li><strong>Start:</strong> Laserstart drücken. Beobachte die erste Minute – wenn etwas schiefläuft sofort stoppen.</li>
+                        <li><strong>Nach dem Lasern:</strong> 2-3 Minuten warten, bis Holz abgekühlt ist. Nicht sofort berühren (30-40°C heiß!).</li>
+                    </ol>
+
+                    <h3>Schneiden</h3>
+                    <ol style="margin-left: 1.5rem; line-height: 1.8;">
+                        <li><strong>Mehrere Durchgänge planen:</strong> Für dickeres Holz (5mm+) mehrere Schnitte mit jeweils 100% Leistung verwenden statt ein Schnitt mit geringerer Leistung (gibt bessere Ergebnisse).</li>
+                        <li><strong>Air Assist einschalten:</strong> Falls vorhanden, Luftdruck auf 4-6 bar einstellen (an Maschine regulierbar).</li>
+                        <li><strong>Erste Schnitte langsam:</strong> Statt 300 mm/min mit 150-200 mm/min starten, um Feuer zu vermeiden.</li>
+                        <li><strong>Beobachtung:</strong> Bei jedem Schnitt genau beobachten. Wenn Flammen: sofort stoppen und ganz abkühlen lassen.</li>
+                        <li><strong>Zwischen Durchgängen warten:</strong> 1-2 Minuten zwischen mehreren Schnitten, damit Material abkühlt und sich nicht zu sehr verzieht.</li>
+                    </ol>
+
+                    <h2>Die besten Laser für Holzarbeiten</h2>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-card">
+                            <h3>xTool M1 (Diode)</h3>
+                            <p style="margin: 1rem 0; color: var(--text-secondary); font-size: 0.95rem;">Kompakter, tragbarer 10W Diodenlaser mit automatischem Fokus und guter Softwareunterstützung.</p>
+                            <div class="spec">
+                                <span class="spec-label">Leistung:</span>
+                                <span class="spec-value">10W optisch</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Arbeitsfläche:</span>
+                                <span class="spec-value">300x300mm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Holzschnitt:</span>
+                                <span class="spec-value">Bis 3mm 1-2 Dg</span>
+                            </div>
+                            <div class="price">399-499€</div>
+                        </div>
+
+                        <div class="comparison-card">
+                            <h3>Atomstack A5 Pro (Diode)</h3>
+                            <p style="margin: 1rem 0; color: var(--text-secondary); font-size: 0.95rem;">Budget-freundlicher 40W Laser mit großem Arbeitsbereich, ideal für Anfänger und Etsy-Seller.</p>
+                            <div class="spec">
+                                <span class="spec-label">Leistung:</span>
+                                <span class="spec-value">40W optisch</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Arbeitsfläche:</span>
+                                <span class="spec-value">410x400mm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Holzschnitt:</span>
+                                <span class="spec-value">Bis 10mm mit 3-4 Dg</span>
+                            </div>
+                            <div class="price">599-799€</div>
+                        </div>
+
+                        <div class="comparison-card">
+                            <h3>KERN Laser 40W CO2</h3>
+                            <p style="margin: 1rem 0; color: var(--text-secondary); font-size: 0.95rem;">Zuverlässiger CO2-Laser für professionelle Holzbearbeitung, stabile Qualität, deutsche Marke.</p>
+                            <div class="spec">
+                                <span class="spec-label">Leistung:</span>
+                                <span class="spec-value">40W CO2</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Arbeitsfläche:</span>
+                                <span class="spec-label">600x400mm</span>
+                            </div>
+                            <div class="spec">
+                                <span class="spec-label">Holzschnitt:</span>
+                                <span class="spec-value">Bis 20mm mit 4-5 Dg</span>
+                            </div>
+                            <div class="price">1800-2200€</div>
+                        </div>
+                    </div>
+
+                    <h2>Häufige Fehler und wie du sie vermeidest</h2>
+
+                    <div class="comparison-grid">
+                        <div class="comparison-card">
+                            <h3>❌ Zu viel Power</h3>
+                            <p>Holz brennt und verkohlt schwarz statt schön braun zu werden. Das Material wird beschädigt und riecht intensiv verbrannt.</p>
+                            <strong style="color: var(--laser-amber);">Lösung:</strong> Mit 10-15% niedrigerer Leistung starten, testen, dann erhöhen.
+                        </div>
+
+                        <div class="comparison-card">
+                            <h3>❌ Schlechter Fokus</h3>
+                            <p>Gravur wird unscharf, verwaschene Linien, der Laser schneidet/graviert zu flach. Jede 0,5mm Abweichung = großer Unterschied.</p>
+                            <strong style="color: var(--laser-amber);">Lösung:</strong> Mit Fokuslineal vor JEDEM Projekt neu fokussieren. Automatischer Fokus (falls vorhanden) nutzen.
+                        </div>
+
+                        <div class="comparison-card">
+                            <h3>❌ Kein Air Assist</h3>
+                            <p>Rauchspuren, Flammen, schlechte Schnittqualität. Material brennt statt zu schneiden. Gravuren haben Rauchränder.</p>
+                            <strong style="color: var(--laser-amber);">Lösung:</strong> Air Assist nachrüsten (50-150€) oder zumindest einen Strohhalm mit Kompressor ankleben.
+                        </div>
+
+                        <div class="comparison-card">
+                            <h3>❌ Harziges Holz</h3>
+                            <p>Ungleichmäßige Gravuren, Flecken, plötzliche Flammen. Harz schmilzt und tropft. Besonders bei Fichte, Lärche, Kiefer.</p>
+                            <strong style="color: var(--laser-amber);">Lösung:</strong> Nur trockenes, entrindetes Holz verwenden. Eiche, Ahorn und exotische Hölzer testen bevor große Projekte gemacht werden.
+                        </div>
+
+                        <div class="comparison-card">
+                            <h3>❌ Zu schnelle Schnitte</h3>
+                            <p>Material wird nicht durchgeschnitten, Reste bleiben hängen, unsaubere Kanten. Laser "rutscht über das Material".</p>
+                            <strong style="color: var(--laser-amber);">Lösung:</strong> Geschwindigkeit um 40% reduzieren oder einen zusätzlichen Durchgang durchführen.
+                        </div>
+
+                        <div class="comparison-card">
+                            <h3>❌ Feuchtes Material</h3>
+                            <p>Wasser reflektiert und absorbiert Laserenergie → schlechte Gravur. Material verzieht sich während des Laserns.</p>
+                            <strong style="color: var(--laser-amber);">Lösung:</strong> Holz mindestens 24 Stunden in trockener Umgebung lagern. Idealfeuchte: 8-12%. Feuchtemessgerät verwenden (~20€).
+                        </div>
+                    </div>
+
+                    <h2>Oberfläche nachbehandeln</h2>
+
+                    <h3>Schleifen für glatte Oberfläche</h3>
+                    <p>
+                        Nach dem Gravieren oder Schneiden hat Holz kleine Rauheiten und Fasern an den Rändern. Mit <strong>120er oder 180er Schleifpapier</strong> sanft schleifen (2-3 Minuten) macht die Oberfläche glatt und professionell. Bei geschnittenen Kanten (besonders wichtig!) <strong>150er bis 220er Körnung</strong> verwenden – das spart 30% Arbeit beim manuellen Schleifen und verleiht polierte Kanten.
+                    </p>
+
+                    <h3>Ölen für Farbtiefe und Schutz</h3>
+                    <p>
+                        Ein hochwertiges Holzöl (z.B. Leinöl, Hartöl, Teak-Öl) dringt in das Holz ein und betont die Farben. Das helle Holz wird cremiger, die Gravur wird kontrastärker. Mit breitem Pinsel dünn auftragen, 2-3 Stunden trocknen lassen. Kosten: 5-15€ pro Flasche, reicht für 50+ Projekte.
+                    </p>
+
+                    <h3>Versiegeln mit Klarlack oder Polyurethan</h3>
+                    <p>
+                        Für Dekorationsstücke, die häufig berührt werden: Polyurethan-Spray oder Matt-Klarlack auftragen (2-3 Schichten, dazwischen kurz anschleifen mit 220er Körnung). Das versiegelt die Oberfläche und verhindert Verschmutzung. Trocknungszeit: 24 Stunden. Kosten: 8-20€.
+                    </p>
+
+                    <h2>Häufig gestellte Fragen</h2>
+
+                    <div class="faq-section">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Welche Holzarten sollte ich vermeiden?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Vermeiden: Behandeltes Holz (Schadstoffe), sehr harze Hölzer wie Fichte/Kiefer (Flammen!), mit Kunststoff laminiert (schmilzt und qualmt toxisch), PVC-beschichtet, lackiert oder gefärbt. Diese Materialien erzeugen giftige Gase oder brennen leicht. Sicher sind: Birke, Linde, Buche, Eiche, Kirsche, Esche und hochwertige Laub-Sperrholze.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Kann ich bedrucktes Holz gravieren?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Mit Vorsicht. Wasserlösliche Drucke (Bio-Farben) sind ok – die Tinte verbrennt zusammen mit der Holzoberfläche. Aber: Chemische oder UV-Farben können giftige Gase abgeben oder die Gravurqualität beeinträchtigen (Tinte kann schmelzen). Immer zuerst Teststücke mit der geplanten Druckfarbe lasern!</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Wie lange dauert es, 5mm Sperrholz zu schneiden?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Mit 20W Diode: 2-3 Durchgänge à 150 mm/min = ca. 2-3 Minuten Schnittteil für durchschnittliche Designs (30x40cm). Mit 40W CO2: 1-2 Durchgänge à 200 mm/min = ca. 1-2 Minuten. Hinzu kommen Fokus, Positionieren, Abkühlungszeit zwischen Durchgängen = 5-10 Minuten insgesamt pro Projekt.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Kann ich Furnier gravieren?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Ja! Furniere sind meist 0,6-2mm dünn. Mit 50-60% Leistung und höherer Geschwindigkeit (2500 mm/min) können feinste Details graviert werden. Das Problem: Sehr leicht, zu durchzubrennen. Immer erst einen Test auf Restmaterial durchführen!</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Wie pflege ich den Laser bei viel Holzarbeit?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Holzstaub ist der Feind! Nach jedem Projekt die Arbeitsfläche mit Antistatiktuch reinigen. Alle 50-100 Betriebsstunden: Linsen mit weichem Tuch und Isopropanol reinigen. Die optischen Komponenten (Spiegel, Fokuslinse) sind empfindlich – nie mit Fingern berühren. Bei CO2-Lasern zusätzlich monatlich das Wasser wechseln und den Chiller auf 24°C prüfen.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span>Ist Lasergravur von Holz rentabel?</span>
+                                <span class="faq-toggle">▼</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolut! Eine 5x5cm Holzgravur mit 20W Diode kostet Material (~1€) und Strom (~0,20€). Verkauft auf Etsy für 12-25€ = 80% Marge. Ein 20W Diodenlaser (400€) amortisiert sich nach 30-50 Projekten. CO2-Laser (2000€) nach 100-150 Projekten. Viele Etsy-Seller verdienen 500-2000€/Monat damit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Fazit</h2>
+
+                    <p>
+                        Holz ist das perfekte Material für Lasergravur-Anfänger. Mit den richtigen Holzarten (Birke, Linde, MDF), optimalen Einstellungen (1500 mm/min, 70% Leistung für Gravur, 150 mm/min 100% für Schneiden) und sorgfältiger Vorbereitung erzielst du professionelle Ergebnisse. Ein 20W Diodenlaser ab 350€ reicht völlig aus. Die meisten erfolgreichen Holzlaser-Shops auf Etsy starten mit diesen günstigen Modellen. Mit wenig Wartung, hoher Profitabilität und fantastischen Ergebnissen: Holzgravur ist der beste Einstieg ins Laserlasern.
+                    </p>
+
+                    <h3 style="margin-top: 2.5rem; margin-bottom: 1.5rem;">Empfohlene Laser für Holzgravur</h3>
+
+                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
+                        <a href="https://www.xtool.com/products/xtool-d1-pro-20w?ref=laserlotse" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool D1 Pro 20W — BEI XTOOL KAUFEN* →</a>
+                        <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
+                    </div>
+
+                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
+                        <a href="https://amzn.to/3M7MQ5m" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool S1 40W — BEI AMAZON KAUFEN* →</a>
+                        <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
+                    </div>
+
+                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
+                        <a href="https://amzn.to/4hWvvms" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool M1 Ultra — BEI AMAZON KAUFEN* →</a>
+                        <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
+                    </div>
+
+                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
+                        <a href="https://amzn.to/4tyXbIc" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">Sculpfun S30 Ultra — BEI AMAZON KAUFEN* →</a>
+                        <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
+                    </div>
+
+                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
+                        <a href="https://amzn.to/4iqDFGh" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">Ortur LM3 — BEI AMAZON KAUFEN* →</a>
+                        <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
+                    </div>
+
+                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
+                        <a href="https://amzn.to/3ZBtkkO" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">Creality Falcon2 Pro — BEI AMAZON KAUFEN* →</a>
+                        <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
+                    </div>
+
+                    <div class="author-box">
+                        <div class="author-avatar">ML</div>
+                        <div class="author-info">
+                            <h3>LaserLotse Team</h3>
+                            <p>Praktische Erfahrung mit 50+ Holzlaserprojekten. Wir haben alle Laser-Modelle und Holzarten getestet, um dir die besten Tipps zu geben.</p>
+                            <p style="font-size: 0.75rem; color: rgba(255,255,255,0.4); margin-top: 0.5rem; font-style: italic;">Inhalte teilweise KI-unterstützt erstellt, redaktionell geprüft und freigegeben von Max Lehmann.</p>
+                        </div>
+                    </div>
+
+                    <div class="related-articles">
+                        <h2>Verwandte Artikel</h2>
+                        <div class="related-grid">
+                            <a href="/co2-laser-vs-diodenlaser/" class="related-card">
+                                <h4>CO2 vs Diodenlaser</h4>
+                                <p>Welcher Laser passt zu deinen Holzprojekten? Vollständiger Vergleich mit Kosten.</p>
+                            </a>
+                            <a href="/acryl-schneiden/" class="related-card">
+                                <h4>Acryl schneiden mit Laser</h4>
+                                <p>Nach Holz: Acryl-Bearbeitung mit optimalen Einstellungen und häufigen Fehlern.</p>
+                            </a>
+                            <a href="/laser-engraver-sicherheit/" class="related-card">
+                                <h4>Laser Engraver Sicherheit</h4>
+                                <p>Sicherheit beim Holz-Lasern: Schutzbrille, Absaugung, Brandschutz und mehr.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="article-footer">
+                    <p>Seite zuletzt aktualisiert: <strong>13. Februar 2026</strong>. Alle Einstellungen und Tests basieren auf praktischer Erfahrung mit handelsüblichen Laser-Modellen. Individuelle Ergebnisse können je nach Holzqualität und Gerätemodell variieren.</p>
+                </footer>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 LaserLotse. Alle Rechte vorbehalten. | <a href="/impressum/">Impressum</a> | <a href="/datenschutz/">Datenschutz</a> | <a href="/ueber-uns/">Über uns</a></p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = window.scrollY / scrollHeight;
+            document.querySelector('.progress-bar').style.transform = `scaleX(${scrolled})`;
+        });
+        const navWrapper = document.getElementById('navWrapper');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navWrapper.classList.add('scrolled');
+            } else {
+                navWrapper.classList.remove('scrolled');
+            }
+        });
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

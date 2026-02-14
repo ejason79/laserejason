@@ -1,0 +1,36 @@
+# robots.txt – LaserLotse.de
+# Strategie: AI-Crawler ERLAUBT (KIEO-Strategie für maximale Zitier-Wahrscheinlichkeit)
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /drafts/
+Disallow: /private/
+
+# AI-Crawler explizit erlaubt
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# Sitemap
+Sitemap: https://laserlotse.de/sitemap.xml
