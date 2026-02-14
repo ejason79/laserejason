@@ -20,36 +20,515 @@
     <!-- <script defer data-domain="laserlotse.de" src="https://plausible.io/js/script.js"></script> -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{--laser-red:#FF4500;--laser-orange:#FF6B35;--laser-amber:#FFA500;--bg-void:#07070A;--bg-panel:#0C0C10;--bg-card:#101016;--bg-elevated:#16161E;--text-primary:#E8E8EC;--text-secondary:#888892;--text-muted:#555560}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background-color:var(--bg-void);color:var(--text-primary);line-height:1.6;font-size:16px}.nav-wrapper{position:fixed;top:0;left:0;right:0;z-index:1000;background-color:transparent;transition:all 0.3s ease;border-bottom:1px solid transparent}.nav-wrapper.scrolled{background-color:rgba(12,12,16,0.95);border-bottom-color:rgba(255,69,0,0.2);backdrop-filter:blur(10px)}.nav-inner{max-width:1200px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}.logo-area{display:flex;align-items:center;gap:0.75rem;font-size:1.25rem;font-weight:700;color:var(--text-primary);text-decoration:none;transition:opacity 0.3s ease}.logo-area:hover{opacity:0.8}.logo-svg{width:32px;height:32px;flex-shrink:0;stroke:currentColor}.nav-links{display:flex;gap:2rem;align-items:center}.nav-links a{color:var(--text-secondary);text-decoration:none;font-size:0.95rem;transition:color 0.3s ease;font-weight:500}.nav-links a:hover{color:var(--laser-red)}.nav-links a.active{color:var(--laser-red)}header{margin-top:80px;padding:3rem 2rem;background:linear-gradient(135deg,rgba(255,69,0,0.05) 0%,rgba(255,107,53,0.02) 100%);border-bottom:1px solid rgba(255,69,0,0.1)}.header-inner{max-width:900px;margin:0 auto}.breadcrumb{display:flex;gap:0.5rem;margin-bottom:1.5rem;font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--text-secondary)}.breadcrumb a{color:var(--laser-red);text-decoration:none}.update-badge{display:inline-flex;align-items:center;gap:0.5rem;background-color:var(--bg-elevated);border:1px solid rgba(255,69,0,0.3);padding:0.5rem 1rem;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--laser-red);margin-bottom:1rem}h1{font-size:2.5rem;font-weight:800;line-height:1.2;margin-bottom:1rem}.header-meta{display:flex;gap:2rem;font-size:0.9rem;color:var(--text-secondary);margin-top:1rem}main{max-width:900px;margin:0 auto;padding:0 2rem}section{margin:3rem 0}h2{font-size:1.8rem;font-weight:700;margin:2.5rem 0 1rem 0}h3{font-size:1.3rem;font-weight:600;margin:1.5rem 0 0.75rem 0}p{margin-bottom:1rem;line-height:1.8}a{color:var(--laser-red);text-decoration:none}a:hover{opacity:0.8;text-decoration:underline}.comparison-table{width:100%;border-collapse:collapse;margin:2rem 0;background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);border-radius:4px;overflow:hidden}.comparison-table th{background-color:var(--bg-elevated);padding:1rem;text-align:left;font-weight:600;font-family:'JetBrains Mono',monospace;font-size:0.9rem;border-bottom:1px solid rgba(255,69,0,0.2)}.comparison-table td{padding:1rem;border-bottom:1px solid rgba(255,69,0,0.1)}.comparison-table tbody tr:hover{background-color:rgba(255,69,0,0.05)}.check{color:#4CAF50;font-weight:700}.cross{color:var(--laser-red)}.feature-section{background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);border-radius:4px;padding:2rem;margin:2rem 0}.faq-item{background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);margin-bottom:1rem;border-radius:4px;overflow:hidden}.faq-question{padding:1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background-color 0.3s ease;font-weight:600}.faq-question:hover{background-color:var(--bg-elevated)}.faq-icon{color:var(--laser-red);font-size:1.2rem;transition:transform 0.3s ease}.faq-item.active .faq-icon{transform:rotate(180deg)}.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding:0 1.5rem}.faq-item.active .faq-answer{max-height:500px;padding:0 1.5rem 1.5rem 1.5rem}.author-box{background-color:var(--bg-elevated);border:1px solid rgba(255,69,0,0.1);padding:2rem;border-radius:4px;margin:3rem 0;display:flex;gap:1.5rem;align-items:flex-start}.author-avatar{width:80px;height:80px;border-radius:50%;background-color:var(--bg-card);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:2rem;color:var(--laser-red);flex-shrink:0}.author-info h4{margin:0 0 0.5rem 0}.author-info p{margin:0;font-size:0.9rem;color:var(--text-secondary)}.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}.related-card{background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);padding:1.5rem;border-radius:4px;transition:border-color 0.3s ease}.related-card:hover{border-color:rgba(255,69,0,0.3)}.related-card h4{margin:0 0 0.75rem 0;font-size:1.1rem}footer{background-color:var(--bg-panel);border-top:1px solid rgba(255,69,0,0.1);padding:3rem 2rem;margin-top:4rem}.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2rem}.footer-section h4{color:var(--text-primary);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.05em}.footer-section ul{list-style:none}.footer-section a{display:block;margin-bottom:0.75rem;font-size:0.9rem;color:var(--text-secondary);transition:color 0.3s ease}.footer-section a:hover{color:var(--laser-red)}.footer-bottom{border-top:1px solid rgba(255,69,0,0.1);padding-top:2rem;text-align:center;color:var(--text-secondary);font-size:0.9rem}@media(max-width:768px){h1{font-size:1.8rem}h2{font-size:1.4rem}.nav-links{gap:1rem;font-size:0.85rem}.comparison-table{font-size:0.85rem}.related-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.author-box{flex-direction:column;text-align:center}}
-  </style>
+/* ═══════════════════════════════════════════════
+   LASERLOTSE V3 — RADAR SCANNER DESIGN SYSTEM
+   ═══════════════════════════════════════════════ */
+
+:root {
+  /* Core Colors */
+  --laser-red: #FF4500;
+  --laser-orange: #FF6B35;
+  --laser-amber: #FFA500;
+  --laser-glow: #FF450040;
+
+  /* Backgrounds */
+  --bg-void: #07070A;
+  --bg-panel: #0C0C10;
+  --bg-card: #101016;
+  --bg-elevated: #16161E;
+  --bg-hover: #1A1A24;
+
+  /* Text */
+  --text-primary: #E8E8EC;
+  --text-secondary: #888892;
+  --text-muted: #555560;
+  --text-ghost: #333340;
+
+  /* Borders */
+  --border-subtle: #1A1A22;
+  --border-active: #FF450050;
+  --border-glow: #FF450030;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Fonts */
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--laser-red) var(--bg-void);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--laser-orange);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+a:hover {
+  color: var(--laser-amber);
+}
+
+/* ── CUSTOM SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-void); }
+::-webkit-scrollbar-thumb { background: var(--laser-red); border-radius: 3px; }
+
+/* ═══════════════════════════════════════════════
+   NAVIGATION — PIXEL-PERFECT SMOOTH TRANSITION
+   Screen 1: Centered logo + nav below (tall)
+   Screen 2: Compact sticky bar (logo left, nav right)
+   All elements animate smoothly, no show/hide!
+   ═══════════════════════════════════════════════ */
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-wrapper.scrolled {
+  background: rgba(7, 7, 10, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom-color: var(--border-subtle);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.6);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px 0 40px;
+  transition: padding 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+
+.nav-wrapper.scrolled .nav-inner {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 58px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-basis: 100%;
+  justify-content: center;
+  padding-bottom: 12px;
+  transition: flex-basis 0.5s cubic-bezier(0.16,1,0.3,1),
+              padding 0.5s cubic-bezier(0.16,1,0.3,1),
+              gap 0.5s ease;
+}
+
+.nav-wrapper.scrolled .logo-area {
+  flex-basis: auto;
+  justify-content: flex-start;
+  padding-bottom: 0;
+  gap: 10px;
+}
+
+.logo-radar {
+  width: 48px;
+  height: 48px;
+  transition: width 0.5s cubic-bezier(0.16,1,0.3,1),
+              height 0.5s cubic-bezier(0.16,1,0.3,1);
+  flex-shrink: 0;
+}
+
+.nav-wrapper.scrolled .logo-radar {
+  width: 30px;
+  height: 30px;
+}
+
+.logo-text {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.logo-text .laser {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 3px;
+  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
+              letter-spacing 0.5s ease;
+}
+
+.logo-text .lotse {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 3px;
+  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
+              letter-spacing 0.5s ease;
+}
+
+.nav-wrapper.scrolled .logo-text .laser,
+.nav-wrapper.scrolled .logo-text .lotse {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 14px;
+  transition: padding 0.5s cubic-bezier(0.16,1,0.3,1),
+              gap 0.5s ease;
+}
+
+.nav-wrapper.scrolled .nav-links {
+  padding-bottom: 0;
+  gap: 2px;
+}
+
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background 0.2s ease,
+              font-size 0.4s ease, padding 0.4s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-wrapper.scrolled .nav-links a {
+  font-size: 10px;
+  padding: 6px 10px;
+  letter-spacing: 1.5px;
+}
+
+.nav-links a:hover {
+  color: var(--laser-orange);
+  background: var(--laser-glow);
+}
+
+.nav-links a.active {
+  color: var(--laser-red);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--laser-red);
+  border-radius: 1px;
+  box-shadow: 0 0 8px var(--laser-glow);
+  transition: width 0.3s ease;
+}
+
+.nav-wrapper.scrolled .nav-links a.active::after {
+  width: 14px;
+}
+
+.nav-search {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, padding 0.4s ease;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.nav-wrapper.scrolled .nav-search {
+  padding: 5px 10px;
+  font-size: 9px;
+}
+
+.nav-search:hover {
+  border-color: var(--laser-red);
+  color: var(--laser-orange);
+}
+
+.mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-btn:hover {
+  border-color: var(--laser-red);
+  color: var(--laser-orange);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+  }
+  .nav-wrapper.scrolled .nav-inner {
+    justify-content: center;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+}
+
+/* Progress bar animation at top of page */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px var(--laser-glow);
+}
+
+.footer {
+  background: var(--bg-panel);
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-3xl) var(--space-xl) var(--space-xl);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.footer-brand .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-md);
+}
+
+.footer-brand .footer-logo svg {
+  width: 28px;
+  height: 28px;
+}
+
+.footer-brand .footer-logo-text {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-col a {
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--laser-orange);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: var(--space-2xl) auto 0;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.footer-bottom p {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer-bottom-links a {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Radar rotation */
+@keyframes radarSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════════════
+   PAGE-SPECIFIC STYLES
+   ═══════════════════════════════════════════════ */
+
+    .logo-area:hover{opacity:0.8}.logo-svg{width:32px;height:32px;flex-shrink:0;stroke:currentColor}.nav-links a.active{color:var(--laser-red)}header{margin-top:80px;padding:3rem 2rem;background:linear-gradient(135deg,rgba(255,69,0,0.05) 0%,rgba(255,107,53,0.02) 100%);border-bottom:1px solid rgba(255,69,0,0.1)}.header-inner{max-width:900px;margin:0 auto}.breadcrumb{display:flex;gap:0.5rem;margin-bottom:1.5rem;font-family:'JetBrains Mono',monospace;font-size:0.85rem;color:var(--text-secondary)}.breadcrumb a{color:var(--laser-red);text-decoration:none}.update-badge{display:inline-flex;align-items:center;gap:0.5rem;background-color:var(--bg-elevated);border:1px solid rgba(255,69,0,0.3);padding:0.5rem 1rem;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--laser-red);margin-bottom:1rem}h1{font-size:2.5rem;font-weight:800;line-height:1.2;margin-bottom:1rem}.header-meta{display:flex;gap:2rem;font-size:0.9rem;color:var(--text-secondary);margin-top:1rem}main { margin-top: 110px; padding: 2rem; }section{margin:3rem 0}h2{font-size:1.8rem;font-weight:700;margin:2.5rem 0 1rem 0}h3{font-size:1.3rem;font-weight:600;margin:1.5rem 0 0.75rem 0}p{margin-bottom:1rem;line-height:1.8}a{color:var(--laser-red);text-decoration:none}a:hover{opacity:0.8;text-decoration:underline}.comparison-table{width:100%;border-collapse:collapse;margin:2rem 0;background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);border-radius:4px;overflow:hidden}.comparison-table th{background-color:var(--bg-elevated);padding:1rem;text-align:left;font-weight:600;font-family:'JetBrains Mono',monospace;font-size:0.9rem;border-bottom:1px solid rgba(255,69,0,0.2)}.comparison-table td{padding:1rem;border-bottom:1px solid rgba(255,69,0,0.1)}.comparison-table tbody tr:hover{background-color:rgba(255,69,0,0.05)}.check{color:#4CAF50;font-weight:700}.cross{color:var(--laser-red)}.feature-section{background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);border-radius:4px;padding:2rem;margin:2rem 0}.faq-item{background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);margin-bottom:1rem;border-radius:4px;overflow:hidden}.faq-question{padding:1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background-color 0.3s ease;font-weight:600}.faq-question:hover{background-color:var(--bg-elevated)}.faq-icon{color:var(--laser-red);font-size:1.2rem;transition:transform 0.3s ease}.faq-item.active .faq-icon{transform:rotate(180deg)}.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease;padding:0 1.5rem}.faq-item.active .faq-answer{max-height:500px;padding:0 1.5rem 1.5rem 1.5rem}.author-box{background-color:var(--bg-elevated);border:1px solid rgba(255,69,0,0.1);padding:2rem;border-radius:4px;margin:3rem 0;display:flex;gap:1.5rem;align-items:flex-start}.author-avatar{width:80px;height:80px;border-radius:50%;background-color:var(--bg-card);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:2rem;color:var(--laser-red);flex-shrink:0}.author-info h4{margin:0 0 0.5rem 0}.author-info p{margin:0;font-size:0.9rem;color:var(--text-secondary)}.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.5rem}.related-card{background-color:var(--bg-card);border:1px solid rgba(255,69,0,0.1);padding:1.5rem;border-radius:4px;transition:border-color 0.3s ease}.related-card:hover{border-color:rgba(255,69,0,0.3)}.related-card h4{margin:0 0 0.75rem 0;font-size:1.1rem}.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:2rem}.footer-section h4{color:var(--text-primary);margin-bottom:1rem;font-family:'JetBrains Mono',monospace;font-size:0.9rem;text-transform:uppercase;letter-spacing:0.05em}.footer-section ul{list-style:none}.footer-section a{display:block;margin-bottom:0.75rem;font-size:0.9rem;color:var(--text-secondary);transition:color 0.3s ease}.footer-section a:hover{color:var(--laser-red)}.footer-bottom{border-top:1px solid rgba(255,69,0,0.1);padding-top:2rem;text-align:center;color:var(--text-secondary);font-size:0.9rem}@media(max-width:768px){h1{font-size:1.8rem}h2{font-size:1.4rem}.comparison-table{font-size:0.85rem}.related-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr}.author-box{flex-direction:column;text-align:center}}
+  
+</style>
 </head>
 <body>
-  <nav class="nav-wrapper" id="navWrapper">
-    <div class="nav-inner">
-      <a href="/" class="logo-area">
-        <svg class="logo-svg" viewBox="0 0 32 32" fill="none">
-          <circle cx="16" cy="16" r="14" stroke-width="2"/>
-          <circle cx="16" cy="16" r="10" stroke-width="1.5" opacity="0.6"/>
-          <circle cx="16" cy="16" r="6" fill="currentColor"/>
-          <line x1="16" y1="2" x2="16" y2="30" stroke-width="1" opacity="0.4"/>
-          <line x1="2" y1="16" x2="30" y2="16" stroke-width="1" opacity="0.4"/>
-        </svg>
-        LASER LOTSE
+  <!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav-wrapper" id="navWrapper">
+  <div class="nav-inner">
+    <div class="logo-area">
+      <a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+        <div class="logo-radar">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
+            <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
+            <line x1="30" y1="2" x2="30" y2="58" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
+            <line x1="2" y1="30" x2="58" y2="30" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
+            <g transform-origin="30 30" style="animation: radarSweep 4s linear infinite">
+              <line x1="30" y1="30" x2="52" y2="14" stroke="#FF4500" stroke-width="1.5" opacity="0.8"/>
+              <path d="M30,30 L52,14 A25,25 0 0,0 48,10 L30,30" fill="#FF4500" opacity="0.1"/>
+            </g>
+            <circle cx="22" cy="20" r="2" fill="#FF6B35" opacity="0.7"/>
+            <circle cx="40" cy="24" r="1.5" fill="#FF4500" opacity="0.5"/>
+            <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
+            <circle cx="30" cy="30" r="1" fill="#fff"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="laser">LASER</span><span class="lotse">LOTSE</span>
+        </div>
       </a>
-      <div class="nav-links">
-        <a href="/">Home</a>
-        <a href="/tests/">Tests</a>
-        <a href="/vergleiche/" class="active">Vergleiche</a>
-        <a href="/kaufberatung/">Kaufberatung</a>
-        <a href="/ueber-uns/">Über uns</a>
-      </div>
     </div>
-  </nav>
+
+    <div class="nav-links">
+      <a href="../beste-laser-engraver/">Tests</a>
+      <a href="../xtool-d1-pro-vs-atomstack-s30-pro/">Vergleiche</a>
+      <a href="../laser-engraver-fuer-anfaenger/">Kaufberatung</a>
+      <a href="../laser-engraver-sicherheit/">Sicherheit</a>
+      <a href="../holz-gravieren/">Ratgeber</a>
+      <a href="../lightburn-vs-lasergrbl/" class="active">Software</a>
+      <button class="nav-search">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        SUCHE
+      </button>
+    </div>
+    <button class="mobile-menu-btn">☰</button>
+  </div>
+</nav>
 
   <header>
     <div class="header-inner">
       <div class="breadcrumb">
-        <a href="/">Home</a> <span>→</span> <a href="/software/">Software</a> <span>→</span> <span>LightBurn vs LaserGRBL</span>
+        <a href="../">Home</a> <span>→</span> <a href="/software/">Software</a> <span>→</span> <span>LightBurn vs LaserGRBL</span>
       </div>
       <div class="update-badge"><span>⚡ Aktualisiert:</span> <span>Februar 2026</span></div>
       <h1>LightBurn vs LaserGRBL: Welche Software ist besser?</h1>
@@ -259,10 +738,101 @@
     </div>
   </footer>
 
-  <script>
-    const nav=document.getElementById('navWrapper');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.pageYOffset>80)});
+  
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg viewBox="0 0 60 60" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
+          <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
+          <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
+          <circle cx="30" cy="30" r="1" fill="#fff"/>
+        </svg>
+        <span class="footer-logo-text">LASER<span style="background: linear-gradient(90deg, #FF4500, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">LOTSE</span></span>
+      </div>
+      <p>Unabhängige Kaufberatung für Lasergraviermaschinen und Laser Cutter im DACH-Raum. Wir testen, vergleichen und empfehlen — ehrlich und praxisnah.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Kategorien</h4>
+      <ul>
+        <li><a href="../beste-laser-engraver/">Bestenlisten</a></li>
+        <li><a href="../xtool-d1-pro-vs-atomstack-s30-pro/">Vergleiche</a></li>
+        <li><a href="../laser-engraver-fuer-anfaenger/">Kaufberatung</a></li>
+        <li><a href="../xtool-d1-pro-test/">Einzeltests</a></li>
+        <li><a href="../holz-gravieren/">Material-Guides</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Beliebte Artikel</h4>
+      <ul>
+        <li><a href="../beste-laser-engraver/">Beste Laser Engraver 2026</a></li>
+        <li><a href="../laser-engraver-unter-500-euro/">Laser unter 500 €</a></li>
+        <li><a href="../co2-laser-vs-diodenlaser/">CO2 vs Diodenlaser</a></li>
+        <li><a href="../xtool-d1-pro-vs-atomstack-s30-pro/">xTool vs Atomstack</a></li>
+        <li><a href="../lightburn-vs-lasergrbl/">LightBurn vs LaserGRBL</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Über uns</h4>
+      <ul>
+        <li><a href="../ueber-uns/">Das Team</a></li>
+        <li><a href="../transparenz/">So finanzieren wir uns</a></li>
+        <li><a href="../ueber-uns/">Kontakt</a></li>
+        <li><a href="../impressum/">Impressum</a></li>
+        <li><a href="../datenschutz/">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 LASERLOTSE.DE — ALLE RECHTE VORBEHALTEN</p>
+    <div class="footer-bottom-links">
+      <a href="../impressum/">IMPRESSUM</a>
+      <a href="../datenschutz/">DATENSCHUTZ</a>
+      <a href="../transparenz/">AFFILIATE-HINWEIS</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── SMOOTH NAVBAR TRANSITION ──
+const navWrapper = document.getElementById('navWrapper');
+let lastScroll = 0;
+const scrollThreshold = 80;
+
+function handleScroll() {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > scrollThreshold) {
+    if (!navWrapper.classList.contains('scrolled')) {
+      navWrapper.classList.add('scrolled');
+    }
+  } else {
+    if (navWrapper.classList.contains('scrolled')) {
+      navWrapper.classList.remove('scrolled');
+    }
+  }
+
+  lastScroll = currentScroll;
+
+  // Progress bar
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = Math.min((currentScroll / docHeight) * 100, 100);
+  document.getElementById('progressBar').style.width = scrollPercent + '%';
+}
+
+window.addEventListener('scroll', handleScroll, { passive: true });
+
+// ── PAGE-SPECIFIC JS ──
+const nav=document.getElementById('navWrapper');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.pageYOffset>80)});
     const faq=document.querySelectorAll('.faq-item');faq.forEach((e,i)=>{e.querySelector('.faq-question').addEventListener('click',()=>{faq.forEach((x,j)=>{if(i!==j)x.classList.remove('active')});e.classList.toggle('active')})});
     if(faq.length)faq[0].classList.add('active');
-  </script>
+</script>
 </body>
 </html>

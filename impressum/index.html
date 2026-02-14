@@ -14,81 +14,425 @@
     <title>Impressum - LaserLotse.de</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* ═══════════════════════════════════════════════
+   LASERLOTSE V3 — RADAR SCANNER DESIGN SYSTEM
+   ═══════════════════════════════════════════════ */
 
-        html {
-            scroll-behavior: smooth;
-        }
+:root {
+  /* Core Colors */
+  --laser-red: #FF4500;
+  --laser-orange: #FF6B35;
+  --laser-amber: #FFA500;
+  --laser-glow: #FF450040;
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background-color: #07070A;
-            color: #E8E8F0;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+  /* Backgrounds */
+  --bg-void: #07070A;
+  --bg-panel: #0C0C10;
+  --bg-card: #101016;
+  --bg-elevated: #16161E;
+  --bg-hover: #1A1A24;
+
+  /* Text */
+  --text-primary: #E8E8EC;
+  --text-secondary: #888892;
+  --text-muted: #555560;
+  --text-ghost: #333340;
+
+  /* Borders */
+  --border-subtle: #1A1A22;
+  --border-active: #FF450050;
+  --border-glow: #FF450030;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Fonts */
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Transitions */
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: all 0.2s ease;
+}
+
+/* ── RESET ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--laser-red) var(--bg-void);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-void);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--laser-orange);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+a:hover {
+  color: var(--laser-amber);
+}
+
+/* ── CUSTOM SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-void); }
+::-webkit-scrollbar-thumb { background: var(--laser-red); border-radius: 3px; }
+
+/* ═══════════════════════════════════════════════
+   NAVIGATION — PIXEL-PERFECT SMOOTH TRANSITION
+   Screen 1: Centered logo + nav below (tall)
+   Screen 2: Compact sticky bar (logo left, nav right)
+   All elements animate smoothly, no show/hide!
+   ═══════════════════════════════════════════════ */
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-wrapper.scrolled {
+  background: rgba(7, 7, 10, 0.95);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom-color: var(--border-subtle);
+  box-shadow: 0 4px 40px rgba(0,0,0,0.6);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px 0 40px;
+  transition: padding 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+
+.nav-wrapper.scrolled .nav-inner {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 58px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-basis: 100%;
+  justify-content: center;
+  padding-bottom: 12px;
+  transition: flex-basis 0.5s cubic-bezier(0.16,1,0.3,1),
+              padding 0.5s cubic-bezier(0.16,1,0.3,1),
+              gap 0.5s ease;
+}
+
+.nav-wrapper.scrolled .logo-area {
+  flex-basis: auto;
+  justify-content: flex-start;
+  padding-bottom: 0;
+  gap: 10px;
+}
+
+.logo-radar {
+  width: 48px;
+  height: 48px;
+  transition: width 0.5s cubic-bezier(0.16,1,0.3,1),
+              height 0.5s cubic-bezier(0.16,1,0.3,1);
+  flex-shrink: 0;
+}
+
+.nav-wrapper.scrolled .logo-radar {
+  width: 30px;
+  height: 30px;
+}
+
+.logo-text {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.logo-text .laser {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 3px;
+  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
+              letter-spacing 0.5s ease;
+}
+
+.logo-text .lotse {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 3px;
+  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
+              letter-spacing 0.5s ease;
+}
+
+.nav-wrapper.scrolled .logo-text .laser,
+.nav-wrapper.scrolled .logo-text .lotse {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+
+
+.nav-wrapper.scrolled 
+
+
+
+.nav-wrapper.scrolled 
+
+
+
+.nav-links a.active {
+  color: var(--laser-red);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--laser-red);
+  border-radius: 1px;
+  box-shadow: 0 0 8px var(--laser-glow);
+  transition: width 0.3s ease;
+}
+
+.nav-wrapper.scrolled .nav-links a.active::after {
+  width: 14px;
+}
+
+.nav-search {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, padding 0.4s ease;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.nav-wrapper.scrolled .nav-search {
+  padding: 5px 10px;
+  font-size: 9px;
+}
+
+.nav-search:hover {
+  border-color: var(--laser-red);
+  color: var(--laser-orange);
+}
+
+.mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-btn:hover {
+  border-color: var(--laser-red);
+  color: var(--laser-orange);
+}
+
+@media (max-width: 768px) {
+  
+  .nav-wrapper.scrolled .nav-inner {
+    justify-content: center;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+}
+
+/* Progress bar animation at top of page */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
+  z-index: 9999;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px var(--laser-glow);
+}
+
+.
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.footer-brand .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: var(--space-md);
+}
+
+.footer-brand .footer-logo svg {
+  width: 28px;
+  height: 28px;
+}
+
+.footer-brand .footer-logo-text {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: var(--space-md);
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-col a {
+  font-size: 13px;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--laser-orange);
+}
+
+
+
+
+
+.footer-bottom-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer-bottom-links a {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+/* Radar rotation */
+@keyframes radarSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ═══════════════════════════════════════════════
+   PAGE-SPECIFIC STYLES
+   ═══════════════════════════════════════════════ */
+
+        
+
+        
+
+        
 
         /* Navigation */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: rgba(7, 7, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 69, 0, 0.1);
-            padding: 1rem 2rem;
-        }
+        
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        
 
-        .logo {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #FF4500 0%, #FF6B35 50%, #FFA500 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            letter-spacing: 2px;
-        }
+        
 
-        .logo:hover {
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
-        }
+        
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            align-items: center;
-        }
+        
 
-        .nav-links a {
-            color: #E8E8F0;
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-        }
+        
 
-        .nav-links a:hover {
-            color: #FF6B35;
-        }
+        
 
         .nav-links a::after {
             content: '';
@@ -106,13 +450,7 @@
         }
 
         /* Main Content */
-        main {
-            flex: 1;
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-            width: 100%;
-        }
+        main { margin-top: 110px; padding: 2rem; }
 
         .page-header {
             text-align: center;
@@ -231,50 +569,23 @@
         }
 
         /* Footer */
-        footer {
-            background-color: #101016;
-            border-top: 1px solid rgba(255, 69, 0, 0.15);
-            padding: 3rem 2rem;
-            margin-top: 3rem;
-        }
+        
 
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
+        
 
-        .footer-section h3 {
-            color: #FF6B35;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
+        
 
-        .footer-section ul {
-            list-style: none;
-            margin: 0;
-        }
+        
 
         .footer-section ul li {
             margin-bottom: 0.6rem;
         }
 
-        .footer-section a {
-            color: #B8B8C8;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+        
 
-        .footer-section a:hover {
-            color: #FF6B35;
-        }
+        
 
         .footer-divider {
             border-top: 1px solid rgba(255, 69, 0, 0.1);
@@ -282,15 +593,7 @@
             margin-top: 2rem;
         }
 
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            color: #888896;
-            font-size: 0.9rem;
-        }
+        
 
         .footer-logo {
             font-family: 'JetBrains Mono', monospace;
@@ -305,10 +608,7 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.85rem;
-            }
+            
 
             h1 {
                 font-size: 2rem;
@@ -323,10 +623,7 @@
                 font-size: 1.4rem;
             }
 
-            .footer-bottom {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+            
 
             main {
                 margin: 2rem auto;
@@ -338,28 +635,15 @@
         }
 
         @media (max-width: 480px) {
-            nav {
-                padding: 0.75rem 1rem;
-            }
+            
 
-            .nav-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
+            
 
-            .logo {
-                font-size: 1.2rem;
-            }
+            
 
-            .nav-links {
-                flex-direction: column;
-                gap: 0.5rem;
-                width: 100%;
-            }
+            
 
-            .nav-links a {
-                font-size: 0.85rem;
-            }
+            
 
             h1 {
                 font-size: 1.8rem;
@@ -389,22 +673,56 @@
                 padding: 0 1rem;
             }
         }
-    </style>
+    
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="nav-container">
-            <a href="/" class="logo">◆ LASERLOTSE ◆</a>
-            <ul class="nav-links">
-                <li><a href="/">Startseite</a></li>
-                <li><a href="/tests/">Tests</a></li>
-                <li><a href="/vergleiche/">Vergleiche</a></li>
-                <li><a href="/kaufberatung/">Kaufberatung</a></li>
-                <li><a href="/ratgeber/">Ratgeber</a></li>
-            </ul>
+    <!-- Progress Bar -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ═══════════════ NAVIGATION ═══════════════ -->
+<nav class="nav-wrapper" id="navWrapper">
+  <div class="nav-inner">
+    <div class="logo-area">
+      <a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+        <div class="logo-radar">
+          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
+            <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
+            <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
+            <line x1="30" y1="2" x2="30" y2="58" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
+            <line x1="2" y1="30" x2="58" y2="30" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
+            <g transform-origin="30 30" style="animation: radarSweep 4s linear infinite">
+              <line x1="30" y1="30" x2="52" y2="14" stroke="#FF4500" stroke-width="1.5" opacity="0.8"/>
+              <path d="M30,30 L52,14 A25,25 0 0,0 48,10 L30,30" fill="#FF4500" opacity="0.1"/>
+            </g>
+            <circle cx="22" cy="20" r="2" fill="#FF6B35" opacity="0.7"/>
+            <circle cx="40" cy="24" r="1.5" fill="#FF4500" opacity="0.5"/>
+            <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
+            <circle cx="30" cy="30" r="1" fill="#fff"/>
+          </svg>
         </div>
-    </nav>
+        <div class="logo-text">
+          <span class="laser">LASER</span><span class="lotse">LOTSE</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="nav-links">
+      <a href="../beste-laser-engraver/">Tests</a>
+      <a href="../xtool-d1-pro-vs-atomstack-s30-pro/">Vergleiche</a>
+      <a href="../laser-engraver-fuer-anfaenger/">Kaufberatung</a>
+      <a href="../laser-engraver-sicherheit/">Sicherheit</a>
+      <a href="../holz-gravieren/">Ratgeber</a>
+      <a href="../lightburn-vs-lasergrbl/">Software</a>
+      <button class="nav-search">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        SUCHE
+      </button>
+    </div>
+    <button class="mobile-menu-btn">☰</button>
+  </div>
+</nav>
 
     <!-- Main Content -->
     <main>
@@ -493,56 +811,7 @@
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-section">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="/">Startseite</a></li>
-                        <li><a href="/tests/">Tests</a></li>
-                        <li><a href="/vergleiche/">Vergleiche</a></li>
-                        <li><a href="/kaufberatung/">Kaufberatung</a></li>
-                        <li><a href="/ratgeber/">Ratgeber</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Rechtliches</h3>
-                    <ul>
-                        <li><a href="/impressum/">Impressum</a></li>
-                        <li><a href="/datenschutz/">Datenschutz</a></li>
-                        <li><a href="/agb/">AGB</a></li>
-                        <li><a href="/kontakt/">Kontakt</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Kontakt</h3>
-                    <ul>
-                        <li><a href="mailto:kontakt@laserlotse.de">kontakt@laserlotse.de</a></li>
-                        <li><a href="tel:+498912345678">+49 (0) 89 123 456 78</a></li>
-                        <li>Werkstattstraße 12<br>80331 München</li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Informationen</h3>
-                    <ul>
-                        <li><a href="/#about">Über uns</a></li>
-                        <li><a href="/#mission">Unsere Mission</a></li>
-                        <li><a href="/blog/">Blog</a></li>
-                        <li><a href="/faq/">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-divider">
-                <div class="footer-bottom">
-                    <div class="footer-logo">◆ LASERLOTSE ◆</div>
-                    <div>&copy; 2024 LaserLotse.de. Alle Rechte vorbehalten.</div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    
 
     <!-- Schema.org LocalBusiness JSON-LD -->
     <script type="application/ld+json">
@@ -597,5 +866,94 @@
         }
     }
     </script>
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <svg viewBox="0 0 60 60" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
+          <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
+          <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
+          <circle cx="30" cy="30" r="1" fill="#fff"/>
+        </svg>
+        <span class="footer-logo-text">LASER<span style="background: linear-gradient(90deg, #FF4500, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">LOTSE</span></span>
+      </div>
+      <p>Unabhängige Kaufberatung für Lasergraviermaschinen und Laser Cutter im DACH-Raum. Wir testen, vergleichen und empfehlen — ehrlich und praxisnah.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Kategorien</h4>
+      <ul>
+        <li><a href="../beste-laser-engraver/">Bestenlisten</a></li>
+        <li><a href="../xtool-d1-pro-vs-atomstack-s30-pro/">Vergleiche</a></li>
+        <li><a href="../laser-engraver-fuer-anfaenger/">Kaufberatung</a></li>
+        <li><a href="../xtool-d1-pro-test/">Einzeltests</a></li>
+        <li><a href="../holz-gravieren/">Material-Guides</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Beliebte Artikel</h4>
+      <ul>
+        <li><a href="../beste-laser-engraver/">Beste Laser Engraver 2026</a></li>
+        <li><a href="../laser-engraver-unter-500-euro/">Laser unter 500 €</a></li>
+        <li><a href="../co2-laser-vs-diodenlaser/">CO2 vs Diodenlaser</a></li>
+        <li><a href="../xtool-d1-pro-vs-atomstack-s30-pro/">xTool vs Atomstack</a></li>
+        <li><a href="../lightburn-vs-lasergrbl/">LightBurn vs LaserGRBL</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Über uns</h4>
+      <ul>
+        <li><a href="../ueber-uns/">Das Team</a></li>
+        <li><a href="../transparenz/">So finanzieren wir uns</a></li>
+        <li><a href="../ueber-uns/">Kontakt</a></li>
+        <li><a href="../impressum/">Impressum</a></li>
+        <li><a href="../datenschutz/">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 LASERLOTSE.DE — ALLE RECHTE VORBEHALTEN</p>
+    <div class="footer-bottom-links">
+      <a href="../impressum/">IMPRESSUM</a>
+      <a href="../datenschutz/">DATENSCHUTZ</a>
+      <a href="../transparenz/">AFFILIATE-HINWEIS</a>
+    </div>
+  </div>
+</footer>
+<script>
+// ── SMOOTH NAVBAR TRANSITION ──
+const navWrapper = document.getElementById('navWrapper');
+let lastScroll = 0;
+const scrollThreshold = 80;
+
+function handleScroll() {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > scrollThreshold) {
+    if (!navWrapper.classList.contains('scrolled')) {
+      navWrapper.classList.add('scrolled');
+    }
+  } else {
+    if (navWrapper.classList.contains('scrolled')) {
+      navWrapper.classList.remove('scrolled');
+    }
+  }
+
+  lastScroll = currentScroll;
+
+  // Progress bar
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scrollPercent = Math.min((currentScroll / docHeight) * 100, 100);
+  document.getElementById('progressBar').style.width = scrollPercent + '%';
+}
+
+window.addEventListener('scroll', handleScroll, { passive: true });
+</script>
 </body>
 </html>
