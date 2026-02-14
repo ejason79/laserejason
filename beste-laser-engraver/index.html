@@ -1161,15 +1161,10 @@ a:hover {
         }
 
         .author-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--laser-red), var(--laser-orange));
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
+            width: 80px; height: 80px; border-radius: 50%;
+            object-fit: cover; flex-shrink: 0;
+            border: 2px solid var(--laser-orange);
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.3);
         }
 
         .author-info h4 {
