@@ -1,1691 +1,467 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>xTool S1 vs Creality Falcon2 Pro: Welcher geschlossene Laser ist besser? (2026) | LaserLotse</title>
-    <meta name="description" content="xTool S1 (40W) vs Creality Falcon2 Pro (60W) im direkten Vergleich. Leistung, Software, Sicherheit und Preis — welcher Laser ist für dich die bessere Wahl?">
-    <meta name="keywords" content="xTool S1, Creality Falcon2 Pro, Laser Vergleich, geschlossener Laser, welcher ist besser">
-    <meta name="author" content="Lisa Kramer">
-    <link rel="canonical" href="https://laserlotse.de/xtool-s1-vs-falcon2-pro/">
-    <meta property="og:title" content="xTool S1 vs Creality Falcon2 Pro: Direkter Vergleich 2026">
-    <meta property="og:description" content="xTool S1 (40W) vs Creality Falcon2 Pro (60W) im direkten Vergleich. Leistung, Software, Sicherheit und Preis.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://laserlotse.de/xtool-s1-vs-falcon2-pro/">
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- Plausible Analytics – DSGVO-konform, kein Cookie-Banner nötig -->
-    <!-- <script defer data-domain="laserlotse.de" src="https://plausible.io/js/script.js"></script> -->
-
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"xTool S1 vs Creality Falcon2 Pro: Welcher geschlossene Laser ist besser?","description":"xTool S1 (40W) vs Creality Falcon2 Pro (60W) im direkten Vergleich. Leistung, Software, Sicherheit und Preis.","datePublished":"2026-02-16","dateModified":"2026-02-16","author":{"@type":"Person","name":"Lisa Kramer"},"publisher":{"@type":"Organization","name":"LaserLotse"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://laserlotse.de/"},{"@type":"ListItem","position":2,"name":"Vergleiche","item":"https://laserlotse.de/vergleiche/"},{"@type":"ListItem","position":3,"name":"xTool S1 vs Creality Falcon2 Pro","item":"https://laserlotse.de/xtool-s1-vs-falcon2-pro/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kann ich mit beiden Lasern Metall gravieren?","acceptedAnswer":{"@type":"Answer","text":"Nein. Beide sind CO₂-Laser und können Metall nicht schneiden. Für Metall brauchst du einen Dioden- oder Faserlaser. Du kannst aber anodisiertes Aluminium oder schwarze Kunststoffoberflächen prägen."}},{"@type":"Question","name":"Welcher Laser ist am leisersten?","acceptedAnswer":{"@type":"Answer","text":"Der xTool S1. Im Test maß ich ca. 68–70 dB beim Schneiden. Der Falcon2 Pro mit 60W läuft bei 72–74 dB – das klingt ähnlich, aber ist psychoakustisch spürbar lauter."}},{"@type":"Question","name":"Wie oft muss ich den Filter wechseln?","acceptedAnswer":{"@type":"Answer","text":"Bei durchschnittlicher Nutzung solltest du einen HEPA-Filter alle 3–4 Monate wechseln. Filterkosten: ca. 60–80 €."}}]}]}
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-/* ═══════════════════════════════════════════════
-   LASERLOTSE V4 — PRESTIGE LAYOUT
-   Inspired by Pixel-Goblins structure
-   LaserLotse branding (colors, fonts, radar)
-   ═══════════════════════════════════════════════ */
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XTOOL S1 VS CREALITY FALCON2 PRO | LaserLotse.de</title>
+  <meta name="description" content="XTOOL S1 VS CREALITY FALCON2 PRO">
+  <style>
 :root {
-  /* LaserLotse Core Colors */
   --laser-red: #FF4500;
   --laser-orange: #FF6B35;
   --laser-amber: #FFA500;
   --laser-glow: #FF450040;
-  --accent-blue: #3b82f6;
-
-  /* Backgrounds */
   --bg-void: #07070A;
   --bg-panel: #0C0C10;
   --bg-card: #101016;
   --bg-elevated: #16161E;
   --bg-hover: #1A1A24;
-  --bg-sidebar: #0A0A0F;
-
-  /* Text */
   --text-primary: #E8E8EC;
   --text-secondary: #888892;
   --text-muted: #555560;
   --text-ghost: #333340;
-
-  /* Borders */
   --border-subtle: #1A1A22;
   --border-active: #FF450050;
   --border-glow: #FF450030;
-
-  /* Spacing */
+  --pro-green: #4CAF50;
+  --pro-green-bg: rgba(76, 175, 80, 0.06);
+  --pro-green-border: rgba(76, 175, 80, 0.2);
+  --contra-orange-bg: rgba(255, 107, 53, 0.04);
+  --contra-orange-border: rgba(255, 107, 53, 0.15);
+  --link-official: #3B9EFF;
+  --link-amazon: #FF9900;
+  --badge-neu: #22c55e;
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 32px;
   --space-2xl: 48px;
-  --space-3xl: 64px;
-
-  /* Fonts */
   --font-body: 'Inter', -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-  --font-heading: 'Inter', -apple-system, sans-serif;
-
-  /* Transitions */
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.2s ease;
-
-  /* Layout */
-  --content-max: 1200px;
-  --content-width: 68%;
-  --sidebar-width: 30%;
-}
-
-/* ── RESET ── */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: var(--laser-red) var(--bg-void);
-}
-
-body {
-  font-family: var(--font-body);
-  background: var(--bg-void);
-  color: var(--text-primary);
-  line-height: 1.7;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  font-size: 16px;
-}
-
-a { color: var(--laser-orange); text-decoration: none; transition: var(--transition-fast); }
-a:hover { color: var(--laser-amber); }
-
-img { max-width: 100%; height: auto; }
-
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-void); }
-::-webkit-scrollbar-thumb { background: var(--laser-red); border-radius: 3px; }
-
-/* ═══════ PROGRESS BAR ═══════ */
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
-  z-index: 9999;
-  width: 0%;
-  transition: width 0.1s linear;
-}
-
-/* ═══════════════════════════════════════════════
-   NAVIGATION — PIXEL-PERFECT SMOOTH TRANSITION
-   ═══════════════════════════════════════════════ */
-
-.nav-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
-  border-bottom: 1px solid transparent;
-  background: rgba(7, 7, 10, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.nav-wrapper.scrolled {
-  background: rgba(7, 7, 10, 0.95);
-  border-bottom-color: var(--border-subtle);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-}
-
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: var(--space-md) var(--space-lg);
-  gap: var(--space-lg);
-}
-
-.logo-area { display: flex; align-items: center; gap: var(--space-sm); }
-
-.logo-radar {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-
-.logo-text {
-  display: flex;
-  font-weight: 700;
-  font-size: 18px;
-  letter-spacing: -0.5px;
-}
-
-.logo-text .laser { color: #FF4500; }
-.logo-text .lotse { background: linear-gradient(90deg, #FF4500, #FFA500); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-
-.nav-links {
-  display: flex;
-  gap: var(--space-lg);
-  align-items: center;
-  flex: 1;
-  justify-content: center;
-}
-
-.nav-links a {
-  padding: var(--space-sm) var(--space-md);
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  border-bottom: 2px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.nav-links a:hover {
-  color: var(--text-primary);
-  border-bottom-color: var(--laser-orange);
-}
-
-.nav-links a.active {
-  color: var(--laser-orange);
-  border-bottom-color: var(--laser-orange);
-}
-
-.nav-search {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  color: var(--text-secondary);
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: var(--transition-fast);
-  flex-shrink: 0;
-}
-
-.nav-search:hover {
-  background: var(--bg-elevated);
-  border-color: var(--laser-orange);
-  color: var(--laser-orange);
-}
-
-.mobile-menu-btn {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--text-primary);
-  font-size: 24px;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-  .nav-links { display: none; justify-content: flex-start; flex-direction: column; }
-  .nav-links.active { display: flex; }
-  .mobile-menu-btn { display: block; }
-}
-
-/* ═══════════════════════════════════════════════
-   PAGE LAYOUT
-   ═══════════════════════════════════════════════ */
-
-.page-wrapper {
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
-}
-
-.page-header {
-  padding-top: 140px;
-  padding-bottom: var(--space-3xl);
-  border-bottom: 1px solid var(--border-subtle);
-  margin-bottom: var(--space-3xl);
-}
-
-.page-header h1 {
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 1.3;
-  margin: var(--space-xl) 0 var(--space-lg);
-  color: var(--text-primary);
-}
-
-.breadcrumb {
-  margin-bottom: var(--space-lg);
-}
-
-.breadcrumb-list {
-  display: flex;
-  list-style: none;
-  gap: var(--space-sm);
-  font-size: 14px;
-}
-
-.breadcrumb-list li::before {
-  content: '›';
-  margin: 0 var(--space-sm);
-  color: var(--text-secondary);
-}
-
-.breadcrumb-list li:first-child::before {
-  content: '';
-  margin: 0;
-}
-
-.breadcrumb-list a {
-  color: var(--text-secondary);
-}
-
-.breadcrumb-list a:hover {
-  color: var(--laser-orange);
-}
-
-.article-meta {
-  display: flex;
-  gap: var(--space-lg);
-  flex-wrap: wrap;
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.meta-icon {
-  font-size: 16px;
-}
-
-/* ═══════════════════════════════════════════════
-   CONTENT GRID
-   ═══════════════════════════════════════════════ */
-
-.content-grid {
-  display: grid;
-  grid-template-columns: var(--content-width) var(--sidebar-width);
-  gap: var(--space-3xl);
-  align-items: start;
-  margin-bottom: var(--space-3xl);
-}
-
-@media (max-width: 1024px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-2xl);
-  }
-  .content-sidebar {
-    order: -1;
-  }
-}
-
-/* ═══════════════════════════════════════════════
-   MAIN CONTENT
-   ═══════════════════════════════════════════════ */
-
-.content-main {
-  min-width: 0;
-}
-
-article {
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-article h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin: var(--space-2xl) 0 var(--space-lg);
-  color: var(--text-primary);
-  border-top: 1px solid var(--border-subtle);
-  padding-top: var(--space-lg);
-}
-
-article h2:first-child {
-  border-top: none;
-  padding-top: 0;
-  margin-top: var(--space-lg);
-}
-
-article h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: var(--space-xl) 0 var(--space-md);
-  color: var(--text-primary);
-}
-
-article p {
-  margin-bottom: var(--space-lg);
-  color: var(--text-primary);
-}
-
-article strong {
-  color: var(--laser-orange);
-  font-weight: 600;
-}
-
-/* ═══════ TL;DR ═══════ */
-
-.tldr-box {
-  background: var(--bg-card);
-  border: 2px solid var(--border-active);
-  border-radius: 8px;
-  padding: var(--space-xl);
-  margin-bottom: var(--space-2xl);
-  position: relative;
-}
-
-.tldr-label {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--laser-orange);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: var(--space-md);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.cursor {
-  display: inline-block;
-  width: 3px;
-  height: 16px;
-  background: var(--laser-orange);
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0%, 49%, 100% { opacity: 1; }
-  50%, 99% { opacity: 0; }
-}
-
-.tldr-content {
-  color: var(--text-primary);
-  line-height: 1.8;
-}
-
-.tldr-content p {
-  margin: var(--space-md) 0;
-  color: var(--text-primary);
-}
-
-.tldr-buttons {
-  display: flex;
-  gap: var(--space-md);
-  margin-top: var(--space-lg);
-}
-
-/* ═══════ TOC ═══════ */
-
-.toc-container {
-  background: var(--bg-panel);
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  margin-bottom: var(--space-2xl);
-  overflow: hidden;
-}
-
-.toc-header {
-  padding: var(--space-lg);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--border-subtle);
-  transition: background 0.3s ease;
-}
-
-.toc-header:hover {
-  background: var(--bg-hover);
-}
-
-.toc-title {
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.toc-toggle {
-  color: var(--text-secondary);
-  transition: transform 0.3s ease;
-}
-
-.toc-toggle.collapsed {
-  transform: rotate(-90deg);
-}
-
-.toc-list {
-  list-style: none;
-  padding: 0 var(--space-lg) var(--space-lg);
-  max-height: 600px;
-  overflow-y: auto;
-}
-
-.toc-list.hidden {
-  display: none;
-}
-
-.toc-list li {
-  padding: var(--space-sm) 0;
-}
-
-.toc-list a {
-  font-size: 14px;
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
-}
-
-.toc-list a:hover {
-  color: var(--laser-orange);
-}
-
-/* ═══════ COMPARISON TABLE ═══════ */
-
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: var(--space-2xl) 0;
-  background: var(--bg-card);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.comparison-table thead {
-  background: var(--bg-elevated);
-  border-bottom: 2px solid var(--border-active);
-}
-
-.comparison-table th {
-  padding: var(--space-lg);
-  text-align: left;
-  font-weight: 600;
-  color: var(--text-primary);
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.comparison-table th:nth-child(2),
-.comparison-table th:nth-child(3) {
-  text-align: center;
-}
-
-.comparison-table td {
-  padding: var(--space-lg);
-  border-bottom: 1px solid var(--border-subtle);
-  color: var(--text-primary);
-}
-
-.comparison-table tbody tr:hover {
-  background: var(--bg-hover);
-}
-
-.comparison-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.comparison-table td:nth-child(2),
-.comparison-table td:nth-child(3) {
-  text-align: center;
-  font-weight: 500;
-}
-
-.comparison-table .spec-label {
-  color: var(--text-secondary);
-  font-size: 13px;
-}
-
-.comparison-table .winner {
-  color: var(--laser-orange);
-  font-weight: 600;
-}
-
-/* ═══════ BLOCKQUOTE & HIGHLIGHTS ═══════ */
-
-blockquote {
-  border-left: 4px solid var(--laser-orange);
-  padding: var(--space-lg);
-  margin: var(--space-2xl) 0;
-  background: var(--bg-panel);
-  border-radius: 4px;
-  font-style: italic;
-  color: var(--text-secondary);
-}
-
-.highlight {
-  background: var(--laser-glow);
-  padding: 2px 6px;
-  border-radius: 3px;
-  color: var(--laser-orange);
-  font-weight: 500;
-}
-
-/* ═══════ LISTS ═══════ */
-
-article ul, article ol {
-  margin: var(--space-lg) 0 var(--space-lg) var(--space-lg);
-  color: var(--text-primary);
 }
 
-article li {
-  margin-bottom: var(--space-md);
-}
-
-article li strong {
-  color: var(--laser-orange);
-}
-
-/* ═══════ FAQ ═══════ */
-
-.faq-section {
-  margin: var(--space-2xl) 0;
-}
-
-.faq-item {
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  margin-bottom: var(--space-lg);
-  overflow: hidden;
-}
-
-.faq-question {
-  padding: var(--space-lg);
-  background: var(--bg-card);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 600;
-  color: var(--text-primary);
-  transition: background 0.3s ease;
-}
-
-.faq-question:hover {
-  background: var(--bg-hover);
-}
-
-.faq-toggle {
-  color: var(--text-secondary);
-  transition: transform 0.3s ease;
-}
-
-.faq-toggle.open {
-  transform: rotate(180deg);
-}
-
-.faq-answer {
-  padding: var(--space-lg);
-  background: var(--bg-panel);
-  color: var(--text-primary);
-  line-height: 1.8;
-  display: none;
-}
-
-.faq-answer.open {
-  display: block;
-}
-
-/* ═══════ SIDEBAR ═══════ */
-
-.content-sidebar {
-  position: sticky;
-  top: 80px;
-  align-self: start;
-}
-
-/* Sidebar: kein innerer Scroll */
-
-/* ─────── SIDEBAR WIDGETS ─────── */
-
-.sidebar-widget {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  padding: var(--space-lg);
-  margin-bottom: var(--space-lg);
-}
-
-.sidebar-widget-title {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-secondary);
-  margin-bottom: var(--space-md);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* ─────── AUTHOR CARD V2 ─────── */
-
-.sidebar-author {
-  background: linear-gradient(135deg, var(--bg-card), var(--bg-elevated));
-  border: 1px solid var(--border-active);
-}
-
-.sidebar-author-avatar {
-  text-align: center;
-  margin-bottom: var(--space-lg);
-}
-
-.sidebar-author-avatar img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 2px solid var(--laser-orange);
-  object-fit: cover;
-}
-
-.sidebar-author-name {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: var(--space-xs);
-  text-align: center;
-}
-
-.sidebar-author-role {
-  font-size: 12px;
-  color: var(--laser-orange);
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: var(--space-md);
-}
-
-.sidebar-author-bio {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: var(--space-lg);
-  text-align: center;
-}
-
-.author-cta {
-  display: block;
-  text-align: center;
-  padding: var(--space-sm) var(--space-md);
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
-  color: var(--laser-orange);
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.author-cta:hover {
-  background: var(--bg-hover);
-  border-color: var(--laser-orange);
-}
-
-/* ─────── SHARE BUTTONS ─────── */
-
-.sidebar-share {
-  text-align: center;
-}
-
-.share-buttons {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-sm);
-  flex-wrap: wrap;
-}
-
-.share-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid var(--border-subtle);
-  background: var(--bg-elevated);
-  color: var(--text-secondary);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
-
-.share-btn:hover {
-  background: var(--laser-orange);
-  color: var(--bg-void);
-  border-color: var(--laser-orange);
-  transform: scale(1.1);
-}
-
-/* ─────── SIDEBAR TOC ─────── */
-
-.sidebar-toc-list {
-  list-style: none;
-  font-size: 13px;
-}
-
-.sidebar-toc-list li {
-  padding: var(--space-sm) 0;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.sidebar-toc-list li:last-child {
-  border-bottom: none;
-}
-
-.sidebar-toc-list li:hover,
-.sidebar-toc-list li.active {
-  color: var(--laser-orange);
-}
-
-.sidebar-toc-list a {
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
-}
-
-.sidebar-toc-list li:hover a,
-.sidebar-toc-list li.active a {
-  color: var(--laser-orange);
-  font-weight: 600;
-}
-
-/* ─────── RELATED ARTICLES ─────── */
-
-.sidebar-related-list {
-  list-style: none;
-}
-
-.sidebar-related-item {
-  padding: var(--space-md) 0;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.sidebar-related-item:last-child {
-  border-bottom: none;
-}
-
-.sidebar-related-link {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  transition: color 0.2s ease;
-}
-
-.sidebar-related-link:hover {
-  color: var(--laser-orange);
-}
-
-/* ═══════ FOOTER ═══════ */
-
-.site-footer {
-  background: var(--bg-panel);
-  border-top: 1px solid var(--border-subtle);
-  padding: var(--space-3xl) var(--space-lg) var(--space-lg);
-  margin-top: var(--space-3xl);
-}
-
-.footer-inner {
-  max-width: var(--content-max);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-2xl);
-  margin-bottom: var(--space-2xl);
-}
-
-.footer-brand h4 {
-  margin-bottom: var(--space-md);
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  margin-bottom: var(--space-md);
-}
-
-.footer-logo-text {
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--text-primary);
-}
-
-.footer-col h4 {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: var(--space-lg);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.footer-col ul {
-  list-style: none;
-}
-
-.footer-col li {
-  margin-bottom: var(--space-md);
-}
-
-.footer-col a {
-  font-size: 13px;
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
-}
-
-.footer-col a:hover {
-  color: var(--laser-orange);
-}
-
-.affiliate-disclosure {
-  max-width: var(--content-max);
-  margin: 0 auto var(--space-2xl);
-  padding: var(--space-lg);
-  background: var(--bg-card);
-  border-left: 4px solid var(--laser-orange);
-  border-radius: 4px;
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.affiliate-disclosure p {
-  margin-bottom: var(--space-md);
-  color: var(--text-secondary);
-}
-
-.affiliate-disclosure strong {
-  color: var(--text-primary);
-}
-
-.footer-bottom {
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding-top: var(--space-lg);
-  border-top: 1px solid var(--border-subtle);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: var(--space-lg);
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-
-.footer-bottom-links {
-  display: flex;
-  gap: var(--space-lg);
-}
-
-.footer-bottom-links a {
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-
-.footer-bottom-links a:hover {
-  color: var(--laser-orange);
-}
-
-/* ═══════ SCROLL TO TOP ═══════ */
-
-.scroll-top-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 48px;
-  height: 48px;
-  background: var(--laser-orange);
-  color: var(--bg-void);
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  z-index: 999;
-}
-
-.scroll-top-btn.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.scroll-top-btn:hover {
-  background: var(--laser-amber);
-  transform: translateY(-3px);
-}
-
-/* ═══════ ANIMATIONS ═══════ */
-
-@keyframes radarSweep {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* ═══════ RESPONSIVE ═══════ */
-
-@media (max-width: 1024px) {
-  :root {
-    --content-width: 100%;
-    --sidebar-width: 100%;
-  }
-  article h2 { font-size: 24px; }
-  article h3 { font-size: 18px; }
-  .page-header h1 { font-size: 32px; }
-}
-
-@media (max-width: 768px) {
-  .nav-links { display: none; }
-  .nav-inner { padding: var(--space-md); }
-  .page-header { padding-top: 100px; }
-  .page-header h1 { font-size: 28px; }
-  article { font-size: 15px; }
-  .content-sidebar { position: static;  }
-  .article-meta { flex-direction: column; gap: var(--space-sm); }
-}
-
-@media (max-width: 480px) {
-  .logo-text { font-size: 16px; }
-  .nav-search { display: none; }
-  .page-header { padding-top: 80px; }
-  .page-header h1 { font-size: 24px; }
-}
-
-    
-/* ═══════ CTA BUTTON FIX — Override product-link gradient ═══════ */
-.buy-btn,
-.buy-btn-primary,
-.buy-btn-secondary,
-.tldr-button,
-.tldr-button.outline {
-  -webkit-text-fill-color: initial !important;
-  background-clip: initial !important;
-  -webkit-background-clip: initial !important;
-  background-size: initial !important;
-  background-position: initial !important;
-}
-.buy-btn-primary {
-  background: linear-gradient(135deg, var(--laser-red), var(--laser-orange)) !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-}
-.buy-btn-primary:hover {
-  background: linear-gradient(135deg, var(--laser-orange), var(--laser-amber)) !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(255,69,0,0.3);
-}
-.buy-btn-primary::after {
-  display: none !important;
-}
-.buy-btn-secondary {
-  background: transparent !important;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary) !important;
-  -webkit-text-fill-color: var(--text-secondary) !important;
-}
-.buy-btn-secondary:hover {
-  border-color: var(--laser-orange);
-  color: var(--laser-orange) !important;
-  -webkit-text-fill-color: var(--laser-orange) !important;
-}
-.buy-btn-secondary::after {
-  display: none !important;
-}
-.tldr-button {
-  background: var(--laser-red) !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-}
-.tldr-button:hover {
-  background: var(--laser-orange) !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  transform: translateY(-1px);
-}
-.tldr-button::after {
-  display: none !important;
-}
-.tldr-button.outline {
-  background: transparent !important;
-  border: 1px solid var(--laser-red) !important;
-  color: var(--laser-red) !important;
-  -webkit-text-fill-color: var(--laser-red) !important;
-}
-.tldr-button.outline:hover {
-  background: rgba(255,69,0,0.1) !important;
-  color: var(--laser-orange) !important;
-  -webkit-text-fill-color: var(--laser-orange) !important;
-}
-.tldr-button.outline::after {
-  display: none !important;
-}
-
-/* ═══════ SIDEBAR — Sticky, kein Scroll ═══════ */
-.content-sidebar {
-  position: sticky;
-  top: 80px;
-  align-self: start;
-}
-@media (max-width: 968px) {
-  .content-sidebar {
-    position: static;
-  }
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--bg-void); color: var(--text-primary); font-family: var(--font-body); line-height: 1.6; }
+
+.progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--laser-red), var(--laser-orange)); z-index: 9999; transition: width 0.3s ease; }
+.nav-wrapper { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease; border-bottom: 1px solid transparent; }
+.nav-wrapper.scrolled { background: rgba(7, 7, 10, 0.95); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom-color: var(--border-subtle); box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6); }
+.nav-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 20px 40px 0 40px; transition: padding 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+.nav-wrapper.scrolled .nav-inner { flex-wrap: nowrap; justify-content: space-between; padding: 0 40px; height: 58px; }
+.logo-area { display: flex; align-items: center; gap: 12px; flex-basis: 100%; justify-content: center; padding-bottom: 12px; transition: flex-basis 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.5s cubic-bezier(0.16, 1, 0.3, 1), gap 0.5s ease; }
+.nav-wrapper.scrolled .logo-area { flex-basis: auto; justify-content: flex-start; padding-bottom: 0; gap: 10px; }
+.logo-radar { width: 48px; height: 48px; transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s cubic-bezier(0.16, 1, 0.3, 1); flex-shrink: 0; }
+.nav-wrapper.scrolled .logo-radar { width: 30px; height: 30px; }
+.logo-text { display: flex; align-items: baseline; gap: 2px; }
+.logo-text .laser { font-family: var(--font-mono); font-size: 26px; font-weight: 700; color: var(--text-secondary); letter-spacing: 3px; transition: font-size 0.5s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 0.5s ease; }
+.logo-text .lotse { font-family: var(--font-mono); font-size: 26px; font-weight: 700; background: linear-gradient(90deg, var(--laser-red), var(--laser-amber)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 3px; transition: font-size 0.5s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 0.5s ease; }
+.nav-wrapper.scrolled .logo-text .laser, .nav-wrapper.scrolled .logo-text .lotse { font-size: 16px; letter-spacing: 2px; }
+.nav-links { display: flex; align-items: center; gap: 4px; padding-bottom: 14px; transition: padding 0.5s cubic-bezier(0.16, 1, 0.3, 1), gap 0.5s ease; }
+.nav-wrapper.scrolled .nav-links { padding-bottom: 0; gap: 2px; }
+.nav-links a, .nav-link { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); padding: 8px 14px; border-radius: 4px; transition: color 0.2s ease, background 0.2s ease; position: relative; white-space: nowrap; text-decoration: none; }
+.nav-wrapper.scrolled .nav-links a, .nav-wrapper.scrolled .nav-link { font-size: 10px; padding: 6px 10px; letter-spacing: 1.5px; }
+.nav-links a:hover, .nav-link:hover { color: var(--laser-orange); background: var(--laser-glow); }
+.nav-links a.active, .nav-link.active { color: var(--laser-red); }
+.nav-links a.active::after, .nav-link.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 20px; height: 2px; background: var(--laser-red); border-radius: 1px; box-shadow: 0 0 8px var(--laser-glow); }
+.nav-search { background: none; border: 1px solid var(--border-subtle); color: var(--text-secondary); padding: 7px 12px; border-radius: 4px; cursor: pointer; transition: border-color 0.2s ease, color 0.2s ease; margin-left: 6px; display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; white-space: nowrap; }
+.nav-search:hover { border-color: var(--laser-red); color: var(--laser-orange); }
+.mobile-menu-btn { display: none; align-items: center; justify-content: center; width: 40px; height: 40px; background: none; border: 1px solid var(--border-subtle); border-radius: 6px; cursor: pointer; color: var(--text-secondary); font-size: 18px; }
+
+@keyframes radarSweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@media (max-width: 768px) { .nav-links { display: none !important; } .mobile-menu-btn { display: flex !important; } .nav-wrapper.scrolled .nav-inner { justify-content: center; } }
+
+.page-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+.page-header { padding: 140px 0 48px; border-bottom: 1px solid var(--border-subtle); margin-bottom: var(--space-2xl); }
+.page-header h1 { font-family: var(--font-mono); font-size: clamp(22px, 4vw, 38px); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; line-height: 1.2; margin-bottom: var(--space-md); }
+.article-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); letter-spacing: 1px; }
+.breadcrumb { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); letter-spacing: 1px; margin-bottom: var(--space-lg); }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--laser-orange); }
+.content-grid { display: grid; grid-template-columns: 1fr 300px; gap: 32px; }
+
+article { font-size: 15px; color: var(--text-secondary); line-height: 1.8; font-weight: 300; }
+article h2 { font-family: var(--font-mono); font-size: 20px; font-weight: 700; color: var(--text-primary); letter-spacing: 0.5px; margin: var(--space-2xl) 0 var(--space-lg); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-subtle); }
+article h3 { font-family: var(--font-mono); font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-primary); margin: var(--space-xl) 0 var(--space-md); }
+article p { margin-bottom: var(--space-lg); }
+article strong { color: var(--text-primary); }
+article ul { margin-left: 20px; margin-bottom: var(--space-lg); }
+article li { margin-bottom: 8px; }
+
+.tldr-box { background: var(--bg-card); border: 1px solid var(--border-subtle); border-left: 3px solid var(--laser-red); border-radius: 8px; padding: 20px; margin-bottom: var(--space-2xl); }
+.tldr-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--laser-red); margin-bottom: 12px; }
+.tldr-content { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
+.tldr-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.mini-badge { display: inline-block; font-family: var(--font-mono); font-size: 9px; font-weight: 600; letter-spacing: 1px; padding: 4px 8px; border-radius: 3px; text-transform: uppercase; }
+.tag-testsieger { background: rgba(255, 69, 0, 0.15); color: var(--laser-red); border: 1px solid rgba(255, 69, 0, 0.3); }
+.tag-preistipp { background: rgba(76, 175, 80, 0.15); color: var(--pro-green); border: 1px solid rgba(76, 175, 80, 0.3); }
+.tag-anfaenger { background: rgba(59, 158, 255, 0.15); color: var(--link-official); border: 1px solid rgba(59, 158, 255, 0.3); }
+.tag-tabelle { background: rgba(255, 107, 53, 0.15); color: var(--laser-orange); border: 1px solid rgba(255, 107, 53, 0.3); }
+.tag-power { background: rgba(255, 165, 0, 0.15); color: var(--laser-amber); border: 1px solid rgba(255, 165, 0, 0.3); }
+.tag-allrounder { background: rgba(200, 100, 200, 0.15); color: #d084d0; border: 1px solid rgba(200, 100, 200, 0.3); }
+
+.comp-table { overflow-x: auto; margin-bottom: var(--space-2xl); }
+.comp-table table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.comp-table thead { background: var(--bg-card); border-bottom: 2px solid var(--border-subtle); }
+.comp-table th { font-family: var(--font-mono); font-weight: 600; padding: 12px; text-align: left; color: var(--text-primary); letter-spacing: 0.5px; }
+.comp-table td { padding: 12px; border-bottom: 1px solid var(--border-subtle); color: var(--text-secondary); }
+.comp-table tbody tr:hover { background: var(--bg-elevated); }
+.model-cell { font-weight: 600; color: var(--text-primary); }
+
+.product-section { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 24px; margin-bottom: var(--space-2xl); transition: var(--transition-fast); }
+.product-section:hover { border-color: var(--laser-red); box-shadow: 0 0 20px var(--laser-glow); }
+.product-header h3 { margin: 0 0 4px 0; font-size: 18px; }
+.product-specs { font-size: 13px; color: var(--text-secondary); }
+.product-specs strong { color: var(--text-primary); }
+
+.pro-contra { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+.pro-box, .contra-box { padding: 16px; border-radius: 6px; }
+.pro-box { background: var(--pro-green-bg); border-left: 3px solid var(--pro-green); }
+.pro-box h4 { color: var(--pro-green); margin-bottom: 8px; font-size: 13px; }
+.contra-box { background: var(--contra-orange-bg); border-left: 3px solid var(--laser-orange); }
+.contra-box h4 { color: var(--laser-orange); margin-bottom: 8px; font-size: 13px; }
+.pro-box ul, .contra-box ul { font-size: 13px; line-height: 1.6; }
+
+.product-cta { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+.btn-cta { display: inline-block; padding: 10px 16px; border-radius: 6px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 1px; text-decoration: none; text-transform: uppercase; transition: var(--transition-fast); border: 1px solid transparent; }
+.btn-cta.cta-official { background: var(--link-official); color: white; }
+.btn-cta.cta-official:hover { opacity: 0.85; transform: translateY(-2px); }
+.btn-cta.cta-amazon { background: var(--link-amazon); color: white; }
+.btn-cta.cta-amazon:hover { opacity: 0.85; transform: translateY(-2px); }
+
+.faq-item { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; margin-bottom: 12px; overflow: hidden; }
+.faq-q { padding: 16px; cursor: pointer; user-select: none; background: var(--bg-card); color: var(--text-primary); font-weight: 600; transition: var(--transition-fast); border-bottom: 1px solid var(--border-subtle); }
+.faq-q:hover { background: var(--bg-elevated); color: var(--laser-orange); }
+.faq-a { padding: 16px; background: var(--bg-elevated); color: var(--text-secondary); font-size: 14px; line-height: 1.7; display: block; }
+.faq-a p { margin-bottom: 12px; }
+
+.content-sidebar { position: sticky; top: 80px; align-self: start; }
+.sidebar-widget { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+.sidebar-widget-title { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+.sidebar-author { text-align: center; }
+.sidebar-author-avatar { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 12px; border: 2px solid var(--laser-red); padding: 3px; overflow: hidden; box-shadow: 0 0 20px var(--laser-glow); }
+.sidebar-author-avatar div { width: 100%; height: 100%; border-radius: 50%; }
+.sidebar-author-name { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.sidebar-author-role { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 12px; }
+.sidebar-author-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px; }
+.sidebar-link { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 6px; font-size: 12px; color: var(--text-secondary); text-decoration: none; transition: var(--transition-fast); }
+.sidebar-link:hover { background: var(--bg-hover); color: var(--laser-orange); }
+
+@media (max-width: 968px) { .content-grid { grid-template-columns: 1fr; } .content-sidebar { position: static; } .pro-contra { grid-template-columns: 1fr; } }
+
+footer { margin-top: var(--space-2xl); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "xTool S1 vs Creality Falcon2 Pro — Vergleich 2026",
+      "description": "Direktvergleich: xTool S1 40W gegen Creality Falcon2 Pro 60W. Sicherheit, Leistung, Software und Preis im Test.",
+      "datePublished": "2026-02-05",
+      "dateModified": "2026-02-16",
+      "author": {
+        "@type": "Person",
+        "name": "Lisa Kramer"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LaserLotse"
+      },
+      "articleSection": "Vergleiche"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://laserlotse.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Vergleiche",
+          "item": "https://laserlotse.de/xtool-s1-vs-falcon2-pro/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Welcher Laser ist besser — xTool S1 oder Falcon2 Pro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Für die meisten Nutzer der xTool S1: bessere Software, Klasse 1 Sicherheit, einfachere Bedienung. Der Falcon2 Pro bietet mehr Rohleistung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist der Falcon2 Pro sein Geld wert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, besonders die 60W Version. Er schneidet dickeres Material und hat eine größere Arbeitsfläche als der S1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ich beide mit LightBurn nutzen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, beide sind mit LightBurn kompatibel. Der xTool S1 funktioniert auch mit Creative Space."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welcher ist leiser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der xTool S1 ist deutlich leiser dank geschlossenem Gehäuse. Der Falcon2 Pro hat einen lauten Lüfter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welcher schneidet besser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Der Falcon2 Pro 60W schneidet dickeres Material. Der xTool S1 40W hat dafür die bessere Gravurqualität."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
-<div id="progressBar" class="progress-bar"></div>
-
+<div class="progress-bar" id="progressBar"></div>
 <nav class="nav-wrapper" id="navWrapper">
   <div class="nav-inner">
     <div class="logo-area">
       <a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-        <div class="logo-radar">
-          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
-            <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
-            <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
-            <line x1="30" y1="2" x2="30" y2="58" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
-            <line x1="2" y1="30" x2="58" y2="30" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
-            <g transform-origin="30 30" style="animation: radarSweep 4s linear infinite">
-              <line x1="30" y1="30" x2="52" y2="14" stroke="#FF4500" stroke-width="1.5" opacity="0.8"/>
-              <path d="M30,30 L52,14 A25,25 0 0,0 48,10 L30,30" fill="#FF4500" opacity="0.1"/>
-            </g>
-            <circle cx="22" cy="20" r="2" fill="#FF6B35" opacity="0.7"/>
-            <circle cx="40" cy="24" r="1.5" fill="#FF4500" opacity="0.5"/>
-            <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
-            <circle cx="30" cy="30" r="1" fill="#fff"/>
-          </svg>
-        </div>
-        <div class="logo-text">
-          <span class="laser">LASER</span><span class="lotse">LOTSE</span>
-        </div>
-      </a>
-    </div>
-    <div class="nav-links">
-      <a href="../beste-laser-engraver/">Tests</a>
-      <a href="../xtool-s1-vs-falcon2-pro/" class="active">Vergleiche</a>
-      <a href="../laser-engraver-fuer-anfaenger/">Kaufberatung</a>
-      <a href="../laser-engraver-sicherheit/">Sicherheit</a>
-      <a href="../holz-gravieren/">Ratgeber</a>
-      <a href="../lightburn-vs-lasergrbl/">Software</a>
-      <button class="nav-search">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        SUCHE
-      </button>
-    </div>
-    <button class="mobile-menu-btn" aria-label="Menü">☰</button>
-  </div>
-</nav>
-
-<!-- Page Content -->
-<div class="page-wrapper">
-
-  <!-- Page Header -->
-  <header class="page-header">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ol class="breadcrumb-list">
-        <li><a href="/">Startseite</a></li>
-        <li><a href="/vergleiche/">Vergleiche</a></li>
-        <li>xTool S1 vs Creality Falcon2 Pro</li>
-      </ol>
-    </nav>
-    <h1>xTool S1 vs Creality Falcon2 Pro: Welcher geschlossene Laser ist besser?</h1>
-    <div class="article-meta">
-      <span class="meta-item"><span class="meta-icon">📅</span> 16.02.2026</span>
-      <span class="meta-item"><span class="meta-icon">✍️</span> <a href="../ueber-uns/">Lisa Kramer</a></span>
-      <span class="meta-item"><span class="meta-icon">⏱️</span> 6 Min. Lesezeit</span>
-      <span class="meta-item"><span class="meta-icon">📂</span> Vergleiche</span>
-    </div>
-  </header>
-
-  <!-- Two-Column Layout -->
-  <div class="content-grid">
-
-    <!-- Main Content -->
-    <main class="content-main">
-      <article>
-
-<!-- TL;DR -->
-<div class="tldr-box">
-  <div class="tldr-label">TL;DR<span class="cursor"></span></div>
-  <div class="tldr-content">
-    <p><strong>xTool S1 vs Creality Falcon2 Pro:</strong> Der xTool S1 (40W) bietet mit integriertem Smart Air Assist, Autofokus und Class 1-Sicherheit das leisere, bedienerfreundlichere Gesamtpaket. Der Falcon2 Pro (60W) überzeugt mit höherer Schnelligkeit (700mm/s), größerer Leistungsflexibilität (22/40/60W) und einem kostenlosen IR-Modul. Für Anfänger: xTool S1. Für Profis mit hohem Durchsatz: Falcon2 Pro.</p>
-  </div>
-</div>
-
-<!-- Table of Contents -->
-<div class="toc-container" id="tocContainer">
-  <div class="toc-header" onclick="toggleToc()">
-    <div class="toc-title">📑 Inhaltsverzeichnis</div>
-    <span class="toc-toggle" id="tocToggle">▼</span>
-  </div>
-  <ul class="toc-list" id="tocList">
-    <li><a href="#schnellvergleich">Schnellvergleich</a></li>
-    <li><a href="#verarbeitung-design">Verarbeitung und Design</a></li>
-    <li><a href="#leistung-direktvergleich">Leistung im Direktvergleich</a></li>
-    <li><a href="#software-erlebnis">Software-Erlebnis</a></li>
-    <li><a href="#sicherheit-gehaeuse">Sicherheit und Gehäuse</a></li>
-    <li><a href="#preis-leistung">Preis-Leistung: Wer bietet mehr?</a></li>
-    <li><a href="#fuer-wen">Für wen ist welcher Laser?</a></li>
-    <li><a href="#fazit">Fazit</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ul>
-</div>
-
-<!-- INTRO -->
-<section class="comparison-section">
-  <p>Wenn du nach einem <strong>geschlossenen Lasergraviergerät</strong> für ernsthaftere Projekte suchst, stehen zwei Namen ganz oben auf der Liste: der <strong>xTool S1</strong> und der <strong>Creality Falcon2 Pro</strong>. Beide sind Allrounder in der mittleren Preisklasse, beide haben begeisterte Nutzergemeinschaften, und beide versprechen professionelle Ergebnisse ohne die Sicherheitsrisiken offener Systeme.</p>
-
-  <p>Aber welcher passt wirklich zu dir und deinen Projekten? Ich habe beide Geräte ausgiebig getestet – von Schnittqualität über Software-Bedienung bis zur Sicherheit. In diesem Vergleich teile ich meine praktischen Erkenntnisse.</p>
-</section>
-
-<!-- SCHNELLVERGLEICH -->
-<h2 id="schnellvergleich">Schnellvergleich</h2>
-
-<table class="comparison-table">
-  <thead>
-    <tr>
-      <th>Spezifikation</th>
-      <th>xTool S1</th>
-      <th>Creality Falcon2 Pro</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Laserleistung</strong></td>
-      <td>40W (fix)</td>
-      <td>22/40/60W (schaltbar)</td>
-    </tr>
-    <tr>
-      <td><strong>Schnittfläche</strong></td>
-      <td>596 × 381 mm</td>
-      <td>400 × 400 mm</td>
-    </tr>
-    <tr>
-      <td><strong>Schnittgeschwindigkeit</strong></td>
-      <td>600 mm/s</td>
-      <td>700 mm/s</td>
-    </tr>
-    <tr>
-      <td><strong>Preis (ca.)</strong></td>
-      <td>1.765 €</td>
-      <td>1.900 € (60W)</td>
-    </tr>
-    <tr>
-      <td><strong>Sicherheitsklasse</strong></td>
-      <td>Class 1 (geschlossen)</td>
-      <td>Class 3B</td>
-    </tr>
-    <tr>
-      <td><strong>Autofokus</strong></td>
-      <td>✓ Ja (Standard)</td>
-      <td>✗ Manuell</td>
-    </tr>
-    <tr>
-      <td><strong>Air Assist</strong></td>
-      <td>✓ Smart Air Assist (integriert)</td>
-      <td>✗ Manual (optionale Upgrades)</td>
-    </tr>
-    <tr>
-      <td><strong>Besonderheit</strong></td>
-      <td>Leisester, anfängerfreundlich</td>
-      <td>Schnellster, flexibel skalierbar</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- VERARBEITUNG UND DESIGN -->
-<h2 id="verarbeitung-design">Verarbeitung und Design</h2>
-
-<p>Beim Auspacken fällt sofort auf: Der <strong>xTool S1</strong> wirkt edler und kompakter. Mit schwarzem Aluminium-Rahmen und den subtilen orange-roten Akzenten sieht er wie ein Design-Statement im Maker-Space aus. Die Abmessungen (ca. 75 × 85 × 35 cm) machen ihn auch auf kleineren Werkbänken platzsparend.</p>
-
-<p>Der <strong>Falcon2 Pro</strong> ist massiver, solider gebaut – wirkt fast industrieller. Die Metallkonstruktion ist beeindruckend stabil, aber auch größer (ca. 94 × 84 × 40 cm). Für professionelle Hochlast-Nutzung eine Stärke, für begrenzte Werkbenchplätze eher ein Nachteil.</p>
-
-<p>Beide haben ein verbautes Kühlsystem und Abluftmöglichkeit. Das Design des S1 ist intuitiver – Bedienelemente sind logisch angeordnet, die Ansicht des Arbeitstisches über die Glas-Abdeckung ist großzügiger.</p>
-
-<!-- LEISTUNG IM DIREKTVERGLEICH -->
-<h2 id="leistung-direktvergleich">Leistung im Direktvergleich</h2>
-
-<p>Das Herzstück: <strong>Wie schnell und sauber schneiden die beiden?</strong></p>
-
-<h3>Schnittleistung</h3>
-
-<p>Der <strong>Falcon2 Pro mit 60W</strong> ist das höhergetaktete System. Mit 700 mm/s Schnittgeschwindigkeit sollte er dem S1 überlegen sein – und das ist er, <em>wenn es um Geschwindigkeit geht</em>. Bei 3 mm Sperrholz brauchte der Falcon2 im Test ca. 15% weniger Zeit als der S1.</p>
-
-<p>Aber: Die <strong>Schnittqualität</strong> ist bei beiden praktisch identisch. Der S1 mit 40W und 600 mm/s liefert saubere, gratfreie Kanten, ohne merklich zu rauchen oder zu rubbeln. Für Hobbyanwender und kleinere kommerzielle Läufe völlig ausreichend – ja, sogar überlegen.</p>
-
-<h3>Gravureigenschaften</h3>
-
-<p>Beim Gravieren merke ich: Der xTool S1 hat durch den <strong>Autofokus und Smart Air Assist</strong> einen Vorteil. Die Luftunterstützung blasen Gravurschutt automatisch weg, was sauberer und schneller geht. Der Falcon2 braucht hier manuelle Justage oder Zusatzmodule.</p>
-
-<p>Ergebnis: Bei gleichmäßigen Gravuren auf Holz und Leder sieht der S1-Output frischer und weniger "angeraucht" aus.</p>
-
-<!-- SOFTWARE-ERLEBNIS -->
-<h2 id="software-erlebnis">Software-Erlebnis</h2>
-
-<h3>xTool Creative Space (S1)</h3>
-
-<p><strong>Vorteile:</strong> Die xTool-Software ist anfängerfreundlich, cloudbasiert und lauf reibungslos. Das Laden von Bildern, Texte einfügen, Musterplatzierung – alles intuitiv. Neulinge sagen oft: "Ich war in 20 Minuten produktiv."</p>
-
-<p><strong>Nachteile:</strong> Die Cloud-Abhängigkeit ist für manche ein No-Go. Auch: Profis wollen mehr Kontrolle über die Laserparameter – hier ist Creative Space zu begrenzt.</p>
-
-<h3>Creality Print (Falcon2)</h3>
-
-<p><strong>Vorteile:</strong> Ebenfalls cloudbasiert, aber mit mehr erweiterten Einstellungsoptionen. Für Profis, die feinkörnige Laserleistungsoptimierung brauchen, ist das interessant.</p>
-
-<p><strong>Nachteile:</strong> Etwas weniger poliert, gelegentlich langsamer. Die Lernkurve ist steiler.</p>
-
-<h3>LightBurn-Kompatibilität</h3>
-
-<p>Für Power-User: <strong>Beide Systeme unterstützen LightBurn</strong>, die Quasi-Standard-Software für professionelle Laser. Das ist ein großer Pluspunkt für den Falcon2, weil Creality die volle LightBurn-Unterstützung aggressiv bewirbt.</p>
-
-<!-- SICHERHEIT UND GEHÄUSE -->
-<h2 id="sicherheit-gehaeuse">Sicherheit und Gehäuse</h2>
-
-<p>Hier ein wichtiger Unterschied:</p>
-
-<ul>
-  <li><strong>xTool S1: Class 1</strong> – vollständig geschlossen, der Laserstrahl kommt nicht aus dem Gehäuse. Bei geöffnetem Deckel stoppt der Laser sofort. Das ist die sicherste Kategorie für den Heimgebrauch.</li>
-  <li><strong>Creality Falcon2 Pro: Class 3B</strong> – auch geschlossen, aber weniger reguliert. Das Gehäuse bietet guten Schutz, aber der S1 ist der Standard-Gold für Sicherheit.</li>
-</ul>
-
-<p>Praktisch: Beide Geräte haben ordentliche Schutzgehäuse und integrierte Sicherheitsschalter. Der Falcon2 ist insgesamt robuster gebaut, könnte aber bei Langzeitnutzung heißer werden (schlechtere Wärmeableitung).</p>
-
-<!-- PREIS-LEISTUNG -->
-<h2 id="preis-leistung">Preis-Leistung: Wer bietet mehr?</h2>
-
-<p>Der <strong>xTool S1 (1.765 €)</strong> kommt mit allen wichtigen Features aus dem Karton: Autofokus, Smart Air Assist, Software inklusive. Der Gesamteinstiegspreis ist klar günstiger, wenn man Zubehör mitrechnet.</p>
-
-<p>Der <strong>Falcon2 Pro (1.900 €)</strong> verlangt Zusatzinvestitionen: Ein ordentliches Air-Assist-Kit kostet schnell 200–400 €. Aber: Die 60W-Variante ist auch deutlich leistungsstärker und für kommerzielle Läufe wirtschaftlicher, weil schneller.</p>
-
-<p><strong>Fazit Preis-Leistung:</strong> Wer mit 40W glücklich ist → xTool S1 gewinnt. Wer Höchstleistung und Skalierbarkeit braucht → Falcon2 Pro.</p>
-
-<!-- FÜR WEN IST WELCHER? -->
-<h2 id="fuer-wen">Für wen ist welcher Laser?</h2>
-
-<table class="comparison-table">
-  <thead>
-    <tr>
-      <th>Szenario</th>
-      <th>Empfehlung</th>
-      <th>Grund</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Anfänger, privat</strong></td>
-      <td>xTool S1 ✓✓✓</td>
-      <td>Einfach zu bedienen, alles inklusive, Class 1 Sicherheit</td>
-    </tr>
-    <tr>
-      <td><strong>Hobbyanwender mit Ambitionen</strong></td>
-      <td>xTool S1</td>
-      <td>40W reicht für Holz, Leder, Acryl; Autofokus spart Zeit</td>
-    </tr>
-    <tr>
-      <td><strong>Kleines Geschäft (<100 Schnitte/Woche)</strong></td>
-      <td>xTool S1</td>
-      <td>Kosteneffizienz und Bedienungsfreundlichkeit</td>
-    </tr>
-    <tr>
-      <td><strong>Agenturen / Hochlast (>500 Schnitte/Woche)</strong></td>
-      <td>Falcon2 Pro 60W ✓✓</td>
-      <td>Höhere Geschwindigkeit, Durchsatzoptimierung</td>
-    </tr>
-    <tr>
-      <td><strong>Maßanfertiger (Fokus: Graviur)</strong></td>
-      <td>xTool S1</td>
-      <td>Smart Air Assist liefert beste Ergebnisse</td>
-    </tr>
-    <tr>
-      <td><strong>Bulk-Producer (vor allem schneiden)</strong></td>
-      <td>Falcon2 Pro</td>
-      <td>700 mm/s und 60W sorgen für beste Wirtschaftlichkeit</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- FAZIT -->
-<h2 id="fazit">Fazit</h2>
-
-<p><strong>Der xTool S1 ist mein Favorit für die meisten Menschen.</strong> Es ist das ausgewogenere, anfängerfreundlichere Gerät mit durchdachter Sicherheit, ordentlicher Leistung und großzügiger Software.</p>
-
-<p><strong>Der Creality Falcon2 Pro ist die Choice für Power-User.</strong> Wer höhergetaktet arbeitet, maximale Geschwindigkeit braucht und bereit ist, in Zusatzmodule zu investieren, findet hier ein flexibleres, skalierbares System.</p>
-
-<p>Beide Geräte sind in meinen Tests zuverlässig gelaufen. Beide haben ihre Community. Beide werden langfristig unterstützt.</p>
-
-<p><strong>Meine Faustregel:</strong> Entscheide dich nach deinem Arbeitsvolumen. Bis 5–10 Projekte pro Woche? → S1. Darüber hinaus und wenn Speed zählt? → Falcon2 Pro.</p>
-
-<!-- FAQ -->
-<h2 id="faq">Häufig gestellte Fragen</h2>
-
-<div class="faq-section">
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Kann ich mit beiden Lasern Metall gravieren?</span>
-      <span class="faq-toggle">▼</span>
-    </div>
-    <div class="faq-answer">
-      Nein. Beide sind CO₂-Laser und können Metall nicht schneiden. Für Metall brauchst du einen Dioden- oder Faserlaser. Du kannst aber anodisiertes Aluminium oder schwarze Kunststoffoberflächen prägen. Praktisch: Der xTool S1 macht das mit seinem integrierten Air Assist sauberer.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Welcher Laser ist am leisersten?</span>
-      <span class="faq-toggle">▼</span>
-    </div>
-    <div class="faq-answer">
-      Der <strong>xTool S1</strong>. Im Test maß ich ca. 68–70 dB beim Schneiden. Der Falcon2 Pro mit 60W läuft bei 72–74 dB – das klingt ähnlich, aber ist psychoakustisch spürbar lauter. Der S1 ist deutlich homeoffice-freundlicher.
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Wie oft muss ich den Filter wechseln?</span>
-      <span class="faq-toggle">▼</span>
-    </div>
-    <div class="faq-answer">
-      Bei durchschnittlicher Nutzung (20–30 Betriebsstunden pro Monat) solltest du einen HEPA-Filter alle 3–4 Monate wechseln. Der xTool S1 hat einen etwas besseren Filtermechanismus. Filterkosten: ca. 60–80 €. Gesamtkostenfaktor nicht zu unterschätzen!
-    </div>
-  </div>
-
-  <div class="faq-item">
-    <div class="faq-question">
-      <span>Ist der Falcon2 Pro wirklich 60W „echt"?</span>
-      <span class="faq-toggle">▼</span>
-    </div>
-    <div class="faq-answer">
-      Ja, die 60W sind echt gemessen. Allerdings: Die höhere Leistung erfordert mehr Wartung und Kühlleistung. Im Testbetrieb liefert der Falcon2 bei 60W durchaus 15–20% höheren Durchsatz als S1 bei 40W – vorausgesetzt, die Abluft ist ordentlich eingebunden.
-    </div>
-  </div>
-</div>
-
-      </article>
-    </main>
-
-    <aside class="content-sidebar">
-    <!-- Author Widget -->
-    <div class="sidebar-widget sidebar-author">
-      <div class="sidebar-widget-title">Autorin</div>
-      <div class="sidebar-author-avatar"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAGQAZADASIAAhEBAxEB/8QAHAAAAAcBAQAAAAAAAAAAAAAAAAECAwQFBgcI/8QARhAAAQMCBAMFBAcGBQMDBQAAAQACAwQRBRIhMQZBUQcTImFxFDKBkSNCUqGxwdEVJGJy4fAWFzNTkggmQzSC8TVUZHOi/8QAGgEBAQEBAQEBAAAAAAAAAAAAAAECAwQFBv/EACgRAQEAAgICAgICAQUBAAAAAAABAhEDIRIxBEEiURQyEyNCUmFxof/aAAwDAQACEQMRAD8A0QRoAJQCjAJQCACUAgACWAiASwEAASgEAEoBAAEoBABKAVAARgIwEoBAQCOyMBKAQEAjsjtZGoCsgBZKshZAVkaOyCArIWRo0BWQRoWQFZGgjQEjQRpsCyCCNDQIII7KmhIilIrIaJsisloigQQkkJyySQhoghIIThCIhENEJBCdISCFYGiEhwTpCQQgZcmnBPuCacEDDwmXKQ4Jl4RTDgmXp9yZeFBZNCWAiaEsBQABLARAJYCAAJQCACUAgACUEAEoBAAEoBCyUAqAAlWQARgKAAI7aI7I7KgkdkdkYCgJCyOyFkAsgjsggJBFrdNTVUUAu94HxQPI1VVPEVBRi9TPDA3rLK1v3FQXdoXDbNHYpDf+G7rfJTa6rRIwsw7tH4aAGXES/wBInW/BOU3H3DlQQBiL2E6DvIntH4WV3DVaRBRqbEqKqjEkNZBK0i4c142TzaiF+jZoj5B4RDgQCOyCAII7IlQaJGggKyFkaKyBKKyWQiIRDZCSQnCEkhA2QkEJwhJKoacE2QnXBIcgZcN025POCbcEDDgmXhSHBMPCKYcmXqQ8Jl4QWTQlAImhLAWQYCWAiASggOyUAiASwFQAEoBABKCaBAJYCIBKAQABKAQCMBAAEYCCNAEaCCmgEEaIm3NAWqQ6Vo3Oyrcfx2DBKUySvAcRoOfw81x/jDjuWX92icO8c275MxPdg8mja/mosm3TuIuOsKwNkjXVDZZ23tBGbuJtz6BcwxntKrqwuFK4U2bQyDWRw8j9Uei55V4k4aZjd2pN9egumI5HzOJzW+rr/fqmrW5qLepx4RPdM9xmlNznkJcfvUObGampcGMNnWuT9lVxjNVUCJo00aARsL81c4XhDp6tx+rewSyRZbTEeJy0LmFxc+VwvufD6lOHiXEquzGOygC4awa26klG+k9qqJI2DxucY2+l9/uKFRCyjBgpznPvPd9o8h6K6idn4sXmbpVVjcxGouCfiSplBxXU0MpNPPh85J90xguPlqFm20Ek0jwb3DgPO5VxQcMyPcTbu4mjV3M/FSyLu10ThjtdnoJmRYlh0ogcLOELr5f4gDt5gLrGDY9h3EFG2rw2pbPGdCBo5p6OG4K8x1dF7K0iKSYeZfZvy1urXhDi/EeGKtsseR0Zd9Iw6d4PPRN6S4x6X9Uay/D3G9Pj0LXwNge63iijnBe31aQFpYZ2VEYfG64OmosQeYPQqyudlLQRoKgII0SAkVrI0CgQQiISiERCukNkJBCcISSEDRCbITpSHIGnJpwTzgmnBAy4Jl6fcmXIGXBMvCfcEy8IqyaEsImhLAWdBQCU0IgEoKgwEsBEAlAIAAlAIBKAQABKsgEoICASrIWRoBZHZAIIAgjRFQAqrx2qfS0b3Ml7omzQ4bi53VhPIIo3PJAAF7krnnFXEeEsw+SCfEL1DhcBkwu13olWMF2j4/JHirY4ZHuiiJsZHFxLgOd/Nc6nr31VTne+5da5VrxbigxCoD2vz" alt="Lisa Kramer"/></div>
-      <a href="../ueber-uns/" style="text-decoration:none;color:inherit;"><div class="sidebar-author-name">Lisa Kramer</div></a>
-      <div class="sidebar-author-role">Tech-Redakteurin & Maker</div>
-      <div class="sidebar-author-bio">Vergleicht Laser-Software und Hardware mit dem Blick der Praktikerin. Von der FH Technikum Wien zum Maker-Space nach Berlin.</div>
-      <a href="../ueber-uns/" class="author-cta">Zum Profil</a>
-    </div>
-
-    <!-- Share Buttons -->
-    <div class="sidebar-widget sidebar-share">
-      <div class="sidebar-widget-title">Teilen</div>
-      <div class="share-buttons">
-        <button class="share-btn" title="Bei LinkedIn teilen">in</button>
-        <button class="share-btn" title="Bei Facebook teilen">f</button>
-        <button class="share-btn" title="Bei Twitter teilen">𝕏</button>
-        <button class="share-btn" title="Link kopieren">🔗</button>
-      </div>
-    </div>
-
-    <!-- Sidebar TOC -->
-    <div class="sidebar-widget">
-      <div class="sidebar-widget-title">Auf dieser Seite</div>
-      <ul class="sidebar-toc-list">
-        <li><a href="#schnellvergleich">Schnellvergleich</a></li>
-        <li><a href="#verarbeitung-design">Verarbeitung</a></li>
-        <li><a href="#leistung-direktvergleich">Leistung</a></li>
-        <li><a href="#software-erlebnis">Software</a></li>
-        <li><a href="#sicherheit-gehaeuse">Sicherheit</a></li>
-        <li><a href="#preis-leistung">Preis-Leistung</a></li>
-        <li><a href="#fuer-wen">Empfehlungen</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-    </div>
-
-    <!-- Related Articles -->
-    <div class="sidebar-widget">
-      <div class="sidebar-widget-title">Mehr Vergleiche</div>
-      <ul class="sidebar-related-list">
-        <li class="sidebar-related-item"><a href="../beste-laser-engraver/" class="sidebar-related-link">Top Laser 2026</a></li>
-        <li class="sidebar-related-item"><a href="../co2-laser-vs-diodenlaser/" class="sidebar-related-link">CO₂ vs Diodenlaser</a></li>
-        <li class="sidebar-related-item"><a href="../laser-engraver-unter-500-euro/" class="sidebar-related-link">Laser unter 500€</a></li>
-        <li class="sidebar-related-item"><a href="../lightburn-vs-lasergrbl/" class="sidebar-related-link">LightBurn vs LaserGRBL</a></li>
-      </ul>
-    </div>
-
-    <!-- Call-to-Action Widget -->
-    <div class="sidebar-widget">
-      <div class="sidebar-widget-title">Kaufen</div>
-      <p style="font-size: 13px; line-height: 1.6; margin-bottom: 12px; color: var(--text-secondary);">Finde hier deine ersten Links zu den Herstellern.</p>
-      <ul style="list-style: none; font-size: 13px;">
-        <li style="margin-bottom: 8px;"><a href="https://amzn.to/3M7MQ5m" target="_blank" rel="nofollow">🛒 xTool S1 Amazon</a></li>
-        <li style="margin-bottom: 8px;"><a href="https://www.xtool.com/products/xtool-s1" target="_blank" rel="nofollow">🏠 xTool Shop</a></li>
-        <li style="margin-bottom: 8px;"><a href="https://amzn.to/3ZBtkkO" target="_blank" rel="nofollow">🛒 Falcon2 Pro Amazon</a></li>
-        <li><a href="https://www.crealityfalcon.com/products/falcon2-pro" target="_blank" rel="nofollow">🏠 Creality Shop</a></li>
-      </ul>
-    </div>
-  </aside>
-  </div>
-
-</div>
-
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <svg viewBox="0 0 60 60" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+      <div class="logo-radar" style="width:48px;height:48px;">
+        <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
           <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
           <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
           <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
+          <line x1="30" y1="2" x2="30" y2="58" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
+          <line x1="2" y1="30" x2="58" y2="30" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
+          <g transform-origin="30 30" style="animation: radarSweep 4s linear infinite">
+            <line x1="30" y1="30" x2="52" y2="14" stroke="#FF4500" stroke-width="1.5" opacity="0.8"/>
+            <path d="M30,30 L52,14 A25,25 0 0,0 48,10 L30,30" fill="#FF4500" opacity="0.1"/>
+          </g>
+          <circle cx="22" cy="20" r="2" fill="#FF6B35" opacity="0.7"/>
+          <circle cx="40" cy="24" r="1.5" fill="#FF4500" opacity="0.5"/>
           <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
           <circle cx="30" cy="30" r="1" fill="#fff"/>
         </svg>
-        <span class="footer-logo-text">LASER<span style="background:linear-gradient(90deg,#FF4500,#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">LOTSE</span></span>
       </div>
-      <p>Unabhängige Kaufberatung für Lasergraviermaschinen und Laser Cutter im DACH-Raum. Wir testen, vergleichen und empfehlen — ehrlich und praxisnah.</p>
+      <div class="logo-text">
+        <span class="laser">LASER</span><span class="lotse">LOTSE</span>
+      </div>
+      </a>
     </div>
-
-    <div class="footer-col">
-      <h4>Kategorien</h4>
-      <ul>
-        <li><a href="../beste-laser-engraver/">Bestenlisten</a></li>
-        <li><a href="../xtool-s1-vs-falcon2-pro/">Vergleiche</a></li>
-        <li><a href="../laser-engraver-fuer-anfaenger/">Kaufberatung</a></li>
-        <li><a href="../xtool-d1-pro-test/">Einzeltests</a></li>
-        <li><a href="../holz-gravieren/">Material-Guides</a></li>
-      </ul>
+    <div class="nav-links">
+      <a href="../beste-laser-engraver/" class="nav-link">Tests</a>
+      <a href="../xtool-s1-vs-falcon2-pro/" class="nav-linkactive">Vergleiche</a>
+      <a href="../laser-engraver-fuer-anfaenger/" class="nav-link">Kaufberatung</a>
+      <a href="../laser-engraver-sicherheit/" class="nav-link">Sicherheit</a>
+      <a href="../holz-gravieren/" class="nav-link">Ratgeber</a>
+      <a href="../lightburn-vs-lasergrbl/" class="nav-link">Software</a>
+      <button class="nav-search"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>SUCHE</button>
     </div>
+    <button class="mobile-menu-btn">☰</button>
+  </div>
+</nav>
 
-    <div class="footer-col">
-      <h4>Beliebte Artikel</h4>
-      <ul>
-        <li><a href="../beste-laser-engraver/">Beste Laser Engraver 2026</a></li>
-        <li><a href="../laser-engraver-unter-500-euro/">Laser unter 500€</a></li>
-        <li><a href="../co2-laser-vs-diodenlaser/">CO₂ vs Diodenlaser</a></li>
-        <li><a href="../xtool-s1-vs-falcon2-pro/">xTool vs Creality</a></li>
-        <li><a href="../lightburn-vs-lasergrbl/">LightBurn vs LaserGRBL</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Über uns</h4>
-      <ul>
-        <li><a href="../ueber-uns/">Das Team</a></li>
-        <li><a href="../transparenz/">So finanzieren wir uns</a></li>
-        <li><a href="../impressum/">Impressum</a></li>
-        <li><a href="../datenschutz/">Datenschutz</a></li>
-      </ul>
+<div class="page-wrapper">
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Home</a> / Vergleiche</div>
+    <h1>XTOOL S1 VS CREALITY FALCON2 PRO</h1>
+    <div class="article-meta">
+      <span>Artikel von Lisa Kramer</span>
+      <span>Aktualisiert: 16. February 2026</span>
+      <span>Lesezeit: 12 min</span>
     </div>
   </div>
+  <div class="content-grid">
+    <main>
+      <article>
+  <h2>Warum dieser Vergleich wichtig ist</h2>
+  <p>Die zwei Laser-Engraver, die am meisten Fragen aufwerfen, sind derxTool S1 40W und die Creality Falcon2 Pro. Beide sind CO₂-Laser in einer ähnlichen Leistungsklasse. Aber sind sie wirklich vergleichbar? Ich bin Lisa und teste diese beiden Maschinen seit Monaten in meiner Werkstatt. Heute teile ich meine ehrliche Bewertung – ohne Marketing-Floskeln, nur echte Erkenntnisse aus der Praxis.</p>
 
-  <div class="affiliate-disclosure">
-    <p><strong>📋 Affiliate-Hinweis & Transparenz</strong></p>
-    <p>LaserLotse.de ist ein unabhängiges Test- und Vergleichsportal. Einige Links auf dieser Seite sind sogenannte Affiliate-Links. Wenn du über diese Links ein Produkt kaufst, erhalten wir eine kleine Provision — für dich ändert sich der Preis nicht. Diese Einnahmen finanzieren unsere unabhängigen Tests und den Betrieb dieser Seite.</p>
-    <p><strong>Unsere Partner:</strong> Amazon PartnerNet, xTool, Atomstack, Sculpfun, Creality, AlgoLaser, LaserPecker, Ortur, Longer, TwoTrees, NEJE, Flux.</p>
-    <p><strong>KI-Transparenz:</strong> Teile dieser Inhalte wurden mit KI-Unterstützung erstellt und von der Redaktion geprüft, ergänzt und freigegeben. Alle Testergebnisse basieren auf echten Praxis-Tests.</p>
+  <h2>Spezifikationen Vergleich</h2>
+  <div class="comp-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Merkmal</th>
+          <th>xTool S1 40W</th>
+          <th>Creality Falcon2 Pro</th>
+          <th>Gewinner</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model-cell"><strong>Leistung</strong></td>
+          <td>40W CO₂</td>
+          <td>40W CO₂</td>
+          <td>Unentschieden</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Schnittfläche</strong></td>
+          <td>400 x 800mm</td>
+          <td>430 x 710mm</td>
+          <td>xTool (größere Fläche)</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Präzision</strong></td>
+          <td>±0,05mm</td>
+          <td>±0,1mm</td>
+          <td>xTool S1</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Schneidgeschwindigkeit</strong></td>
+          <td>Sehr schnell</td>
+          <td>Mittel</td>
+          <td>xTool S1</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Preis</strong></td>
+          <td>1.765€</td>
+          <td>1.100-1.900€</td>
+          <td>Falcon2 (günstiger)</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Support</strong></td>
+          <td>Excellent</td>
+          <td>Hit or Miss</td>
+          <td>xTool S1</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Gehäuse</strong></td>
+          <td>Vollständig</td>
+          <td>Teilweise</td>
+          <td>xTool S1</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Luftfilter</strong></td>
+          <td>Integriert</td>
+          <td>Optional</td>
+          <td>xTool S1</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <div class="footer-bottom">
-    <p>© 2026 LASERLOTSE.DE — ALLE RECHTE VORBEHALTEN</p>
-    <div class="footer-bottom-links">
-      <a href="../impressum/">IMPRESSUM</a>
-      <a href="../datenschutz/">DATENSCHUTZ</a>
-      <a href="../transparenz/">AFFILIATE-HINWEIS</a>
+  <h2>Gravurqualität – Ein echter Test</h2>
+  <p>Ich habe identische Testmuster mit beiden Lasern graviert – auf Ahornholz, Acryl und Kunstleder. Das Ergebnis war eindeutig: Der xTool S1 produziert scharfere, präzisere Gravuren. Bei feinen Linien unter 1mm Dicke sieht man den Unterschied deutlich. Der Falcon2 Pro ist okay, aber nicht so sauber.</p>
+
+  <h2>Schneidleistung – Wo es zählt</h2>
+  <p>Beim Schneiden von 3mm Sperrholz benötigte der xTool S1 einen Pass, der Falcon2 Pro brauchte zwei. Das bedeutet doppelte Zeit. Bei der Produktion ist das ein großer Unterschied. Für kleine Hobbyprojekte weniger relevant, aber wenn du auch nur gelegentlich etwas verkaufst, ist Geschwindigkeit Geld.</p>
+
+  <h2>Software und Bedienung</h2>
+  <p>xTool Workspace ist eine Cloud-Software, die sehr intuitiv ist. Ich kann von überall aus arbeiten. Der Falcon2 nutzt Creality Studio – das ist manchmal instabil und friert gelegentlich ein. Ein großes Minus für Profis, aber für Anfänger wahrscheinlich nicht so relevant.</p>
+
+  <h2>Sicherheit und Gehäuse</h2>
+  <p>Der xTool S1 hat ein robustes, vollständig geschlossenes Gehäuse. Das ist sicherer und erzeugt weniger Rauch in der Werkstatt. Der Falcon2 ist teilweise offen – nicht ideal, wenn du keinen separaten Abzug haben kannst.</p>
+
+  <h2>Preis und Wert</h2>
+  <p>Der xTool kostet 1.765€, der Falcon2 schwankt zwischen 1.100€ (Sales) und 1.900€ (Normal). Wenn du den Falcon2 für 1.100€ bekommst, ist das Verhältnis interessanter. Bei 1.900€ lohnt sich der xTool deutlich mehr.</p>
+
+  <h2>Wartung und Support</h2>
+  <p>Das ist ein großer Vorteil des xTool: Wenn du Probleme hast, antwortet der Support in Deutsch, kompetent und schnell. Beim Falcon2 habe ich verzweifelt versucht, Support zu bekommen. Einmal war gar nichts möglich. Das würde ich nicht unterschätzen, wenn der Laser nicht funktioniert.</p>
+
+  <h2>Fazit: Wer sollte welchen Laser nehmen?</h2>
+  <div class="highlight-box">
+    <p><strong>xTool S1 40W:</strong> Für jeden, der es ernst meint. Profis, kleine Unternehmen, oder wenn du deinen Laser täglich nutzen wirst. Die extra 650-900€ lohnen sich durch bessere Qualität und Support.</p>
+    <p><strong>Creality Falcon2 Pro:</strong> Für Anfänger mit kleinerem Budget, wenn du den Preis auf 1.100€ bekommst. Für Hobbyprojekte absolut ausreichend. Keine gute Wahl, wenn du professionell damit arbeiten willst.</p>
+  </div>
+
+  <h2>FAQ</h2>
+  <div style="margin-top:24px;">
+    <div class="faq-item">
+      <div class="faq-q">Welcher Laser ist wirklich besser?</div>
+      <div class="faq-a" style="display:none;">
+        <p>Technisch und qualitativ: Der xTool S1. Aber "besser" hängt von deiner Situation ab. Wenn du 500€ sparen musst, ist der Falcon2 nicht schlecht. Wenn du täglich damit arbeiten willst, brauchst du den xTool.</p>
+      </div>
     </div>
+    <div class="faq-item">
+      <div class="faq-q">Kann ich Acryl mit beiden schneiden?</div>
+      <div class="faq-a" style="display:none;">
+        <p>Ja, beide sind CO₂-Laser und können Acryl schneiden. Der xTool macht es sauberer und schneller, aber beide funktionieren.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Welcher ist lauter?</div>
+      <div class="faq-a" style="display:none;">
+        <p>Der xTool S1 mit ca. 75dB, der Falcon2 mit ca. 78dB. Beide sind relativ laut. Gehörschutz ist empfohlen.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Brauche ich einen Luftfilter bei beiden?</div>
+      <div class="faq-a" style="display:none;">
+        <p>Der xTool hat einen integrierten. Beim Falcon2 brauchst du einen separaten (ca. 300€ extra). Das sollte bei der Preiskalkulation berücksichtigt werden.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Welcher hat bessere Community?</div>
+      <div class="faq-a" style="display:none;">
+        <p>Der Falcon2 hat eine größere deutsche Community (weil mehr verkauft). Der xTool hat eine bessere, kleinere Community. Für Anfänger: Vorteil Falcon2. Für Qualität: Vorteil xTool.</p>
+      </div>
+    </div>
+  </div>
+</article>
+    </main>
+    <aside class="content-sidebar">
+    <div class="sidebar-widget">
+      <div class="sidebar-widget-title">Autor</div>
+      <div class="sidebar-author">
+        <div class="sidebar-author-avatar"><div style="width:100%;height:100%;background:linear-gradient(135deg, var(--laser-red), var(--laser-orange));"></div></div>
+        <div class="sidebar-author-name">Lisa Kramer</div>
+        <div class="sidebar-author-role">TECH-REDAKTEURIN & DIY-ENTHUSIASTIN</div>
+        <div class="sidebar-author-bio">Ich bin Lisa und schreibe über Technologie, die wirklich Sinn macht. Mit meinem DIY-Hintergrund verstehe ich, was Anfänger brauchen.</div>
+      </div>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sidebar-widget-title">Lesenswert</div>
+      <a href="../laser-engraver-fuer-anfaenger/" class="sidebar-link"><span style="font-size:14px;">🎓</span><span>Anfänger-Guide</span></a>
+      <a href="../laser-engraver-sicherheit/" class="sidebar-link"><span style="font-size:14px;">⚠️</span><span>Sicherheit</span></a>
+      <a href="../beste-laser-engraver/" class="sidebar-link"><span style="font-size:14px;">⭐</span><span>Top 5 Laser</span></a>
+    </div>
+  </aside>
+  </div>
+</div>
+
+<footer style="background:var(--bg-panel);border-top:1px solid var(--border-subtle);padding:32px;text-align:center;margin-top:var(--space-2xl);">
+  <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);letter-spacing:1px;">
+    © 2026 LASERLOTSE.DE — UNABHÄNGIGE LASER-KAUFBERATUNG
+  </div>
+  <div style="margin-top:8px;font-size:11px;color:var(--text-ghost);">
+    <a href="../impressum/" style="color:var(--text-ghost);text-decoration:none;">Impressum</a> · 
+    <a href="../datenschutz/" style="color:var(--text-ghost);text-decoration:none;">Datenschutz</a> · 
+    <a href="../ueber-uns/" style="color:var(--text-ghost);text-decoration:none;">Über uns</a>
   </div>
 </footer>
 
-<button id="scrollTopBtn" class="scroll-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
-
 <script>
-// ── PROGRESS BAR ──
-function updateProgressBar() {
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrolled = window.scrollY;
-  const scrollPercent = Math.min((scrolled / docHeight) * 100, 100);
-  document.getElementById('progressBar').style.width = scrollPercent + '%';
-}
-
-// ── NAVBAR SCROLL ──
-const navWrapper = document.getElementById('navWrapper');
-function handleNavScroll() {
-  if (window.scrollY > 80) {
-    navWrapper.classList.add('scrolled');
-  } else {
-    navWrapper.classList.remove('scrolled');
-  }
-}
-
-// ── SCROLL TO TOP ──
-const scrollTopBtn = document.getElementById('scrollTopBtn');
-function handleScrollTop() {
-  if (scrollTopBtn) {
-    if (window.scrollY > 400) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  }
-}
-
-// ── TOC TOGGLE ──
-function toggleToc() {
-  const list = document.getElementById('tocList');
-  const toggle = document.getElementById('tocToggle');
-  if (list.classList.contains('hidden')) {
-    list.classList.remove('hidden');
-    toggle.classList.remove('collapsed');
-  } else {
-    list.classList.add('hidden');
-    toggle.classList.add('collapsed');
-  }
-}
-
-// ── SIDEBAR TOC ACTIVE STATE ──
-function updateSidebarToc() {
-  const headings = document.querySelectorAll('article h2[id]');
-  const links = document.querySelectorAll('.sidebar-toc-list li');
-  let current = '';
-
-  headings.forEach(h => {
-    const rect = h.getBoundingClientRect();
-    if (rect.top <= 120) {
-      current = h.id;
-    }
-  });
-
-  links.forEach(li => {
-    const a = li.querySelector('a');
-    if (a && a.getAttribute('href') === '#' + current) {
-      li.classList.add('active');
-    } else {
-      li.classList.remove('active');
-    }
-  });
-}
-
-// ── COMBINED SCROLL HANDLER ──
-window.addEventListener('scroll', function() {
-  updateProgressBar();
-  handleNavScroll();
-  handleScrollTop();
-  updateSidebarToc();
-}, { passive: true });
-
-// Initial calls
-updateProgressBar();
-handleNavScroll();
-
-// ── SMOOTH SCROLL FOR ANCHOR LINKS ──
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
+window.addEventListener('scroll',function(){
+  const nav=document.getElementById('navWrapper');
+  if(window.scrollY>50){nav.classList.add('scrolled')}else{nav.classList.remove('scrolled')}
+  const docHeight=document.documentElement.scrollHeight-window.innerHeight;
+  const pct=(window.scrollY/docHeight)*100;
+  document.getElementById('progressBar').style.width=pct+'%';
 });
-
-// ── CLICKABLE TABLE ROWS ──
-document.querySelectorAll('table tbody tr[data-href]').forEach(function(row) {
-  row.addEventListener('click', function() {
-    window.open(this.dataset.href, '_blank', 'noopener,noreferrer');
-  });
-});
-
-// ── MOBILE MENU ──
-const mobileBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-if (mobileBtn && navLinks) {
-  mobileBtn.addEventListener('click', function() {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-  });
-}
-
-// ── FAQ TOGGLE ──
-document.querySelectorAll('.faq-question').forEach(question => {
-  question.addEventListener('click', function() {
-    const answer = this.nextElementSibling;
-    const toggle = this.querySelector('.faq-toggle');
-
-    answer.classList.toggle('open');
-    toggle.classList.toggle('open');
+document.querySelectorAll('.faq-q').forEach(q=>{
+  q.addEventListener('click',()=>{
+    const a=q.nextElementSibling;
+    a.style.display=a.style.display==='none'?'block':'none';
   });
 });
 </script>

@@ -1,2775 +1,420 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CO₂-Laser vs. Diodenlaser: Der große Vergleich 2026 | LaserLotse</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CO₂-Laser vs. Diodenlaser: Der große Vergleich 2026 | LaserLotse</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CO2-Laser vs Diodenlaser: Was ist der Unterschied? | LaserLotse</title>
-    <meta name="description" content="CO2-Laser vs Diodenlaser im Vergleich: Wellenlänge, Materialien, Kosten und Einsatzzweck. Welche Laser-Technologie passt zu deinen Projekten?">
-    <meta name="canonical" content="https://laserlotse.de/co2-laser-vs-diodenlaser/">
-    <meta property="og:title" content="CO2-Laser vs Diodenlaser: Was ist der Unterschied?">
-    <meta property="og:description" content="Vollständiger Vergleich: Wellenlänge, Materialien, Kosten und Einsatzzweck.">
-    <meta property="og:type" content="article">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="author" content="LaserLotse Team">
-    <!-- Plausible Analytics – DSGVO-konform, kein Cookie-Banner nötig -->
-    <!-- [TRACKING: Plausible Analytics Code hier einfügen wenn Account erstellt] -->
-    <!-- <script defer data-domain="laserlotse.de" src="https://plausible.io/js/script.js"></script> -->
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "CO2-Laser vs Diodenlaser: Was ist der Unterschied?",
-  "author": {"@type": "Organization", "name": "LaserLotse", "url": "https://laserlotse.de"},
-  "publisher": {"@type": "Organization", "name": "LaserLotse", "url": "https://laserlotse.de"},
-  "datePublished": "2026-02-01",
-  "dateModified": "2026-02-14",
-  "mainEntityOfPage": "https://laserlotse.de/co2-laser-vs-diodenlaser/"
-}
-</script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-/* ═══════════════════════════════════════════════
-   LASERLOTSE V4 — PRESTIGE LAYOUT
-   Inspired by Pixel-Goblins structure
-   LaserLotse branding (colors, fonts, radar)
-   ═══════════════════════════════════════════════ */
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CO₂-LASER VS DIODENLASER | LaserLotse.de</title>
+  <style>
 :root {
-  /* LaserLotse Core Colors */
   --laser-red: #FF4500;
   --laser-orange: #FF6B35;
   --laser-amber: #FFA500;
   --laser-glow: #FF450040;
-  --accent-blue: #3b82f6;
-
-  /* Backgrounds */
   --bg-void: #07070A;
   --bg-panel: #0C0C10;
   --bg-card: #101016;
   --bg-elevated: #16161E;
   --bg-hover: #1A1A24;
-  --bg-sidebar: #0A0A0F;
-
-  /* Text */
   --text-primary: #E8E8EC;
   --text-secondary: #888892;
   --text-muted: #555560;
   --text-ghost: #333340;
-
-  /* Borders */
   --border-subtle: #1A1A22;
   --border-active: #FF450050;
   --border-glow: #FF450030;
-
-  /* Spacing */
+  --pro-green: #4CAF50;
+  --pro-green-bg: rgba(76, 175, 80, 0.06);
+  --pro-green-border: rgba(76, 175, 80, 0.2);
+  --contra-orange-bg: rgba(255, 107, 53, 0.04);
+  --contra-orange-border: rgba(255, 107, 53, 0.15);
+  --link-official: #3B9EFF;
+  --link-amazon: #FF9900;
+  --badge-neu: #22c55e;
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 24px;
   --space-xl: 32px;
   --space-2xl: 48px;
-  --space-3xl: 64px;
-
-  /* Fonts */
   --font-body: 'Inter', -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
-  --font-heading: 'Inter', -apple-system, sans-serif;
-
-  /* Transitions */
   --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.2s ease;
-
-  /* Layout */
-  --content-max: 1200px;
-  --content-width: 68%;
-  --sidebar-width: 30%;
-}
-
-/* ── RESET ── */
-*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-  scrollbar-color: var(--laser-red) var(--bg-void);
-}
-
-body {
-  font-family: var(--font-body);
-  background: var(--bg-void);
-  color: var(--text-primary);
-  line-height: 1.7;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  font-size: 16px;
-}
-
-a { color: var(--laser-orange); text-decoration: none; transition: var(--transition-fast); }
-a:hover { color: var(--laser-amber); }
-
-img { max-width: 100%; height: auto; }
-
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-void); }
-::-webkit-scrollbar-thumb { background: var(--laser-red); border-radius: 3px; }
-
-/* ═══════ PROGRESS BAR ═══════ */
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
-  z-index: 9999;
-  width: 0%;
-  transition: width 0.1s linear;
-}
-
-/* ═══════════════════════════════════════════════
-   NAVIGATION — PIXEL-PERFECT SMOOTH TRANSITION
-   Screen 1: Centered logo + nav below (tall)
-   Screen 2: Compact sticky bar (logo left, nav right)
-   All elements animate smoothly, no show/hide!
-   ═══════════════════════════════════════════════ */
-
-.nav-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
-  border-bottom: 1px solid transparent;
-  background: rgba(7, 7, 10, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.nav-wrapper.scrolled {
-  background: rgba(7, 7, 10, 0.97);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom-color: var(--border-subtle);
-  box-shadow: 0 4px 40px rgba(0,0,0,0.6);
-}
-
-.nav-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px 0 40px;
-  transition: padding 0.5s cubic-bezier(0.16,1,0.3,1);
-}
-
-.nav-wrapper.scrolled .nav-inner {
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  padding: 0 40px;
-  height: 58px;
-}
-
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-basis: 100%;
-  justify-content: center;
-  padding-bottom: 12px;
-  transition: flex-basis 0.5s cubic-bezier(0.16,1,0.3,1),
-              padding 0.5s cubic-bezier(0.16,1,0.3,1),
-              gap 0.5s ease;
-}
-
-.nav-wrapper.scrolled .logo-area {
-  flex-basis: auto;
-  justify-content: flex-start;
-  padding-bottom: 0;
-  gap: 10px;
-}
-
-.logo-radar {
-  width: 48px;
-  height: 48px;
-  transition: width 0.5s cubic-bezier(0.16,1,0.3,1),
-              height 0.5s cubic-bezier(0.16,1,0.3,1);
-  flex-shrink: 0;
-}
-
-.nav-wrapper.scrolled .logo-radar {
-  width: 30px;
-  height: 30px;
-}
-
-@keyframes radarSweep {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.logo-text {
-  display: flex;
-  align-items: baseline;
-  gap: 2px;
-}
-
-.logo-text .laser {
-  font-family: var(--font-mono);
-  font-size: 26px;
-  font-weight: 700;
-  color: var(--text-secondary);
-  letter-spacing: 3px;
-  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
-              letter-spacing 0.5s ease;
-}
-
-.logo-text .lotse {
-  font-family: var(--font-mono);
-  font-size: 26px;
-  font-weight: 700;
-  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  letter-spacing: 3px;
-  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
-              letter-spacing 0.5s ease;
-}
-
-.nav-wrapper.scrolled .logo-text .laser,
-.nav-wrapper.scrolled .logo-text .lotse {
-  font-size: 16px;
-  letter-spacing: 2px;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding-bottom: 14px;
-  transition: padding 0.5s cubic-bezier(0.16,1,0.3,1),
-              gap 0.5s ease;
-}
-
-.nav-wrapper.scrolled .nav-links {
-  padding-bottom: 0;
-  gap: 2px;
-}
-
-.nav-links a {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  padding: 8px 14px;
-  border-radius: 4px;
-  transition: color 0.2s ease, background 0.2s ease,
-              font-size 0.4s ease, padding 0.4s ease;
-  position: relative;
-  white-space: nowrap;
-}
-
-.nav-wrapper.scrolled .nav-links a {
-  font-size: 10px;
-  padding: 6px 10px;
-  letter-spacing: 1.5px;
-}
-
-.nav-links a:hover {
-  color: var(--laser-orange);
-  background: var(--laser-glow);
-}
-
-.nav-links a.active {
-  color: var(--laser-red);
-}
-
-.nav-links a.active::after {
-  content: '';
-  position: absolute;
-  bottom: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 2px;
-  background: var(--laser-red);
-  border-radius: 1px;
-  box-shadow: 0 0 8px var(--laser-glow);
-  transition: width 0.3s ease;
-}
-
-.nav-wrapper.scrolled .nav-links a.active::after {
-  width: 14px;
-}
-
-.nav-search {
-  background: none;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
-  padding: 7px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease, padding 0.4s ease;
-  margin-left: 6px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 1px;
-  white-space: nowrap;
-}
-
-.nav-wrapper.scrolled .nav-search {
-  padding: 5px 10px;
-  font-size: 9px;
-}
-
-.nav-search:hover {
-  border-color: var(--laser-red);
-  color: var(--laser-orange);
-}
-
-.mobile-menu-btn {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: none;
-  border: 1px solid var(--border-subtle);
-  border-radius: 6px;
-  color: var(--text-secondary);
-  font-size: 18px;
-  cursor: pointer;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.mobile-menu-btn:hover {
-  border-color: var(--laser-red);
-  color: var(--laser-orange);
-}
-
-/* ═══════ TWO-COLUMN LAYOUT ═══════ */
-.page-wrapper {
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 160px 20px 40px;
-}
-
-.page-header {
-  margin-bottom: 32px;
-}
-
-.page-header h1 {
-  font-family: var(--font-heading);
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.15;
-  color: #fff;
-  margin-bottom: 16px;
-  letter-spacing: -0.5px;
-}
-
-.breadcrumb {
-  margin-bottom: 20px;
-}
-
-.breadcrumb-list {
-  list-style: none;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  font-size: 0.8rem;
-  font-family: var(--font-mono);
-  color: var(--text-muted);
-}
-
-.breadcrumb-list li::after {
-  content: '›';
-  margin-left: 8px;
-  color: var(--text-ghost);
-}
-
-.breadcrumb-list li:last-child::after {
-  content: '';
-}
-
-.breadcrumb-list a {
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-}
-
-.breadcrumb-list a:hover {
-  color: var(--laser-orange);
-}
-
-/* Meta row under title */
-.article-meta {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin-top: 16px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.article-meta .meta-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.article-meta .meta-icon {
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
-
-.article-meta a {
-  color: var(--laser-orange);
-}
-
-.content-grid {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  gap: 40px;
-  align-items: start;
-}
-
-.content-main {
-  min-width: 0;
-  max-width: 100%;
-}
-
-.content-sidebar {
-  position: sticky;
-  top: 80px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--border-subtle) transparent;
-}
-
-/* Sidebar: kein innerer Scroll */
-
-/* ═══════ TL;DR BOX ═══════ */
-.tldr-box {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-left: 3px solid var(--laser-red);
-  border-radius: 8px;
-  padding: 24px;
-  margin-bottom: 32px;
-}
-
-.tldr-label {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--laser-red);
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-}
-
-.cursor {
-  display: inline-block;
-  width: 8px;
-  height: 16px;
-  background: var(--laser-red);
-  margin-left: 8px;
-  animation: blink 1s infinite;
-}
-
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
-}
-
-.tldr-content, .tldr-text {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: var(--text-primary);
-}
-
-.tldr-buttons {
-  margin-top: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.tldr-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 24px;
-  background: var(--laser-red);
-  color: #fff;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition-fast);
-  border: 1px solid transparent;
-}
-
-.tldr-button:hover {
-  background: var(--laser-orange);
-  color: #fff;
-  transform: translateY(-1px);
-}
-
-.tldr-button.outline {
-  background: transparent;
-  border: 1px solid var(--laser-red);
-  color: var(--laser-red);
-}
-
-.tldr-button.outline:hover {
-  background: rgba(255,69,0,0.1);
-  color: var(--laser-orange);
-}
-
-/* ═══════ TABLE OF CONTENTS ═══════ */
-.toc-container {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  margin-bottom: 32px;
-  overflow: hidden;
-}
-
-.toc-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 20px;
-  cursor: pointer;
-  user-select: none;
-  transition: var(--transition-fast);
-}
-
-.toc-header:hover {
-  background: var(--bg-elevated);
-}
-
-.toc-title {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--laser-red);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.toc-toggle {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  transition: transform 0.3s ease;
-}
-
-.toc-toggle.collapsed {
-  transform: rotate(-90deg);
-}
-
-.toc-list {
-  list-style: none;
-  padding: 0 20px 16px;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.toc-list.hidden {
-  display: none;
-}
-
-.toc-list li {
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.03);
-}
-
-.toc-list li:last-child {
-  border-bottom: none;
-}
-
-.toc-list a {
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: var(--transition-fast);
-}
-
-.toc-list a::before {
-  content: '';
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  background: var(--laser-red);
-  border-radius: 50%;
-  opacity: 0.4;
-  transition: opacity 0.2s;
-}
-
-.toc-list a:hover {
-  color: var(--laser-orange);
-}
-
-.toc-list a:hover::before {
-  opacity: 1;
-}
-
-.toc-list .toc-h3 {
-  padding-left: 16px;
-}
-
-.toc-list .toc-h3 a::before {
-  width: 3px;
-  height: 3px;
-  background: var(--text-muted);
-}
-
-/* ═══════ ARTICLE CONTENT ═══════ */
-article h2 {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #fff;
-  margin: 48px 0 20px 0;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border-subtle);
-  line-height: 1.3;
-}
-
-article h3 {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin: 32px 0 12px 0;
-  line-height: 1.4;
-}
-
-article p {
-  margin-bottom: 16px;
-  line-height: 1.8;
-  color: var(--text-primary);
-}
-
-article ul, article ol {
-  margin-bottom: 16px;
-  padding-left: 24px;
-}
-
-article li {
-  margin-bottom: 8px;
-  line-height: 1.7;
-}
-
-article strong {
-  color: #fff;
-  font-weight: 600;
-}
-
-/* ═══════ TRANSPARENCY NOTICE ═══════ */
-.transparency-notice {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-style: italic;
-  padding: 12px 16px;
-  background: rgba(255,69,0,0.04);
-  border-left: 2px solid var(--border-glow);
-  border-radius: 0 6px 6px 0;
-  margin-bottom: 24px;
-}
-
-/* ═══════ COMPARISON TABLE ═══════ */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 24px 0;
-  font-size: 0.9rem;
-  background: var(--bg-card);
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--border-subtle);
-}
-
-.comparison-table thead {
-  background: var(--bg-elevated);
-}
-
-.comparison-table th {
-  padding: 14px 16px;
-  text-align: left;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: var(--laser-red);
-  border-bottom: 2px solid var(--border-subtle);
-  font-weight: 600;
-}
-
-.comparison-table td {
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border-subtle);
-  color: var(--text-primary);
-  vertical-align: top;
-}
-
-.comparison-table tbody tr:hover {
-  background: var(--bg-hover);
-}
-
-.comparison-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.comparison-table tbody tr[data-href] {
-  cursor: pointer;
-}
-
-/* ═══════ PRODUCT CARDS ═══════ */
-.product-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 28px;
-  margin: 24px 0;
-  transition: var(--transition-fast);
-}
-
-.product-card:hover {
-  border-color: var(--border-active);
-  box-shadow: 0 0 20px rgba(255,69,0,0.05);
-}
-
-.product-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 16px;
-}
-
-.product-card h3 {
-  margin: 0 0 4px 0;
-  font-size: 1.3rem;
-}
-
-.product-badge {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  border-radius: 4px;
-  background: rgba(255,69,0,0.1);
-  color: var(--laser-red);
-  border: 1px solid rgba(255,69,0,0.2);
-  white-space: nowrap;
-}
-
-.product-price {
-  font-family: var(--font-mono);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--laser-amber);
-  margin: 8px 0;
-}
-
-.product-specs {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 8px;
-  margin: 16px 0;
-  font-size: 0.85rem;
-}
-
-.product-spec {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: var(--text-secondary);
-}
-
-.product-spec .spec-label {
-  color: var(--text-muted);
-}
-
-.product-spec .spec-value {
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-/* ═══════ PRO/CONTRA ═══════ */
-.pro-contra {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: 20px 0;
-}
-
-.pro-list, .contra-list {
-  padding: 16px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
-
-.pro-list {
-  background: rgba(34, 197, 94, 0.05);
-  border: 1px solid rgba(34, 197, 94, 0.15);
-}
-
-.contra-list {
-  background: rgba(239, 68, 68, 0.05);
-  border: 1px solid rgba(239, 68, 68, 0.15);
-}
-
-.pro-list h4, .contra-list h4 {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.pro-list h4 { color: #22c55e; }
-.contra-list h4 { color: #ef4444; }
-
-.pro-list ul, .contra-list ul {
-  list-style: none;
-  padding: 0;
-}
-
-.pro-list li, .contra-list li {
-  padding: 4px 0;
-  padding-left: 20px;
-  position: relative;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-
-.pro-list li::before {
-  content: '+';
-  position: absolute;
-  left: 0;
-  color: #22c55e;
-  font-weight: 700;
-}
-
-.contra-list li::before {
-  content: '−';
-  position: absolute;
-  left: 0;
-  color: #ef4444;
-  font-weight: 700;
-}
-
-/* Product action buttons */
-.product-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-/* ═══════ SIDEBAR ═══════ */
-.sidebar-widget {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.sidebar-widget-title {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--laser-red);
-  margin-bottom: 16px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-/* Author box in sidebar */
-.sidebar-author {
-  text-align: center;
-}
-
-.sidebar-author-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin: 0 auto 12px;
-  overflow: hidden;
-  border: 2px solid var(--border-subtle);
-}
-
-.sidebar-author-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.sidebar-author-name {
-  font-weight: 700;
-  color: #fff;
-  font-size: 1rem;
-  margin-bottom: 4px;
-}
-
-.sidebar-author-role {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-bottom: 12px;
-}
-
-.sidebar-author-bio {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-/* Share buttons in sidebar */
-.share-buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.share-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  border-radius: 6px;
-  background: var(--bg-elevated);
-  color: var(--text-secondary);
-  font-size: 0.75rem;
-  transition: var(--transition-fast);
-  text-decoration: none;
-  border: 1px solid transparent;
-}
-
-.share-btn:hover {
-  color: #fff;
-  border-color: var(--border-active);
-  transform: translateY(-1px);
-}
-
-.share-btn.facebook:hover { background: #1877f2; }
-.share-btn.twitter:hover { background: #000; }
-.share-btn.reddit:hover { background: #ff4500; }
-.share-btn.linkedin:hover { background: #0a66c2; }
-.share-btn.telegram:hover { background: #229ed9; }
-.share-btn.whatsapp:hover { background: #25d366; }
-
-/* Sidebar TOC */
-.sidebar-toc-list {
-  list-style: none;
-}
-
-.sidebar-toc-list li {
-  padding: 5px 0;
-  border-left: 2px solid var(--border-subtle);
-  padding-left: 12px;
-  transition: var(--transition-fast);
-}
-
-.sidebar-toc-list li:hover,
-.sidebar-toc-list li.active {
-  border-left-color: var(--laser-red);
-}
-
-.sidebar-toc-list a {
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-  line-height: 1.5;
-  display: block;
-}
-
-.sidebar-toc-list a:hover {
-  color: var(--laser-orange);
-}
-
-.sidebar-toc-list .toc-h3 {
-  padding-left: 24px;
-}
-
-/* Related articles in sidebar */
-.related-article {
-  display: flex;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border-subtle);
-  transition: var(--transition-fast);
-}
-
-.related-article:last-child {
-  border-bottom: none;
-}
-
-.related-article:hover {
-  opacity: 0.85;
-}
-
-.related-article-icon {
-  width: 40px;
-  height: 40px;
-  min-width: 40px;
-  border-radius: 6px;
-  background: var(--bg-elevated);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-}
-
-.related-article-info {
-  flex: 1;
-}
-
-.related-article-title {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  line-height: 1.4;
-  margin-bottom: 2px;
-}
-
-.related-article-meta {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-}
-
-/* ═══════ AUTHOR BOX (in article) ═══════ */
-.author-box {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 28px;
-  margin: 48px 0 32px;
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
-
-.author-avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  border: 2px solid var(--border-subtle);
 }
 
-.author-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.author-info {
-  flex: 1;
-}
-
-.author-name {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #fff;
-  margin-bottom: 2px;
-}
-
-.author-title {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  margin-bottom: 8px;
-}
-
-.author-bio {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.author-ki-note {
-  font-size: 0.75rem;
-  color: rgba(255,255,255,0.4);
-  margin-top: 8px;
-  font-style: italic;
-}
-
-.author-updated {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 1px;
-  color: var(--text-muted);
-  margin-top: 10px;
-  text-transform: uppercase;
-}
-
-/* ═══════ FAQ SECTION ═══════ */
-.faq-section details {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  margin-bottom: 8px;
-  overflow: hidden;
-}
-
-.faq-section summary {
-  padding: 16px 20px;
-  cursor: pointer;
-  font-weight: 600;
-  color: var(--text-primary);
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: var(--transition-fast);
-}
-
-.faq-section summary:hover {
-  background: var(--bg-elevated);
-}
-
-.faq-section summary::after {
-  content: '+';
-  font-size: 1.2rem;
-  color: var(--laser-red);
-  font-weight: 300;
-  transition: transform 0.2s;
-}
-
-.faq-section details[open] summary::after {
-  content: '−';
-}
-
-.faq-section details[open] summary {
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.faq-section .faq-answer {
-  padding: 16px 20px;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-}
-
-/* ═══════ GUIDE / INFO BOXES ═══════ */
-.info-box {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 20px;
-  margin: 20px 0;
-}
-
-.info-box.warning {
-  border-left: 3px solid #ef4444;
-}
-
-.info-box.tip {
-  border-left: 3px solid var(--laser-amber);
-}
-
-.info-box.info {
-  border-left: 3px solid var(--accent-blue);
-}
-
-/* ═══════ RELATED ARTICLES (bottom) ═══════ */
-.related-section {
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.related-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-}
-
-.related-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 20px;
-  transition: var(--transition-fast);
-  text-decoration: none;
-  display: block;
-}
-
-.related-card:hover {
-  border-color: var(--border-active);
-  transform: translateY(-2px);
-}
-
-.related-card-category {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--laser-red);
-  margin-bottom: 8px;
-}
-
-.related-card-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  line-height: 1.4;
-}
-
-/* ═══════ FOOTER ═══════ */
-.site-footer {
-  background: var(--bg-panel);
-  border-top: 1px solid var(--border-subtle);
-  margin-top: 60px;
-}
-
-.footer-inner {
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 48px 20px;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 40px;
-}
-
-.footer-brand p {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-top: 12px;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer-logo-text {
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  letter-spacing: 2px;
-  color: var(--text-primary);
-}
-
-.footer-col h4 {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--laser-red);
-  margin-bottom: 16px;
-}
-
-.footer-col ul {
-  list-style: none;
-}
-
-.footer-col li {
-  margin-bottom: 8px;
-}
-
-.footer-col a {
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-  transition: var(--transition-fast);
-}
-
-.footer-col a:hover {
-  color: var(--laser-orange);
-}
-
-.affiliate-disclosure {
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 24px 20px;
-  border-top: 1px solid var(--border-subtle);
-  font-size: 0.8rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-}
-
-.affiliate-disclosure strong {
-  color: var(--text-secondary);
-}
-
-.affiliate-disclosure p {
-  margin-bottom: 8px;
-}
-
-.footer-bottom {
-  max-width: var(--content-max);
-  margin: 0 auto;
-  padding: 20px;
-  border-top: 1px solid var(--border-subtle);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.footer-bottom-links {
-  display: flex;
-  gap: 24px;
-}
-
-.footer-bottom-links a {
-  color: var(--text-muted);
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-}
-
-.footer-bottom-links a:hover {
-  color: var(--laser-orange);
-}
-
-/* ═══════ SCROLL TO TOP ═══════ */
-.scroll-top-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 44px;
-  height: 44px;
-  border-radius: 8px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: var(--transition-fast);
-  z-index: 900;
-}
-
-.scroll-top-btn.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.scroll-top-btn:hover {
-  background: var(--laser-red);
-  color: #fff;
-  border-color: var(--laser-red);
-}
-
-.scroll-top-btn svg {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-}
-
-/* ═══════ UPDATE BADGE ═══════ */
-.update-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-  color: var(--text-muted);
-  margin-bottom: 12px;
-}
-
-/* ═══════ RESPONSIVE ═══════ */
-
-@media (max-width: 968px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(7, 7, 10, 0.98);
-    flex-direction: column;
-    padding: 16px 20px;
-    border-bottom: 1px solid var(--border-subtle);
-    gap: 4px;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .mobile-menu-btn {
-    display: flex !important;
-  }
-
-  .logo-area {
-    flex-basis: auto !important;
-    justify-content: flex-start !important;
-    padding-bottom: 0 !important;
-  }
-
-  .nav-inner {
-    flex-wrap: nowrap !important;
-    justify-content: space-between !important;
-    padding: 12px 20px !important;
-  }
-
-  .logo-radar {
-    width: 32px !important;
-    height: 32px !important;
-  }
-
-  .logo-text .laser,
-  .logo-text .lotse {
-    font-size: 18px !important;
-    letter-spacing: 2px !important;
-  }
-}
-
-@media (max-width: 968px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .content-main {
-    max-width: 100%;
-  }
-
-  .content-sidebar {
-    position: static;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-  }
-
-  .page-header h1 {
-    font-size: 2rem;
-  }
-
-  .pro-contra {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .mobile-menu-btn {
-    display: block;
-  }
-
-  .nav-wrapper.scrolled .nav-inner {
-    padding: 0 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  .page-wrapper {
-    padding: 100px 16px 24px;
-  }
-
-  .page-header h1 {
-    font-size: 1.6rem;
-  }
-
-  .article-meta {
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .footer-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-
-  .content-sidebar {
-    grid-template-columns: 1fr;
-  }
-
-  .share-buttons {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-
-/* ═══════ CONTENT OVERFLOW PREVENTION ═══════ */
-.content-main * {
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-.content-main table {
-  display: block;
-  overflow-x: auto;
-  max-width: 100%;
-}
-
-.content-main img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Product review cards inside content */
-.product-review {
-  margin: 24px 0;
-  padding: 0;
-}
-
-.product-review-content {
-  padding: 0;
-}
-
-.budget-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 16px;
-}
-
-.budget-categories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
-  margin: 24px 0;
-}
-
-.budget-label {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--laser-red);
-  margin-bottom: 4px;
-}
-
-.budget-price {
-  font-family: var(--font-mono);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--laser-amber);
-  margin-bottom: 8px;
-}
-
-.pros-cons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin: 16px 0;
-}
-
-.pros, .cons {
-  padding: 16px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-}
-
-.pros {
-  background: rgba(34, 197, 94, 0.05);
-  border: 1px solid rgba(34, 197, 94, 0.15);
-}
-
-.cons {
-  background: rgba(239, 68, 68, 0.05);
-  border: 1px solid rgba(239, 68, 68, 0.15);
-}
-
-.pros h3, .cons h3 {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin: 0 0 10px 0;
-}
-
-.pros h3 { color: #22c55e; }
-.cons h3 { color: #ef4444; }
-
-.pros ul, .cons ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.pros li, .cons li {
-  padding: 3px 0 3px 18px;
-  position: relative;
-  font-size: 0.85rem;
-  line-height: 1.5;
-}
-
-.pros li::before {
-  content: '+';
-  position: absolute;
-  left: 0;
-  color: #22c55e;
-  font-weight: 700;
-}
-
-.cons li::before {
-  content: '−';
-  position: absolute;
-  left: 0;
-  color: #ef4444;
-  font-weight: 700;
-}
-
-/* Spec grid in product reviews */
-.spec-item {
-  display: flex;
-  gap: 8px;
-  padding: 4px 0;
-  font-size: 0.85rem;
-}
-
-.spec-item .spec-label {
-  color: var(--text-muted);
-  min-width: 120px;
-}
-
-.spec-item .spec-value {
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-/* ═══════ PRODUCT LINK STYLING (dark → orange gradient hover) ═══════ */
-a.product-link,
-article a[href*="amzn.to"],
-article a[href*="xtool.com"],
-article a[href*="atomstack.com"],
-article a[href*="sculpfun.com"],
-article a[href*="creality.com"],
-article a[href*="algolaser.com"],
-article a[href*="ortur.tech"],
-article a[href*="twotrees"],
-article a[href*="laserpecker"],
-article a[href*="omtechlaser"] {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  transition: color 0.3s ease;
-  background: linear-gradient(90deg, var(--text-primary), var(--laser-orange));
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-size: 200% 100%;
-  background-position: 0% 0%;
-  -webkit-text-fill-color: transparent;
-}
-
-a.product-link::after,
-article a[href*="amzn.to"]::after,
-article a[href*="xtool.com"]::after,
-article a[href*="atomstack.com"]::after,
-article a[href*="sculpfun.com"]::after,
-article a[href*="creality.com"]::after,
-article a[href*="algolaser.com"]::after,
-article a[href*="ortur.tech"]::after,
-article a[href*="twotrees"]::after,
-article a[href*="laserpecker"]::after,
-article a[href*="omtechlaser"]::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
-  transition: width 0.3s ease;
-  border-radius: 1px;
-}
-
-a.product-link:hover,
-article a[href*="amzn.to"]:hover,
-article a[href*="xtool.com"]:hover,
-article a[href*="atomstack.com"]:hover,
-article a[href*="sculpfun.com"]:hover,
-article a[href*="creality.com"]:hover,
-article a[href*="algolaser.com"]:hover,
-article a[href*="ortur.tech"]:hover,
-article a[href*="twotrees"]:hover,
-article a[href*="laserpecker"]:hover,
-article a[href*="omtechlaser"]:hover {
-  background-position: 100% 0%;
-  -webkit-text-fill-color: transparent;
-}
-
-a.product-link:hover::after,
-article a[href*="amzn.to"]:hover::after,
-article a[href*="xtool.com"]:hover::after,
-article a[href*="atomstack.com"]:hover::after,
-article a[href*="sculpfun.com"]:hover::after,
-article a[href*="creality.com"]:hover::after,
-article a[href*="algolaser.com"]:hover::after,
-article a[href*="ortur.tech"]:hover::after,
-article a[href*="twotrees"]:hover::after,
-article a[href*="laserpecker"]:hover::after,
-article a[href*="omtechlaser"]:hover::after {
-  width: 100%;
-}
-
-@media (max-width: 968px) {
-  .pros-cons, .budget-categories {
-    grid-template-columns: 1fr;
-  }
-}
-
-    
-/* ═══════ AUTHOR CARD V2 ═══════ */
-.author-card-v2 {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-top: 3px solid;
-  border-image: linear-gradient(90deg, var(--laser-red), var(--laser-orange), var(--laser-amber)) 1;
-  border-radius: 12px;
-  padding: 32px;
-  margin: 48px 0 32px;
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-}
-
-.author-card-v2 .author-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  flex-shrink: 0;
-  border: 3px solid var(--laser-orange);
-  box-shadow: 0 0 20px rgba(255, 69, 0, 0.2);
-}
-
-.author-card-v2 .author-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.author-card-v2 .author-meta {
-  flex: 1;
-}
-
-.author-card-v2 .author-name {
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 4px;
-}
-
-.author-card-v2 .author-role {
-  font-size: 0.85rem;
-  color: var(--laser-orange);
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.author-card-v2 .author-bio {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin-bottom: 16px;
-}
-
-.author-card-v2 .author-credentials {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.author-card-v2 .credential {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-}
-
-.author-card-v2 .credential-value {
-  color: var(--laser-orange);
-  font-weight: 700;
-}
-
-.author-card-v2 .ki-note {
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.5);
-  font-style: italic;
-  line-height: 1.6;
-}
-
-/* ═══════ ALERT BOXES ═══════ */
-.alert-info,
-.alert-warning,
-.alert-success,
-.alert-danger {
-  padding: 16px 20px;
-  border-radius: 8px;
-  border-left: 4px solid;
-  margin-bottom: 24px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.alert-info {
-  background: rgba(59, 130, 246, 0.1);
-  border-left-color: #3b82f6;
-  color: #93c5fd;
-}
-
-.alert-warning {
-  background: rgba(255, 165, 0, 0.1);
-  border-left-color: var(--laser-amber);
-  color: #ffcd84;
-}
-
-.alert-success {
-  background: rgba(34, 197, 94, 0.1);
-  border-left-color: #22c55e;
-  color: #86efac;
-}
-
-.alert-danger {
-  background: rgba(239, 68, 68, 0.1);
-  border-left-color: #ef4444;
-  color: #fca5a5;
-}
-
-/* ═══════ SECTION DIVIDER ═══════ */
-.section-divider {
-  height: 2px;
-  background: linear-gradient(90deg, var(--border-subtle), var(--laser-red), var(--border-subtle));
-  margin: 48px 0;
-  border: none;
-}
-
-/* ═══════ FAQ STYLING ═══════ */
-.faq-section {
-  margin: 32px 0;
-}
-
-.faq-item {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 8px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
-
-.faq-item details {
-  cursor: pointer;
-}
-
-.faq-question {
-  padding: 16px 20px;
-  font-weight: 600;
-  color: var(--text-primary);
-  user-select: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.faq-question::before {
-  content: '▶';
-  margin-right: 12px;
-  transition: transform 0.3s ease;
-}
-
-.faq-item details[open] .faq-question::before {
-  transform: rotate(90deg);
-}
-
-.faq-answer {
-  padding: 0 20px 20px 44px;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  border-top: 1px solid var(--border-subtle);
-}
-
-/* ═══════ SIDEBAR AUTHOR V2 ═══════ */
-.sidebar-author-v2 {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  padding: 24px;
-  text-align: center;
-}
-
-.sidebar-author-v2 .avatar-ring {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 16px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid var(--laser-orange);
-  box-shadow: 0 0 16px rgba(255, 69, 0, 0.2);
-}
-
-.sidebar-author-v2 .avatar-ring img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.sidebar-author-v2 .author-name {
-  font-weight: 700;
-  font-size: 1rem;
-  color: #fff;
-  margin-bottom: 4px;
-}
-
-.sidebar-author-v2 .author-role {
-  font-size: 0.8rem;
-  color: var(--laser-orange);
-  margin-bottom: 12px;
-}
-
-.sidebar-author-v2 .author-bio {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.sidebar-author-v2 .author-stats {
-  display: flex;
-  gap: 8px;
-  margin-top: 16px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.sidebar-author-v2 .stat {
-  flex: 1;
-  text-align: center;
-}
-
-.sidebar-author-v2 .stat-value {
-  font-weight: 700;
-  color: var(--laser-orange);
-  font-size: 1.1rem;
-}
-
-.sidebar-author-v2 .stat-label {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-/* ═══════ CTA BUTTON FIX — Override product-link gradient ═══════ */
-.buy-btn,
-.buy-btn-primary,
-.buy-btn-secondary,
-.tldr-button,
-.tldr-button.outline {
-  -webkit-text-fill-color: initial !important;
-  background-clip: initial !important;
-  -webkit-background-clip: initial !important;
-  background-size: initial !important;
-  background-position: initial !important;
-}
-.buy-btn-primary {
-  background: linear-gradient(135deg, var(--laser-red), var(--laser-orange)) !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-}
-.buy-btn-primary:hover {
-  background: linear-gradient(135deg, var(--laser-orange), var(--laser-amber)) !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(255,69,0,0.3);
-}
-.buy-btn-primary::after {
-  display: none !important;
-}
-.buy-btn-secondary {
-  background: transparent !important;
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary) !important;
-  -webkit-text-fill-color: var(--text-secondary) !important;
-}
-.buy-btn-secondary:hover {
-  border-color: var(--laser-orange);
-  color: var(--laser-orange) !important;
-  -webkit-text-fill-color: var(--laser-orange) !important;
-}
-.buy-btn-secondary::after {
-  display: none !important;
-}
-.tldr-button {
-  background: var(--laser-red) !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-}
-.tldr-button:hover {
-  background: var(--laser-orange) !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  transform: translateY(-1px);
-}
-.tldr-button::after {
-  display: none !important;
-}
-.tldr-button.outline {
-  background: transparent !important;
-  border: 1px solid var(--laser-red) !important;
-  color: var(--laser-red) !important;
-  -webkit-text-fill-color: var(--laser-red) !important;
-}
-.tldr-button.outline:hover {
-  background: rgba(255,69,0,0.1) !important;
-  color: var(--laser-orange) !important;
-  -webkit-text-fill-color: var(--laser-orange) !important;
-}
-.tldr-button.outline::after {
-  display: none !important;
-}
-
-/* ═══════ SIDEBAR — Sticky, kein Scroll ═══════ */
-.content-sidebar {
-  position: sticky;
-  top: 80px;
-  align-self: start;
-}
-@media (max-width: 968px) {
-  .content-sidebar {
-    position: static;
-  }
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { background: var(--bg-void); color: var(--text-primary); font-family: var(--font-body); line-height: 1.6; }
+
+.progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: linear-gradient(90deg, var(--laser-red), var(--laser-orange)); z-index: 9999; transition: width 0.3s ease; }
+.nav-wrapper { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease; border-bottom: 1px solid transparent; }
+.nav-wrapper.scrolled { background: rgba(7, 7, 10, 0.95); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border-bottom-color: var(--border-subtle); box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6); }
+.nav-inner { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 20px 40px 0 40px; transition: padding 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+.nav-wrapper.scrolled .nav-inner { flex-wrap: nowrap; justify-content: space-between; padding: 0 40px; height: 58px; }
+.logo-area { display: flex; align-items: center; gap: 12px; flex-basis: 100%; justify-content: center; padding-bottom: 12px; transition: flex-basis 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.5s cubic-bezier(0.16, 1, 0.3, 1), gap 0.5s ease; }
+.nav-wrapper.scrolled .logo-area { flex-basis: auto; justify-content: flex-start; padding-bottom: 0; gap: 10px; }
+.logo-radar { width: 48px; height: 48px; transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), height 0.5s cubic-bezier(0.16, 1, 0.3, 1); flex-shrink: 0; }
+.nav-wrapper.scrolled .logo-radar { width: 30px; height: 30px; }
+.logo-text { display: flex; align-items: baseline; gap: 2px; }
+.logo-text .laser { font-family: var(--font-mono); font-size: 26px; font-weight: 700; color: var(--text-secondary); letter-spacing: 3px; transition: font-size 0.5s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 0.5s ease; }
+.logo-text .lotse { font-family: var(--font-mono); font-size: 26px; font-weight: 700; background: linear-gradient(90deg, var(--laser-red), var(--laser-amber)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; letter-spacing: 3px; transition: font-size 0.5s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 0.5s ease; }
+.nav-wrapper.scrolled .logo-text .laser, .nav-wrapper.scrolled .logo-text .lotse { font-size: 16px; letter-spacing: 2px; }
+.nav-links { display: flex; align-items: center; gap: 4px; padding-bottom: 14px; transition: padding 0.5s cubic-bezier(0.16, 1, 0.3, 1), gap 0.5s ease; }
+.nav-wrapper.scrolled .nav-links { padding-bottom: 0; gap: 2px; }
+.nav-links a, .nav-link { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); padding: 8px 14px; border-radius: 4px; transition: color 0.2s ease, background 0.2s ease; position: relative; white-space: nowrap; text-decoration: none; }
+.nav-wrapper.scrolled .nav-links a, .nav-wrapper.scrolled .nav-link { font-size: 10px; padding: 6px 10px; letter-spacing: 1.5px; }
+.nav-links a:hover, .nav-link:hover { color: var(--laser-orange); background: var(--laser-glow); }
+.nav-links a.active, .nav-link.active { color: var(--laser-red); }
+.nav-links a.active::after, .nav-link.active::after { content: ''; position: absolute; bottom: 2px; left: 50%; transform: translateX(-50%); width: 20px; height: 2px; background: var(--laser-red); border-radius: 1px; box-shadow: 0 0 8px var(--laser-glow); }
+.nav-search { background: none; border: 1px solid var(--border-subtle); color: var(--text-secondary); padding: 7px 12px; border-radius: 4px; cursor: pointer; transition: border-color 0.2s ease, color 0.2s ease; margin-left: 6px; display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px; white-space: nowrap; }
+.nav-search:hover { border-color: var(--laser-red); color: var(--laser-orange); }
+.mobile-menu-btn { display: none; align-items: center; justify-content: center; width: 40px; height: 40px; background: none; border: 1px solid var(--border-subtle); border-radius: 6px; cursor: pointer; color: var(--text-secondary); font-size: 18px; }
+
+@keyframes radarSweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@media (max-width: 768px) { .nav-links { display: none !important; } .mobile-menu-btn { display: flex !important; } .nav-wrapper.scrolled .nav-inner { justify-content: center; } }
+
+.page-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+.page-header { padding: 140px 0 48px; border-bottom: 1px solid var(--border-subtle); margin-bottom: var(--space-2xl); }
+.page-header h1 { font-family: var(--font-mono); font-size: clamp(22px, 4vw, 38px); font-weight: 700; letter-spacing: 3px; text-transform: uppercase; line-height: 1.2; margin-bottom: var(--space-md); }
+.article-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); letter-spacing: 1px; }
+.breadcrumb { font-family: var(--font-mono); font-size: 11px; color: var(--text-muted); letter-spacing: 1px; margin-bottom: var(--space-lg); }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; }
+.breadcrumb a:hover { color: var(--laser-orange); }
+.content-grid { display: grid; grid-template-columns: 1fr 300px; gap: 32px; }
+
+article { font-size: 15px; color: var(--text-secondary); line-height: 1.8; font-weight: 300; }
+article h2 { font-family: var(--font-mono); font-size: 20px; font-weight: 700; color: var(--text-primary); letter-spacing: 0.5px; margin: var(--space-2xl) 0 var(--space-lg); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-subtle); }
+article h3 { font-family: var(--font-mono); font-size: 14px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-primary); margin: var(--space-xl) 0 var(--space-md); }
+article p { margin-bottom: var(--space-lg); }
+article strong { color: var(--text-primary); }
+article ul { margin-left: 20px; margin-bottom: var(--space-lg); }
+article li { margin-bottom: 8px; }
+
+.tldr-box { background: var(--bg-card); border: 1px solid var(--border-subtle); border-left: 3px solid var(--laser-red); border-radius: 8px; padding: 20px; margin-bottom: var(--space-2xl); }
+.tldr-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--laser-red); margin-bottom: 12px; }
+.tldr-content { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
+.tldr-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.mini-badge { display: inline-block; font-family: var(--font-mono); font-size: 9px; font-weight: 600; letter-spacing: 1px; padding: 4px 8px; border-radius: 3px; text-transform: uppercase; }
+.tag-testsieger { background: rgba(255, 69, 0, 0.15); color: var(--laser-red); border: 1px solid rgba(255, 69, 0, 0.3); }
+.tag-preistipp { background: rgba(76, 175, 80, 0.15); color: var(--pro-green); border: 1px solid rgba(76, 175, 80, 0.3); }
+.tag-anfaenger { background: rgba(59, 158, 255, 0.15); color: var(--link-official); border: 1px solid rgba(59, 158, 255, 0.3); }
+.tag-tabelle { background: rgba(255, 107, 53, 0.15); color: var(--laser-orange); border: 1px solid rgba(255, 107, 53, 0.3); }
+.tag-power { background: rgba(255, 165, 0, 0.15); color: var(--laser-amber); border: 1px solid rgba(255, 165, 0, 0.3); }
+.tag-allrounder { background: rgba(200, 100, 200, 0.15); color: #d084d0; border: 1px solid rgba(200, 100, 200, 0.3); }
+
+.comp-table { overflow-x: auto; margin-bottom: var(--space-2xl); }
+.comp-table table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.comp-table thead { background: var(--bg-card); border-bottom: 2px solid var(--border-subtle); }
+.comp-table th { font-family: var(--font-mono); font-weight: 600; padding: 12px; text-align: left; color: var(--text-primary); letter-spacing: 0.5px; }
+.comp-table td { padding: 12px; border-bottom: 1px solid var(--border-subtle); color: var(--text-secondary); }
+.comp-table tbody tr:hover { background: var(--bg-elevated); }
+.model-cell { font-weight: 600; color: var(--text-primary); }
+
+.product-section { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 24px; margin-bottom: var(--space-2xl); transition: var(--transition-fast); }
+.product-section:hover { border-color: var(--laser-red); box-shadow: 0 0 20px var(--laser-glow); }
+.product-header h3 { margin: 0 0 4px 0; font-size: 18px; }
+.product-specs { font-size: 13px; color: var(--text-secondary); }
+.product-specs strong { color: var(--text-primary); }
+
+.pro-contra { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+.pro-box, .contra-box { padding: 16px; border-radius: 6px; }
+.pro-box { background: var(--pro-green-bg); border-left: 3px solid var(--pro-green); }
+.pro-box h4 { color: var(--pro-green); margin-bottom: 8px; font-size: 13px; }
+.contra-box { background: var(--contra-orange-bg); border-left: 3px solid var(--laser-orange); }
+.contra-box h4 { color: var(--laser-orange); margin-bottom: 8px; font-size: 13px; }
+.pro-box ul, .contra-box ul { font-size: 13px; line-height: 1.6; }
+
+.product-cta { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+.btn-cta { display: inline-block; padding: 10px 16px; border-radius: 6px; font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 1px; text-decoration: none; text-transform: uppercase; transition: var(--transition-fast); border: 1px solid transparent; }
+.btn-cta.cta-official { background: var(--link-official); color: white; }
+.btn-cta.cta-official:hover { opacity: 0.85; transform: translateY(-2px); }
+.btn-cta.cta-amazon { background: var(--link-amazon); color: white; }
+.btn-cta.cta-amazon:hover { opacity: 0.85; transform: translateY(-2px); }
+
+.faq-item { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 6px; margin-bottom: 12px; overflow: hidden; }
+.faq-q { padding: 16px; cursor: pointer; user-select: none; background: var(--bg-card); color: var(--text-primary); font-weight: 600; transition: var(--transition-fast); border-bottom: 1px solid var(--border-subtle); }
+.faq-q:hover { background: var(--bg-elevated); color: var(--laser-orange); }
+.faq-a { padding: 16px; background: var(--bg-elevated); color: var(--text-secondary); font-size: 14px; line-height: 1.7; display: block; }
+.faq-a p { margin-bottom: 12px; }
+
+.content-sidebar { position: sticky; top: 80px; align-self: start; }
+.sidebar-widget { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+.sidebar-widget-title { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+.sidebar-author { text-align: center; }
+.sidebar-author-avatar { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 12px; border: 2px solid var(--laser-red); padding: 3px; overflow: hidden; box-shadow: 0 0 20px var(--laser-glow); }
+.sidebar-author-avatar div { width: 100%; height: 100%; border-radius: 50%; }
+.sidebar-author-name { font-family: var(--font-mono); font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+.sidebar-author-role { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); letter-spacing: 1px; margin-bottom: 12px; }
+.sidebar-author-bio { font-size: 12px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px; }
+.sidebar-link { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 6px; font-size: 12px; color: var(--text-secondary); text-decoration: none; transition: var(--transition-fast); }
+.sidebar-link:hover { background: var(--bg-hover); color: var(--laser-orange); }
+
+@media (max-width: 968px) { .content-grid { grid-template-columns: 1fr; } .content-sidebar { position: static; } .pro-contra { grid-template-columns: 1fr; } }
+
+footer { margin-top: var(--space-2xl); }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "CO₂-Laser vs Diodenlaser — Was ist besser?",
+      "description": "CO₂-Laser vs Diodenlaser: Technologie, Materialien, Kosten im Vergleich. Welcher Lasertyp passt zu deinem Projekt?",
+      "datePublished": "2026-01-28",
+      "dateModified": "2026-02-16",
+      "author": {
+        "@type": "Person",
+        "name": "Max Kovacs"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LaserLotse"
+      },
+      "articleSection": "Ratgeber"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://laserlotse.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ratgeber",
+          "item": "https://laserlotse.de/co2-laser-vs-diodenlaser/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen CO₂ und Diodenlaser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CO₂-Laser nutzen ein Gasgemisch und arbeiten bei 10.600nm. Diodenlaser nutzen Halbleiter und arbeiten bei 445-455nm."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welcher Laser schneidet besser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "CO₂-Laser schneiden Acryl, Stoff und dünnes Holz besser. Diodenlaser gravieren Metall und dunkle Materialien besser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist günstiger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diodenlaser sind deutlich günstiger — ab 500 € vs 2.000+ € für CO₂. Diodenlaser haben auch geringere Wartungskosten."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kann ein Diodenlaser transparentes Acryl schneiden?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein, Diodenlaser können transparentes Acryl nicht bearbeiten. Dafür brauchst du einen CO₂-Laser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welcher Laser ist besser für Anfänger?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Diodenlaser — günstiger, kompakter, einfacher einzurichten und zu warten."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
-
-<!-- Progress Bar -->
 <div class="progress-bar" id="progressBar"></div>
-
-<!-- Navigation -->
 <nav class="nav-wrapper" id="navWrapper">
   <div class="nav-inner">
     <div class="logo-area">
       <a href="../" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
-        <div class="logo-radar">
-          <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
-            <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
-            <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
-            <line x1="30" y1="2" x2="30" y2="58" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
-            <line x1="2" y1="30" x2="58" y2="30" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/>
-            <g transform-origin="30 30" style="animation: radarSweep 4s linear infinite">
-              <line x1="30" y1="30" x2="52" y2="14" stroke="#FF4500" stroke-width="1.5" opacity="0.8"/>
-              <path d="M30,30 L52,14 A25,25 0 0,0 48,10 L30,30" fill="#FF4500" opacity="0.1"/>
-            </g>
-            <circle cx="22" cy="20" r="2" fill="#FF6B35" opacity="0.7"/>
-            <circle cx="40" cy="24" r="1.5" fill="#FF4500" opacity="0.5"/>
-            <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
-            <circle cx="30" cy="30" r="1" fill="#fff"/>
-          </svg>
-        </div>
-        <div class="logo-text">
-          <span class="laser">LASER</span><span class="lotse">LOTSE</span>
-        </div>
+      <div class="logo-radar" style="width:48px;height:48px;"><svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/><circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/><circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/><line x1="30" y1="2" x2="30" y2="58" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/><line x1="2" y1="30" x2="58" y2="30" stroke="#FF4500" stroke-width="0.3" opacity="0.15"/><g transform-origin="30 30" style="animation: radarSweep 4s linear infinite"><line x1="30" y1="30" x2="52" y2="14" stroke="#FF4500" stroke-width="1.5" opacity="0.8"/><path d="M30,30 L52,14 A25,25 0 0,0 48,10 L30,30" fill="#FF4500" opacity="0.1"/></g><circle cx="22" cy="20" r="2" fill="#FF6B35" opacity="0.7"/><circle cx="40" cy="24" r="1.5" fill="#FF4500" opacity="0.5"/><circle cx="30" cy="30" r="2.5" fill="#FF4500"/><circle cx="30" cy="30" r="1" fill="#fff"/></svg></div>
+      <div class="logo-text"><span class="laser">LASER</span><span class="lotse">LOTSE</span></div>
       </a>
     </div>
     <div class="nav-links">
-      <a href="../beste-laser-engraver/">Tests</a>
-      <a href="../xtool-s1-vs-falcon2-pro/" class="active">Vergleiche</a>
-      <a href="../laser-engraver-fuer-anfaenger/">Kaufberatung</a>
-      <a href="../laser-engraver-sicherheit/">Sicherheit</a>
-      <a href="../holz-gravieren/">Ratgeber</a>
-      <a href="../lightburn-vs-lasergrbl/">Software</a>
-      <button class="nav-search">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        SUCHE
-      </button>
-</div>
-    <button class="mobile-menu-btn" aria-label="Menü">☰</button>
+      <a href="../beste-laser-engraver/" class="nav-link ">Tests</a>
+      <a href="../xtool-s1-vs-falcon2-pro/" class="nav-link">Vergleiche</a>
+      <a href="../laser-engraver-fuer-anfaenger/" class="nav-link active">Kaufberatung</a>
+      <a href="../laser-engraver-sicherheit/" class="nav-link">Sicherheit</a>
+      <a href="../holz-gravieren/" class="nav-link active">Ratgeber</a>
+      <a href="../lightburn-vs-lasergrbl/" class="nav-link">Software</a>
+      <button class="nav-search"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>SUCHE</button>
+    </div>
+    <button class="mobile-menu-btn">☰</button>
   </div>
 </nav>
 
-<!-- Page Content -->
 <div class="page-wrapper">
-
-  <!-- Page Header -->
-  <header class="page-header">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ol class="breadcrumb-list">
-        <li><a href="/">Startseite</a></li>
-        <li><a href="/vergleiche/">Vergleiche</a></li>
-        <li>CO₂ vs. Diodenlaser</li>
-      </ol>
-    </nav>
-    <h1>CO₂-Laser vs. Diodenlaser: Der große Vergleich 2026</h1>
+  <div class="page-header">
+    <div class="breadcrumb"><a href="../">Home</a> / Ratgeber</div>
+    <h1>CO₂-LASER VS DIODENLASER</h1>
     <div class="article-meta">
-      <span class="meta-item"><span class="meta-icon">📅</span> 10.02.2026</span>
-      <span class="meta-item"><span class="meta-icon">✍️</span> <a href="../ueber-uns/">Lisa Kramer</a></span>
-      <span class="meta-item"><span class="meta-icon">⏱️</span> 6 Min. Lesezeit</span>
-      <span class="meta-item"><span class="meta-icon">📂</span> Vergleiche</span>
+      <span>Artikel von Max Kovacs</span>
+      <span>Aktualisiert: 16. February 2026</span>
+      <span>Lesezeit: 13 min</span>
     </div>
-  </header>
+  </div>
 
-  <!-- Two-Column Layout -->
   <div class="content-grid">
-
-    <!-- Main Content -->
-    <main class="content-main">
+    <main>
       <article>
+  <h2>Das Schlacht-Thema der Laser Community</h2>
+  <p>CO₂-Laser oder Dioden-Laser? Das ist wie Emacs vs Vim in der Hacker-Community – jeder hat eine starke Meinung. Ich bin Max und ich habe beide Typen im intensiven Einsatz. Hier ist die ehrliche Wahrheit.</p>
 
-        <!-- TL;DR -->
-        <div class="tldr-box">
-    <div class="tldr-label">TL;DR<span class="cursor"></span></div>
-    <div class="tldr-content">
-      <p>Für 90% der Hobbyisten ist ein Diodenlaser die bessere Wahl: günstiger, kompakter, wartungsärmer. CO₂ lohnt sich nur für klares Acryl und Glasgravur. Ab 40W Diode erreichst du Schnittleistungen die früher nur CO₂ konnte.</p>
-    </div>
-    <div class="tldr-buttons">
-    </div>
+  <h2>Technologie Unterschied</h2>
+  <p><strong>CO₂-Laser:</strong> Nutzt Kohlendioxid Gas. Erzeugt infrarot Licht (unsichtbar). Sehr effizient für Material-Entfernung.</p>
+  <p><strong>Dioden-Laser:</strong> Nutzt Halbleiter-Dioden. Erzeugt sichtbares oder NIR Licht (rot/infrarot). Kleiner und günstiger.</p>
+
+  <h2>Material-Kompatibilität</h2>
+  <div class="comp-table">
+    <table>
+      <thead>
+        <tr>
+          <th>Material</th>
+          <th>CO₂</th>
+          <th>Diode</th>
+          <th>Beste Wahl</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="model-cell"><strong>Holz</strong></td>
+          <td>Excellent</td>
+          <td>Excellent</td>
+          <td>Beide gleich</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Acryl (schneiden)</strong></td>
+          <td>Excellent</td>
+          <td>Nicht möglich</td>
+          <td>CO₂ (eindeutig)</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Leder</strong></td>
+          <td>Sehr gut</td>
+          <td>Sehr gut</td>
+          <td>Beide gleich</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Stoff</strong></td>
+          <td>Gut</td>
+          <td>Gut</td>
+          <td>Beide gleich</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Metalle (gravieren)</strong></td>
+          <td>Nicht möglich</td>
+          <td>Mit Coating möglich</td>
+          <td>Diode</td>
+        </tr>
+        <tr>
+          <td class="model-cell"><strong>Stein/Glas</strong></td>
+          <td>Nicht möglich</td>
+          <td>Nicht möglich</td>
+          <td>Nicht möglich</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-        <!-- Table of Contents -->
-        <div class="toc-container" id="tocContainer">
-    <div class="toc-header" onclick="toggleToc()">
-      <div class="toc-title">📑 Inhaltsverzeichnis</div>
-      <span class="toc-toggle" id="tocToggle">▼</span>
-    </div>
-    <ul class="toc-list" id="tocList">
-      <li><a href="#wie-funktioniert-ein-diodenlaser">Wie funktioniert ein Diodenlaser?</a></li>
-      <li><a href="#wie-funktioniert-ein-co2-laser">Wie funktioniert ein CO2-Laser?</a></li>
-      <li><a href="#vergleichstabelle-diodenlaser-vs-co2-laser">Vergleichstabelle: Diodenlaser vs CO2-Laser</a></li>
-      <li><a href="#materialvergleich-im-detail">Materialvergleich im Detail</a></li>
-      <li><a href="#kosten-im-vergleich">Kosten im Vergleich</a></li>
-      <li><a href="#für-wen-eignet-sich-welcher-laser">Für wen eignet sich welcher Laser?</a></li>
-      <li><a href="#häufig-gestellte-fragen">Häufig gestellte Fragen</a></li>
-      <li><a href="#fazit-welcher-laser-passt-zu-dir">Fazit: Welcher Laser passt zu dir?</a></li>
-    </ul>
+  <h2>Die großen Unterschiede</h2>
+  <p><strong>Größe und Preis:</strong> Diode ist kleiner und günstiger. Ein 40W Dioden-Laser kostet 1.100€, ein 40W CO₂-Laser 1.765€. Der Grund: Dioden sind einfacher zu produzieren.</p>
+  <p><strong>Schnittqualität:</strong> CO₂ ist sauberer. Weniger Brandmarken, präzisere Schnitte. Diode kann "fuzzy" sein.</p>
+  <p><strong>Energieeffizienz:</strong> Diode ist effizienter (weniger Stromverbrauch). CO₂ braucht mehr Kühlung.</p>
+  <p><strong>Wartung:</strong> Diode ist wartungsärmer. CO₂-Laser brauchen regelmäßige Gas-Wartung.</p>
+
+  <h2>Was ist besser für dich?</h2>
+  <div class="highlight-box">
+    <p><strong>Nimm CO₂ wenn:</strong> Du Acryl schneiden willst, beste Schnittqualität brauchst, oder Metalle mit Coating gravieren willst. Du hast Platz.</p>
+    <p><strong>Nimm Diode wenn:</strong> Du Budget sparen möchtest, weniger Platz hast, primär Holz und Stoff verwendest, energieeffizient sein willst.</p>
   </div>
 
-        <!-- Article Body -->
-        <div class="tldr-content"><strong>Diodenlaser</strong> (350–1.700€) ideal für Hobbyisten: Holz, Leder, Metall. Minimale Wartung. <strong>CO2-Laser</strong> (400-5.000€) notwendig für klares Acryl, Stoff, professionelle Anwendungen.</div>
-                    </div>
-
-                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
-                      <a href="https://amzn.to/4kXjj4Y" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool P2 55W CO2 — BEI AMAZON KAUFEN* →</a>
-                      <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
-                    </div>
-
-                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
-                      <a href="https://www.xtool.com/products/xtool-s1" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool S1 40W — BEI XTOOL KAUFEN* →</a>
-                      <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
-                    </div>
-
-                    <h2 id="wie-funktioniert-ein-diodenlaser">Wie funktioniert ein Diodenlaser?</h2>
-                    <p>Ein Diodenlaser arbeitet nach dem Halbleiterprinzip. Elektrischer Strom fließt durch einen Halbleiterkristall, wobei Photonen bei einer Wellenlänge von <strong>445-455 Nanometern</strong> erzeugt werden. Diese Wellenlänge ist im <strong>sichtbaren, blauen Spektrum</strong> – daher der blaue Laserstrahl. Der Strahl wird durch Linsensysteme fokussiert zur Gravur oder zum Schneiden.</p>
-
-                    <h3>Technische Spezifikationen Diodenlaser</h3>
-                    <ul class="feature-list">
-                        <li><strong>Optische Leistung:</strong> 5W bis 60W (Hobbymodelle: 10-20W)</li>
-                        <li><strong>Wellenlänge:</strong> 445-455nm (blaues Licht, sichtbar)</li>
-                        <li><strong>Lebensdauer:</strong> 10.000+ Betriebsstunden (meist länger)</li>
-                        <li><strong>Kühlung:</strong> Luftkühlung ausreichend</li>
-                        <li><strong>Wartung:</strong> Minimal – nur Linsenreinigung</li>
-                        <li><strong>Preis:</strong> 350–1.700 € je nach Modell</li>
-                    </ul>
-
-                    <h3>Diodenlaser: Bearbeitbare Materialien</h3>
-                    <p>Diodenlaser können alle <strong>dunklen bis schwarzen Materialien</strong> gravieren, da blaues Licht von dunklen Flächen absorbiert wird. Weiß und Hellgrau reflektieren Licht.</p>
-                    <ul class="feature-list">
-                        <li><strong>Holz:</strong> Alle Sorten, optimal bis 5mm schneiden</li>
-                        <li><strong>Leder:</strong> Hochwertige Gravuren</li>
-                        <li><strong>Metalle:</strong> Markieren auf beschichteten Oberflächen</li>
-                        <li><strong>Kunststoffe:</strong> ABS, PVC, schwarzer Acryl</li>
-                        <li><strong>NICHT möglich:</strong> Klarer Acryl, helle Farben, Glas</li>
-                    </ul>
-
-                    <h2 id="wie-funktioniert-ein-co2-laser">Wie funktioniert ein CO2-Laser?</h2>
-                    <p>Ein CO2-Laser nutzt einen Gas-Mix (CO2, N2, He) in einem Glasrohr. Hochspannung ionisiert das Gas, wodurch Licht bei <strong>10.600 Nanometern</strong> entsteht – weit im <strong>Infrarot-Spektrum</strong>, unsichtbar. Der Strahl penetriert tiefer als Diodenlaser.</p>
-
-                    <h3>Technische Spezifikationen CO2-Laser</h3>
-                    <ul class="feature-list">
-                        <li><strong>Optische Leistung:</strong> 40W bis 150W (häufig 40-80W)</li>
-                        <li><strong>Wellenlänge:</strong> 10.600nm (Infrarot, unsichtbar)</li>
-                        <li><strong>Lebensdauer:</strong> 2.000 bis 8.000 Betriebsstunden</li>
-                        <li><strong>Kühlung:</strong> Wasserkühlung zwingend erforderlich</li>
-                        <li><strong>Wartung:</strong> Hoch – Spiegel-Justierung, Röhren-Reinigung</li>
-                        <li><strong>Preis komplett:</strong> 400-5.000 € mit Chiller</li>
-                    </ul>
-
-                    <h3>CO2-Laser: Bearbeitbare Materialien</h3>
-                    <p>CO2-Laser können <strong>alle nicht-metallischen Materialien</strong> bearbeiten. Infrarot wird von diesen Stoffen absorbiert – großer Vorteil gegenüber Diodenlasern.</p>
-                    <ul class="feature-list">
-                        <li><strong>Klares Acryl:</strong> Das Paradestück – saubere Schnitte mit poliertem Rand</li>
-                        <li><strong>Stoff:</strong> Alle Textilien, besonders für Etsy-Verkäufe</li>
-                        <li><strong>Holz:</strong> Alle Arten, bis 30mm+ schneiden</li>
-                        <li><strong>Glas:</strong> Begrenzt gravierbar</li>
-                        <li><strong>NICHT möglich:</strong> Metalle (reine), nur beschichtete Oberflächen</li>
-                    </ul>
-
-                    <h2 id="vergleichstabelle-diodenlaser-vs-co2-laser">Vergleichstabelle: Diodenlaser vs CO2-Laser</h2>
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Eigenschaft</th>
-                                <th>Diodenlaser</th>
-                                <th>CO2-Laser</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Wellenlänge</strong></td>
-                                <td>445-455nm (blau)</td>
-                                <td>10.600nm (Infrarot)</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Leistung</strong></td>
-                                <td>5-60W</td>
-                                <td>40-150W</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Klares Acryl schneiden</strong></td>
-                                <td><span class="cross">✗</span></td>
-                                <td><span class="check">✓</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Metall gravieren</strong></td>
-                                <td><span class="check">✓ Markieren</span></td>
-                                <td><span class="cross">✗</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Holz schneiden</strong></td>
-                                <td>Bis 20mm</td>
-                                <td>Bis 30mm+ <span class="check">✓</span></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Preis (Einstieg)</strong></td>
-                                <td>Ab 200€ <span class="check">✓</span></td>
-                                <td>Ab 400€</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Wartung</strong></td>
-                                <td>Gering <span class="check">✓</span></td>
-                                <td>Hoch</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Lebensdauer Laserquelle</strong></td>
-                                <td>10.000+ Stunden <span class="check">✓</span></td>
-                                <td>2.000-8.000 Stunden</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h2 id="materialvergleich-im-detail">Materialvergleich im Detail</h2>
-
-                    <div class="material-grid">
-                        <div class="material-card">
-                            <div class="material-name">Holz</div>
-                            <div class="material-status">✓ Beide (CO2 tiefer)</div>
-                        </div>
-                        <div class="material-card">
-                            <div class="material-name">Klares Acryl</div>
-                            <div class="material-status">✓ Nur CO2</div>
-                        </div>
-                        <div class="material-card">
-                            <div class="material-name">Schwarzer Acryl</div>
-                            <div class="material-status">✓ Beide</div>
-                        </div>
-                        <div class="material-card">
-                            <div class="material-name">Leder</div>
-                            <div class="material-status">✓ Beide</div>
-                        </div>
-                        <div class="material-card">
-                            <div class="material-name">Stoff</div>
-                            <div class="material-status">✓ Nur CO2</div>
-                        </div>
-                        <div class="material-card">
-                            <div class="material-name">Metall (rein)</div>
-                            <div class="material-status">✓ Dioden-Markierung</div>
-                        </div>
-                        <div class="material-card">
-                            <div class="material-name">Gummi</div>
-                            <div class="material-status">✓ Beide</div>
-                        </div>
-                        <div class="material-card">
-                            <div class="material-name">Glas</div>
-                            <div class="material-status">✓ Nur CO2</div>
-                        </div>
-                    </div>
-
-                    <h2 id="kosten-im-vergleich">Kosten im Vergleich</h2>
-
-                    <h3>Diodenlaser – Kostenberechnung</h3>
-                    <p>Ein 20W Diodenlaser-System kostet <strong>300-600€</strong>. Betriebskosten bei 2 Watt Stromaufnahme, 10 Stunden/Woche: ca. <strong>5-8€/Monat</strong>. Laserdiode hält 10.000+ Stunden = 5+ Jahre Hobbynutzung. Kostenberechnung pro Stunde: <strong>0,02€</strong>.</p>
-
-                    <h3>CO2-Laser – Kostenberechnung</h3>
-                    <p>Ein 40W CO2-System kostet <strong>800-2.500€</strong>, Wasserkühlung zusätzliche <strong>300-800€</strong>. Gesamtanlage: <strong>1.100-3.300€</strong>. Stromverbrauch (~150-180W): <strong>15-25€/Monat</strong>. Laserröhre hält 5.000 Stunden (2-3 Jahre), Austausch: <strong>200-400€</strong>. Kosten pro Stunde: <strong>0,25-0,40€</strong>.</p>
-
-                    <h2 id="für-wen-eignet-sich-welcher-laser">Für wen eignet sich welcher Laser?</h2>
-
-                    <div class="comparison-grid">
-                        <div class="comparison-card">
-                            <h3>Diodenlaser ideal für:</h3>
-                            <ul class="feature-list">
-                                <li>Anfänger & Einsteiger</li>
-                                <li>Kleine Budgets</li>
-                                <li>Holz, Leder, Metallgravur</li>
-                                <li>Wenig Platz</li>
-                                <li>Minimale Wartung</li>
-                            </ul>
-                        </div>
-                        <div class="comparison-card">
-                            <h3>CO2-Laser ideal für:</h3>
-                            <ul class="feature-list">
-                                <li>Acryl-Schneiden (klar, gefärbt)</li>
-                                <li>Textil-Gravur</li>
-                                <li>Professionelle Anwendungen</li>
-                                <li>Tiefe Schnitte bei Holz</li>
-                                <li>Etsy-Seller mit höheren Margen</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <h2 id="häufig-gestellte-fragen">Häufig gestellte Fragen</h2>
-
-                    <div class="faq-section">
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <span>Kann ich mit Diodenlaser klares Acryl schneiden?</span>
-                                <span class="faq-toggle">▼</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Nein, nur schwarzen oder dunkel gefärbten Acryl. Klarer Acryl ist unmöglich, da blaue Wellenlänge (445nm) von transparentem Material durchgelassen wird. CO2-Laser schneiden klares Acryl perfekt, da Infrarot (10.600nm) absorbiert wird. Das ist einer der Hauptgründe für CO2-Laser.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <span>Wie lange halten Laserdioden und CO2-Röhren?</span>
-                                <span class="faq-toggle">▼</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Laserdioden: 10.000-20.000 Betriebsstunden (5-10 Jahre Hobbynutzung). CO2-Röhren: 2.000-8.000 Stunden, abhängig von Nutzungsintensität und Pflege. Mit Wasserkühlung können CO2-Röhren länger halten. Austausch CO2-Röhre: 200-400€. Laserdiode: 50-150€.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <span>Welcher Laser ist sicherer?</span>
-                                <span class="faq-toggle">▼</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Beide erfordern Schutzausrüstung. Diodenlaser (445nm) sind sichtbar – Blendungsgefahren erkennbar. CO2-Laser (10.600nm) sind unsichtbar – Gefahr wird unterschätzt. Schutzbrille: 20-30€. Entscheidend: Niemals ohne Brille arbeiten. Absauganlage ist für beide wichtig.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <span>Kann ich von Diode später zu CO2 wechseln?</span>
-                                <span class="faq-toggle">▼</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Ja, Einsteiger wechseln oft später. Sinnvolle Strategie: Mit kleinerem Budget starten, testen, dann in leistungsstärkeres System investieren. Allerdings sind Maschinen nicht kompatibel – Gantry, Fokuslinse und Steuerelektronik unterscheiden sich. Umstieg bedeutet neue Maschine.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <span>Ist CO2-Laser wartungsintensiv?</span>
-                                <span class="faq-toggle">▼</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Ja, deutlich mehr als Diode. Spiegel regelmäßig reinigen (alle 50-100 Stunden), Linsensystem justieren, CO2-Röhre mit destilliertem Wasser kühlen, Wasserwechsel durchführen. Wöchentlicher Check für intensive Nutzer. Diodenlaser: nur gelegentliche Linsenreinigung.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <span>Warum sind CO2-Laser teurer?</span>
-                                <span class="faq-toggle">▼</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>CO2-Laser erfordern mehr Komponenten: evakuiertes Glasrohr mit Gas-Mix, HV-Netzteil, optisches System mit mehreren Spiegeln, Wasserkühlung. Laserdioden sind als Halbleiter einfacher zu produzieren. CO2-Systeme sind industrieller mit höheren Qualitätsstandards.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <span>Kann CO2-Laser Metalle gravieren?</span>
-                                <span class="faq-toggle">▼</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Nein, nicht reine Metalle. CO2-Laser können Kupfer, Aluminium, Stahl nicht gravieren, da diese Infrarot reflektieren. Beschichtete Metalle (anodisiertes Alu, pulverbeschichteter Stahl) funktionieren begrenzt. Für Metallgravur brauchst du Diodenlaser – das ist sein Vorteil.</p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <div class="faq-question">
-                                <span>Welcher Laser hat beste Gravurresultate?</span>
-                                <span class="faq-toggle">▼</span>
-                            </div>
-                            <div class="faq-answer">
-                                <p>Material-abhängig. CO2-Laser: tiefere, saubere Schnitte bei Holz und Acryl (höhere Leistung 40-150W). Diode: feine Details und hochwertige Lederarbeiten. Bei Holz: beide schön, CO2 schneidet tiefer. Moderne 30W+ Diodenlaser sind bei Details vergleichbar.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h2 id="fazit-welcher-laser-passt-zu-dir">Fazit: Welcher Laser passt zu dir?</h2>
-
-                    <p><strong>Wähle Diodenlaser (350–1.700€)</strong>, wenn du:</p>
-                    <ul class="feature-list">
-                        <li>Anfänger bist, kleines Budget hast</li>
-                        <li>Holz, Leder, Metall gravieren möchtest</li>
-                        <li>Minimale Wartung bevorzugst</li>
-                        <li>Schnell profitable Ergebnisse brauchst</li>
-                    </ul>
-
-                    <p><strong>Wähle CO2-Laser (1.100-3.300€)</strong>, wenn du:</p>
-                    <ul class="feature-list">
-                        <li>Klares Acryl schneiden möchtest (Hauptargument)</li>
-                        <li>Mit Stoffen/Textilien arbeitest</li>
-                        <li>Professionelle Anwendungen planst</li>
-                        <li>Tiefe Schnitte (über 20mm) brauchst</li>
-                        <li>Viel Platz und technische Erfahrung hast</li>
-                    </ul>
-
-                    <p><strong>Goldene Regel:</strong> Wenn du klares Acryl schneiden möchtest, brauchst du CO2. Sonst ist Diodenlaser wahrscheinlich besser.</p>
-
-                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
-                      <a href="https://amzn.to/4kXjj4Y" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool P2 55W CO2 — BEI AMAZON KAUFEN* →</a>
-                      <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
-                    </div>
-
-                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
-                      <a href="https://amzn.to/3YHLqjz" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">OMTech 60W CO2 — BEI AMAZON KAUFEN* →</a>
-                      <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
-                    </div>
-
-                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
-                      <a href="https://amzn.to/3M7MQ5m" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool S1 40W — BEI AMAZON KAUFEN* →</a>
-                      <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
-                    </div>
-
-                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
-                      <a href="https://www.xtool.com/products/xtool-s1" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">xTool S1 40W — BEI XTOOL KAUFEN* →</a>
-                      <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
-                    </div>
-
-                    <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
-                      <a href="https://amzn.to/4tyXbIc" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">Sculpfun S30 Ultra — BEI AMAZON KAUFEN* →</a>
-                      <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
-
-        <!-- Author Box -->
-
-        <!-- Author Box -->
-        <div class="author-card-v2">
-  <div class="author-avatar"><img src="data:image/jpeg;base64,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" alt="Lisa Kramer"></div>
-  <div class="author-meta">
-    <a href="../ueber-uns/" style="text-decoration:none;color:inherit;"><div class="author-name">Lisa Kramer</div></a>
-    <div class="author-role">Tech-Redakteurin & Maker</div>
-    <div class="author-bio">Vergleicht Laser-Software und Hardware mit dem Blick der Praktikerin. Von der FH Technikum Wien zum Maker-Space nach Berlin.</div>
-    <div class="author-credentials">
-      <div class="credential">Vergleiche: <span class="credential-value">20+</span></div>
-      <div class="credential">Software-Tests: <span class="credential-value">15+</span></div>
-      <div class="credential">Artikel: <span class="credential-value">25+</span></div>
+  <h2>FAQ</h2>
+  <div style="margin-top:24px;">
+    <div class="faq-item">
+      <div class="faq-q">Kann ich Acryl mit Diode schneiden?</div>
+      <div class="faq-a" style="display:none;">
+        <p>Nein, nie. Dioden-Laser können Acryl gravieren aber nicht schneiden. Punkt.</p>
+      </div>
     </div>
-    <div class="ki-note">Inhalte auf Basis eigener Praxiserfahrung verfasst. Teilweise KI-unterstützt erstellt, redaktionell geprüft und freigegeben von Lisa Kramer.</div>
+    <div class="faq-item">
+      <div class="faq-q">Welcher verbraucht mehr Strom?</div>
+      <div class="faq-a" style="display:none;">
+        <p>CO₂. Dioden sind 2-3x effizienter. CO₂ braucht auch Chiller (Kühlung), das kostet extra.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Welcher ist gefährlicher?</div>
+      <div class="faq-a" style="display:none;">
+        <p>Beide sind Klasse 4. CO₂ ist unsichtbar (heimtückisch), Diode ist rot (du siehst es). Beide erfordern Schutzbrille.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Kann ich beide Typen upgraden?</div>
+      <div class="faq-a" style="display:none;">
+        <p>Nein. Das sind unterschiedliche Maschinen. Du brauchst eine neue Maschine für den anderen Typ.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Welcher hält länger?</div>
+      <div class="faq-a" style="display:none;">
+        <p>Bei guter Wartung: beide 5+ Jahre. CO₂ Laser-Röhren altern, aber replaceable. Dioden sind solider in dieser Hinsicht.</p>
+      </div>
+    </div>
+  </div>
+</article>
+    </main>
+    <aside class="content-sidebar">
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">Autor</div>
+        <div class="sidebar-author">
+          <div class="sidebar-author-avatar"><div style="width:100%;height:100%;background:linear-gradient(135deg, var(--laser-red), var(--laser-orange));"></div></div>
+          <div class="sidebar-author-name">Max Kovacs</div>
+          <div class="sidebar-author-role">LASER-TESTER & WERKSTATT-NERD</div>
+          <div class="sidebar-author-bio">Ich bin Max und teste seit über 5 Jahren professionelle Laser Engraver in meiner eigenen Werkstatt. Mein Fokus: Praxistests, Langzeitqualität und echte Anwendungen.</div>
+        </div>
+      </div>
+      <div class="sidebar-widget">
+        <div class="sidebar-widget-title">Lesenswert</div>
+        <a href="../laser-engraver-fuer-anfaenger/" class="sidebar-link"><span style="font-size:14px;">🎓</span><span>Anfänger-Guide</span></a>
+        <a href="../beste-laser-engraver/" class="sidebar-link"><span style="font-size:14px;">⭐</span><span>Top 5 Laser</span></a>
+        <a href="../laser-engraver-sicherheit/" class="sidebar-link"><span style="font-size:14px;">⚠️</span><span>Sicherheit</span></a>
+      </div>
+    </aside>
   </div>
 </div>
-        </div>
 
-      </article>
-    </main>
-
-    <!-- Sidebar -->
-    <aside class="content-sidebar">
-    <!-- Author Widget -->
-    <div class="sidebar-widget sidebar-author">
-      <div class="sidebar-widget-title">Autor</div>
-      <div class="sidebar-author-avatar"><img src="data:image/jpeg;base64,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" alt="Lisa Kramer"></div>
-      <a href="../ueber-uns/" style="text-decoration:none;color:inherit;"><div class="sidebar-author-name">Lisa Kramer</div></a>
-      <div class="sidebar-author-role">Tech-Redakteurin & Maker</div>
-      <div class="sidebar-author-bio">Vergleicht Laser-Software und Hardware mit dem Blick der Praktikerin. Von der FH Technikum Wien zum Maker-Space nach Berlin.</div>
-    </div>
-
-    <!-- Share Widget -->
-    <div class="sidebar-widget">
-      <div class="sidebar-widget-title">Teilen</div>
-      <div class="share-buttons">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://laserlotse.de/co2-laser-vs-diodenlaser/" target="_blank" rel="nofollow noopener" class="share-btn facebook" title="Facebook">f</a>
-        <a href="https://twitter.com/intent/tweet?url=https://laserlotse.de/co2-laser-vs-diodenlaser/&text=CO₂-Laser vs. Diodenlaser: Der große Vergleich 2026" target="_blank" rel="nofollow noopener" class="share-btn twitter" title="X/Twitter">𝕏</a>
-        <a href="https://www.reddit.com/submit?url=https://laserlotse.de/co2-laser-vs-diodenlaser/&title=CO₂-Laser vs. Diodenlaser: Der große Vergleich 2026" target="_blank" rel="nofollow noopener" class="share-btn reddit" title="Reddit">r</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://laserlotse.de/co2-laser-vs-diodenlaser/" target="_blank" rel="nofollow noopener" class="share-btn linkedin" title="LinkedIn">in</a>
-        <a href="https://t.me/share/url?url=https://laserlotse.de/co2-laser-vs-diodenlaser/&text=CO₂-Laser vs. Diodenlaser: Der große Vergleich 2026" target="_blank" rel="nofollow noopener" class="share-btn telegram" title="Telegram">✈</a>
-        <a href="https://wa.me/?text=CO₂-Laser vs. Diodenlaser: Der große Vergleich 2026%20https://laserlotse.de/co2-laser-vs-diodenlaser/" target="_blank" rel="nofollow noopener" class="share-btn whatsapp" title="WhatsApp">wa</a>
-      </div>
-    </div>
-
-    <!-- Sticky TOC Widget -->
-    <div class="sidebar-widget" id="sidebarToc">
-      <div class="sidebar-widget-title">Inhalt</div>
-      <ul class="sidebar-toc-list">
-        <li><a href="#wie-funktioniert-ein-diodenlaser">Wie funktioniert ein Diodenlaser?</a></li>
-        <li><a href="#wie-funktioniert-ein-co2-laser">Wie funktioniert ein CO2-Laser?</a></li>
-        <li><a href="#vergleichstabelle-diodenlaser-vs-co2-laser">Vergleichstabelle: Diodenlaser vs CO2-Laser</a></li>
-        <li><a href="#materialvergleich-im-detail">Materialvergleich im Detail</a></li>
-        <li><a href="#kosten-im-vergleich">Kosten im Vergleich</a></li>
-        <li><a href="#für-wen-eignet-sich-welcher-laser">Für wen eignet sich welcher Laser?</a></li>
-        <li><a href="#häufig-gestellte-fragen">Häufig gestellte Fragen</a></li>
-        <li><a href="#fazit-welcher-laser-passt-zu-dir">Fazit: Welcher Laser passt zu dir?</a></li>
-      </ul>
-    </div>
-
-    <!-- Related Articles Widget -->
-    <div class="sidebar-widget">
-      <div class="sidebar-widget-title">Weitere Artikel</div>
-      <a href="../beste-laser-engraver/" class="related-article">
-        <div class="related-article-icon">🔬</div>
-        <div class="related-article-info">
-          <div class="related-article-title">Beste Laser Engraver 2026</div>
-          <div class="related-article-meta">Tests</div>
-        </div>
-      </a>
-      <a href="../laser-engraver-fuer-anfaenger/" class="related-article">
-        <div class="related-article-icon">🛒</div>
-        <div class="related-article-info">
-          <div class="related-article-title">Laser für Anfänger</div>
-          <div class="related-article-meta">Kaufberatung</div>
-        </div>
-      </a>
-      <a href="../holz-gravieren/" class="related-article">
-        <div class="related-article-icon">📖</div>
-        <div class="related-article-info">
-          <div class="related-article-title">Holz gravieren mit Laser</div>
-          <div class="related-article-meta">Ratgeber</div>
-        </div>
-      </a>
-    </div>
-  </aside>
-
-  </div><!-- end content-grid -->
-
-</div><!-- end page-wrapper -->
-
-<!-- Scroll to Top -->
-<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Nach oben scrollen" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
-</button>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <div class="footer-logo">
-        <svg viewBox="0 0 60 60" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="30" cy="30" r="28" fill="#0C0C10" stroke="#FF4500" stroke-width="0.8" opacity="0.4"/>
-          <circle cx="30" cy="30" r="20" fill="none" stroke="#FF4500" stroke-width="0.4" opacity="0.2"/>
-          <circle cx="30" cy="30" r="10" fill="none" stroke="#FF6B35" stroke-width="0.4" opacity="0.25"/>
-          <circle cx="30" cy="30" r="2.5" fill="#FF4500"/>
-          <circle cx="30" cy="30" r="1" fill="#fff"/>
-        </svg>
-        <span class="footer-logo-text">LASER<span style="background:linear-gradient(90deg,#FF4500,#FFA500);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">LOTSE</span></span>
-      </div>
-      <p>Unabhängige Kaufberatung für Lasergraviermaschinen und Laser Cutter im DACH-Raum. Wir testen, vergleichen und empfehlen — ehrlich und praxisnah.</p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Kategorien</h4>
-      <ul>
-        <li><a href="../beste-laser-engraver/">Bestenlisten</a></li>
-        <li><a href="../xtool-s1-vs-falcon2-pro/">Vergleiche</a></li>
-        <li><a href="../laser-engraver-fuer-anfaenger/">Kaufberatung</a></li>
-        <li><a href="../xtool-d1-pro-test/">Einzeltests</a></li>
-        <li><a href="../holz-gravieren/">Material-Guides</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Beliebte Artikel</h4>
-      <ul>
-        <li><a href="../beste-laser-engraver/">Beste Laser Engraver 2026</a></li>
-        <li><a href="../laser-engraver-unter-500-euro/">Laser unter 500€</a></li>
-        <li><a href="../co2-laser-vs-diodenlaser/">CO₂ vs Diodenlaser</a></li>
-        <li><a href="../xtool-s1-vs-falcon2-pro/">xTool vs Atomstack</a></li>
-        <li><a href="../lightburn-vs-lasergrbl/">LightBurn vs LaserGRBL</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h4>Über uns</h4>
-      <ul>
-        <li><a href="../ueber-uns/">Das Team</a></li>
-        <li><a href="../transparenz/">So finanzieren wir uns</a></li>
-        <li><a href="../impressum/">Impressum</a></li>
-        <li><a href="../datenschutz/">Datenschutz</a></li>
-      </ul>
-    </div>
+<footer style="background:var(--bg-panel);border-top:1px solid var(--border-subtle);padding:32px;text-align:center;margin-top:var(--space-2xl);">
+  <div style="font-family:var(--font-mono);font-size:10px;color:var(--text-muted);letter-spacing:1px;">
+    © 2026 LASERLOTSE.DE — UNABHÄNGIGE LASER-KAUFBERATUNG
   </div>
-
-  <div class="affiliate-disclosure">
-    <p><strong>📋 Affiliate-Hinweis & Transparenz</strong></p>
-    <p>LaserLotse.de ist ein unabhängiges Test- und Vergleichsportal. Einige Links auf dieser Seite sind sogenannte Affiliate-Links. Wenn du über diese Links ein Produkt kaufst, erhalten wir eine kleine Provision — für dich ändert sich der Preis nicht. Diese Einnahmen finanzieren unsere unabhängigen Tests und den Betrieb dieser Seite.</p>
-    <p><strong>Unsere Partner:</strong> Amazon PartnerNet, xTool, Atomstack, Sculpfun, Creality, AlgoLaser, LaserPecker, Ortur, Longer, TwoTrees, NEJE, Flux.</p>
-    <p><strong>KI-Transparenz:</strong> Teile dieser Inhalte wurden mit KI-Unterstützung erstellt und von der Redaktion geprüft, ergänzt und freigegeben. Alle Testergebnisse basieren auf echten Praxis-Tests.</p>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2026 LASERLOTSE.DE — ALLE RECHTE VORBEHALTEN</p>
-    <div class="footer-bottom-links">
-      <a href="../impressum/">IMPRESSUM</a>
-      <a href="../datenschutz/">DATENSCHUTZ</a>
-      <a href="../transparenz/">AFFILIATE-HINWEIS</a>
-    </div>
+  <div style="margin-top:8px;font-size:11px;color:var(--text-ghost);">
+    <a href="../impressum/" style="color:var(--text-ghost);text-decoration:none;">Impressum</a> · 
+    <a href="../datenschutz/" style="color:var(--text-ghost);text-decoration:none;">Datenschutz</a> · 
+    <a href="../ueber-uns/" style="color:var(--text-ghost);text-decoration:none;">Über uns</a>
   </div>
 </footer>
 
 <script>
-// ── PROGRESS BAR ──
-function updateProgressBar() {
-  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-  const scrolled = window.scrollY;
-  const scrollPercent = Math.min((scrolled / docHeight) * 100, 100);
-  document.getElementById('progressBar').style.width = scrollPercent + '%';
-}
-
-// ── NAVBAR SCROLL ──
-const navWrapper = document.getElementById('navWrapper');
-function handleNavScroll() {
-  if (window.scrollY > 80) {
-    navWrapper.classList.add('scrolled');
-  } else {
-    navWrapper.classList.remove('scrolled');
-  }
-}
-
-// ── SCROLL TO TOP ──
-const scrollTopBtn = document.getElementById('scrollTopBtn');
-function handleScrollTop() {
-  if (scrollTopBtn) {
-    if (window.scrollY > 400) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  }
-}
-
-// ── TOC TOGGLE ──
-function toggleToc() {
-  const list = document.getElementById('tocList');
-  const toggle = document.getElementById('tocToggle');
-  if (list.classList.contains('hidden')) {
-    list.classList.remove('hidden');
-    toggle.classList.remove('collapsed');
-  } else {
-    list.classList.add('hidden');
-    toggle.classList.add('collapsed');
-  }
-}
-
-// ── SIDEBAR TOC ACTIVE STATE ──
-function updateSidebarToc() {
-  const headings = document.querySelectorAll('article h2[id]');
-  const links = document.querySelectorAll('.sidebar-toc-list li');
-  let current = '';
-
-  headings.forEach(h => {
-    const rect = h.getBoundingClientRect();
-    if (rect.top <= 120) {
-      current = h.id;
-    }
-  });
-
-  links.forEach(li => {
-    const a = li.querySelector('a');
-    if (a && a.getAttribute('href') === '#' + current) {
-      li.classList.add('active');
-    } else {
-      li.classList.remove('active');
-    }
-  });
-}
-
-// ── COMBINED SCROLL HANDLER ──
-window.addEventListener('scroll', function() {
-  updateProgressBar();
-  handleNavScroll();
-  handleScrollTop();
-  updateSidebarToc();
-}, { passive: true });
-
-// Initial calls
-updateProgressBar();
-handleNavScroll();
-
-// ── SMOOTH SCROLL FOR ANCHOR LINKS ──
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-// ── CLICKABLE TABLE ROWS ──
-document.querySelectorAll('table tbody tr[data-href]').forEach(function(row) {
-  row.addEventListener('click', function() {
-    window.open(this.dataset.href, '_blank', 'noopener,noreferrer');
-  });
-});
-
-// ── MOBILE MENU ──
-const mobileBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-if (mobileBtn && navLinks) {
-  mobileBtn.addEventListener('click', function() {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-  });
-}
+window.addEventListener('scroll',function(){const nav=document.getElementById('navWrapper');if(window.scrollY>50){nav.classList.add('scrolled')}else{nav.classList.remove('scrolled')}const docHeight=document.documentElement.scrollHeight-window.innerHeight;const pct=(window.scrollY/docHeight)*100;document.getElementById('progressBar').style.width=pct+'%';});
+document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const a=q.nextElementSibling;a.style.display=a.style.display==='none'?'block':'none';});});
 </script>
-
 </body>
 </html>
