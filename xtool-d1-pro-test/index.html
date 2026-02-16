@@ -25,10 +25,6 @@
     <!-- [TRACKING: Plausible Analytics Code hier einfügen wenn Account erstellt] -->
     <!-- <script defer data-domain="laserlotse.de" src="https://plausible.io/js/script.js"></script> -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,6 +37,10 @@
   "dateModified": "2026-02-14"
 }
 </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
 
@@ -141,7 +141,13 @@ img { max-width: 100%; height: auto; }
   transition: width 0.1s linear;
 }
 
-/* ═══════ NAVIGATION ═══════ */
+/* ═══════════════════════════════════════════════
+   NAVIGATION — PIXEL-PERFECT SMOOTH TRANSITION
+   Screen 1: Centered logo + nav below (tall)
+   Screen 2: Compact sticky bar (logo left, nav right)
+   All elements animate smoothly, no show/hide!
+   ═══════════════════════════════════════════════ */
+
 .nav-wrapper {
   position: fixed;
   top: 0;
@@ -161,7 +167,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .nav-inner {
-  max-width: var(--content-max);
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -184,23 +190,30 @@ img { max-width: 100%; height: auto; }
   gap: 12px;
   flex-basis: 100%;
   justify-content: center;
-  transition: flex-basis 0.5s cubic-bezier(0.16,1,0.3,1), justify-content 0.3s ease;
+  padding-bottom: 12px;
+  transition: flex-basis 0.5s cubic-bezier(0.16,1,0.3,1),
+              padding 0.5s cubic-bezier(0.16,1,0.3,1),
+              gap 0.5s ease;
 }
 
 .nav-wrapper.scrolled .logo-area {
   flex-basis: auto;
   justify-content: flex-start;
+  padding-bottom: 0;
+  gap: 10px;
 }
 
 .logo-radar {
   width: 48px;
   height: 48px;
-  transition: var(--transition-smooth);
+  transition: width 0.5s cubic-bezier(0.16,1,0.3,1),
+              height 0.5s cubic-bezier(0.16,1,0.3,1);
+  flex-shrink: 0;
 }
 
 .nav-wrapper.scrolled .logo-radar {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
 }
 
 @keyframes radarSweep {
@@ -209,81 +222,155 @@ img { max-width: 100%; height: auto; }
 }
 
 .logo-text {
-  font-family: var(--font-mono);
-  font-size: 1.4rem;
-  letter-spacing: 3px;
-  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1);
-}
-
-.nav-wrapper.scrolled .logo-text {
-  font-size: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
 }
 
 .logo-text .laser {
-  color: var(--text-primary);
-  font-weight: 300;
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 3px;
+  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
+              letter-spacing 0.5s ease;
 }
 
 .logo-text .lotse {
+  font-family: var(--font-mono);
+  font-size: 26px;
+  font-weight: 700;
   background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  background-clip: text;
+  letter-spacing: 3px;
+  transition: font-size 0.5s cubic-bezier(0.16,1,0.3,1),
+              letter-spacing 0.5s ease;
+}
+
+.nav-wrapper.scrolled .logo-text .laser,
+.nav-wrapper.scrolled .logo-text .lotse {
+  font-size: 16px;
+  letter-spacing: 2px;
 }
 
 .nav-links {
   display: flex;
-  gap: 8px;
-  flex-basis: 100%;
-  justify-content: center;
-  padding: 16px 0 12px 0;
-  transition: all 0.5s cubic-bezier(0.16,1,0.3,1);
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 14px;
+  transition: padding 0.5s cubic-bezier(0.16,1,0.3,1),
+              gap 0.5s ease;
 }
 
 .nav-wrapper.scrolled .nav-links {
-  flex-basis: auto;
-  padding: 0;
+  padding-bottom: 0;
+  gap: 2px;
 }
 
-.nav-links a, .nav-links button {
+.nav-links a {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 1.5px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: var(--text-secondary);
-  padding: 6px 14px;
-  border-radius: 6px;
-  transition: var(--transition-fast);
-  background: none;
-  border: none;
-  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background 0.2s ease,
+              font-size 0.4s ease, padding 0.4s ease;
+  position: relative;
   white-space: nowrap;
 }
 
-.nav-links a:hover, .nav-links button:hover {
-  color: var(--text-primary);
-  background: var(--bg-elevated);
+.nav-wrapper.scrolled .nav-links a {
+  font-size: 10px;
+  padding: 6px 10px;
+  letter-spacing: 1.5px;
+}
+
+.nav-links a:hover {
+  color: var(--laser-orange);
+  background: var(--laser-glow);
 }
 
 .nav-links a.active {
   color: var(--laser-red);
-  background: rgba(255, 69, 0, 0.08);
+}
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: var(--laser-red);
+  border-radius: 1px;
+  box-shadow: 0 0 8px var(--laser-glow);
+  transition: width 0.3s ease;
+}
+
+.nav-wrapper.scrolled .nav-links a.active::after {
+  width: 14px;
+}
+
+.nav-search {
+  background: none;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, padding 0.4s ease;
+  margin-left: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.nav-wrapper.scrolled .nav-search {
+  padding: 5px 10px;
+  font-size: 9px;
+}
+
+.nav-search:hover {
+  border-color: var(--laser-red);
+  color: var(--laser-orange);
 }
 
 .mobile-menu-btn {
   display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   background: none;
-  border: none;
-  color: var(--text-primary);
-  font-size: 1.5rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-size: 18px;
   cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.mobile-menu-btn:hover {
+  border-color: var(--laser-red);
+  color: var(--laser-orange);
 }
 
 /* ═══════ TWO-COLUMN LAYOUT ═══════ */
 .page-wrapper {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 100px 20px 40px;
+  padding: 120px 20px 40px;
 }
 
 .page-header {
@@ -1334,6 +1421,53 @@ article strong {
 }
 
 /* ═══════ RESPONSIVE ═══════ */
+
+@media (max-width: 968px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(7, 7, 10, 0.98);
+    flex-direction: column;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border-subtle);
+    gap: 4px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+
+  .logo-area {
+    flex-basis: auto !important;
+    justify-content: flex-start !important;
+    padding-bottom: 0 !important;
+  }
+
+  .nav-inner {
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    padding: 12px 20px !important;
+  }
+
+  .logo-radar {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .logo-text .laser,
+  .logo-text .lotse {
+    font-size: 18px !important;
+    letter-spacing: 2px !important;
+  }
+}
+
 @media (max-width: 968px) {
   .content-grid {
     flex-direction: column;
@@ -1452,7 +1586,11 @@ article strong {
       <a href="../laser-engraver-sicherheit/">Sicherheit</a>
       <a href="../holz-gravieren/">Ratgeber</a>
       <a href="../lightburn-vs-lasergrbl/">Software</a>
-    </div>
+      <button class="nav-search">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        SUCHE
+      </button>
+</div>
     <button class="mobile-menu-btn" aria-label="Menü">☰</button>
   </div>
 </nav>
@@ -1473,7 +1611,7 @@ article strong {
     <div class="article-meta">
       <span class="meta-item"><span class="meta-icon">📅</span> 09.02.2026</span>
       <span class="meta-item"><span class="meta-icon">✍️</span> <a href="../ueber-uns/">Max Lehmann</a></span>
-      <span class="meta-item"><span class="meta-icon">⏱️</span> 19 Min. Lesezeit</span>
+      <span class="meta-item"><span class="meta-icon">⏱️</span> 6 Min. Lesezeit</span>
       <span class="meta-item"><span class="meta-icon">📂</span> Tests</span>
     </div>
   </header>
