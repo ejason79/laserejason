@@ -145,10 +145,13 @@ img { max-width: 100%; height: auto; }
   z-index: 1000;
   transition: background 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
   border-bottom: 1px solid transparent;
+  background: rgba(7, 7, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-wrapper.scrolled {
-  background: rgba(7, 7, 10, 0.95);
+  background: rgba(7, 7, 10, 0.97);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom-color: var(--border-subtle);
@@ -359,7 +362,7 @@ img { max-width: 100%; height: auto; }
 .page-wrapper {
   max-width: var(--content-max);
   margin: 0 auto;
-  padding: 120px 20px 40px;
+  padding: 160px 20px 40px;
 }
 
 .page-header {
@@ -1503,7 +1506,7 @@ article strong {
 
 @media (max-width: 640px) {
   .page-wrapper {
-    padding: 80px 16px 24px;
+    padding: 100px 16px 24px;
   }
 
   .page-header h1 {
