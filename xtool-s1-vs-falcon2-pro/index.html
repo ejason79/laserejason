@@ -644,14 +644,11 @@ article li strong {
 
 .content-sidebar {
   position: sticky;
-  top: 100px;
-  max-height: calc(100vh - 120px);
-  overflow-y: auto;
+  top: 80px;
+  align-self: start;
 }
 
-.content-sidebar::-webkit-scrollbar { width: 3px; }
-.content-sidebar::-webkit-scrollbar-track { background: transparent; }
-.content-sidebar::-webkit-scrollbar-thumb { background: var(--border-subtle); border-radius: 2px; }
+/* Sidebar: kein innerer Scroll */
 
 /* ─────── SIDEBAR WIDGETS ─────── */
 
@@ -1016,7 +1013,7 @@ article li strong {
   .page-header { padding-top: 100px; }
   .page-header h1 { font-size: 28px; }
   article { font-size: 15px; }
-  .content-sidebar { position: static; max-height: none; }
+  .content-sidebar { position: static;  }
   .article-meta { flex-direction: column; gap: var(--space-sm); }
 }
 
@@ -1098,18 +1095,15 @@ article li strong {
   display: none !important;
 }
 
-/* ═══════ SIDEBAR SCROLL FIX ═══════ */
+/* ═══════ SIDEBAR — Sticky, kein Scroll ═══════ */
 .content-sidebar {
   position: sticky;
   top: 80px;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
   align-self: start;
 }
 @media (max-width: 968px) {
   .content-sidebar {
     position: static;
-    max-height: none;
   }
 }
 </style>

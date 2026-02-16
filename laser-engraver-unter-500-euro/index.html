@@ -448,15 +448,11 @@ img { max-width: 100%; height: auto; }
 .content-sidebar {
   position: sticky;
   top: 80px;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--border-subtle) transparent;
 }
 
-.content-sidebar::-webkit-scrollbar { width: 3px; }
-.content-sidebar::-webkit-scrollbar-track { background: transparent; }
-.content-sidebar::-webkit-scrollbar-thumb { background: var(--border-subtle); border-radius: 2px; }
+/* Sidebar: kein innerer Scroll */
 
 /* ═══════ TL;DR BOX ═══════ */
 .tldr-box {
@@ -1462,7 +1458,6 @@ article strong {
 
   .content-sidebar {
     position: static;
-    max-height: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 16px;
@@ -1822,18 +1817,15 @@ article a[href*="omtechlaser"]:hover::after {
   display: none !important;
 }
 
-/* ═══════ SIDEBAR SCROLL FIX ═══════ */
+/* ═══════ SIDEBAR — Sticky, kein Scroll ═══════ */
 .content-sidebar {
   position: sticky;
   top: 80px;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
   align-self: start;
 }
 @media (max-width: 968px) {
   .content-sidebar {
     position: static;
-    max-height: none;
   }
 }
 </style>
