@@ -1537,6 +1537,230 @@ article strong {
   }
 }
 
+
+/* ═══════ CONTENT OVERFLOW PREVENTION ═══════ */
+.content-main * {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.content-main table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.content-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Product review cards inside content */
+.product-review {
+  margin: 24px 0;
+  padding: 0;
+}
+
+.product-review-content {
+  padding: 0;
+}
+
+.budget-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.budget-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.budget-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--laser-red);
+  margin-bottom: 4px;
+}
+
+.budget-price {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--laser-amber);
+  margin-bottom: 8px;
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.pros, .cons {
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.pros {
+  background: rgba(34, 197, 94, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.cons {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.pros h3, .cons h3 {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.pros h3 { color: #22c55e; }
+.cons h3 { color: #ef4444; }
+
+.pros ul, .cons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pros li, .cons li {
+  padding: 3px 0 3px 18px;
+  position: relative;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.pros li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.cons li::before {
+  content: '−';
+  position: absolute;
+  left: 0;
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* Spec grid in product reviews */
+.spec-item {
+  display: flex;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 0.85rem;
+}
+
+.spec-item .spec-label {
+  color: var(--text-muted);
+  min-width: 120px;
+}
+
+.spec-item .spec-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ═══════ PRODUCT LINK STYLING (dark → orange gradient hover) ═══════ */
+a.product-link,
+article a[href*="amzn.to"],
+article a[href*="xtool.com"],
+article a[href*="atomstack.com"],
+article a[href*="sculpfun.com"],
+article a[href*="creality.com"],
+article a[href*="algolaser.com"],
+article a[href*="ortur.tech"],
+article a[href*="twotrees"],
+article a[href*="laserpecker"],
+article a[href*="omtechlaser"] {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+  background: linear-gradient(90deg, var(--text-primary), var(--laser-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  -webkit-text-fill-color: transparent;
+}
+
+a.product-link::after,
+article a[href*="amzn.to"]::after,
+article a[href*="xtool.com"]::after,
+article a[href*="atomstack.com"]::after,
+article a[href*="sculpfun.com"]::after,
+article a[href*="creality.com"]::after,
+article a[href*="algolaser.com"]::after,
+article a[href*="ortur.tech"]::after,
+article a[href*="twotrees"]::after,
+article a[href*="laserpecker"]::after,
+article a[href*="omtechlaser"]::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+a.product-link:hover,
+article a[href*="amzn.to"]:hover,
+article a[href*="xtool.com"]:hover,
+article a[href*="atomstack.com"]:hover,
+article a[href*="sculpfun.com"]:hover,
+article a[href*="creality.com"]:hover,
+article a[href*="algolaser.com"]:hover,
+article a[href*="ortur.tech"]:hover,
+article a[href*="twotrees"]:hover,
+article a[href*="laserpecker"]:hover,
+article a[href*="omtechlaser"]:hover {
+  background-position: 100% 0%;
+  -webkit-text-fill-color: transparent;
+}
+
+a.product-link:hover::after,
+article a[href*="amzn.to"]:hover::after,
+article a[href*="xtool.com"]:hover::after,
+article a[href*="atomstack.com"]:hover::after,
+article a[href*="sculpfun.com"]:hover::after,
+article a[href*="creality.com"]:hover::after,
+article a[href*="algolaser.com"]:hover::after,
+article a[href*="ortur.tech"]:hover::after,
+article a[href*="twotrees"]:hover::after,
+article a[href*="laserpecker"]:hover::after,
+article a[href*="omtechlaser"]:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 968px) {
+  .pros-cons, .budget-categories {
+    grid-template-columns: 1fr;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -1649,8 +1873,8 @@ article strong {
                     <tr><td class="product-name">xTool D1 Pro 20W</td><td>20W</td><td>432 × 406 mm</td><td>1.093 €</td><td class="rating">9.2/10</td></tr>
                     <tr><td class="product-name">Atomstack S30 Pro</td><td>33W</td><td>410 × 400 mm</td><td>569 €</td><td class="rating">8.9/10</td></tr>
                     <tr><td class="product-name">Sculpfun S30 Ultra</td><td>33W</td><td>600 × 600 mm</td><td>699 €</td><td class="rating">8.7/10</td></tr>
-                    <tr><td class="product-name">Creality Falcon2 Pro</td><td>22W</td><td>400 × 415 mm</td><td>549 €</td><td class="rating">8.4/10</td></tr>
-                    <tr><td class="product-name">Ortur LM3</td><td>20W</td><td>400 × 400 mm</td><td>580 €</td><td class="rating">8.2/10</td></tr>
+                    <tr><td class="product-name"><a href="https://amzn.to/3ZBtkkO" class="product-link" rel="nofollow sponsored" target="_blank">Creality Falcon2 Pro*</a></td><td>22W</td><td>400 × 415 mm</td><td>549 €</td><td class="rating">8.4/10</td></tr>
+                    <tr><td class="product-name"><a href="https://ortur.tech/" class="product-link" rel="nofollow" target="_blank">Ortur LM3</a></td><td>20W</td><td>400 × 400 mm</td><td>580 €</td><td class="rating">8.2/10</td></tr>
                     <tr><td class="product-name">Two Trees TS2</td><td>10W</td><td>450 × 450 mm</td><td>399 €</td><td class="rating">7.8/10</td></tr>
                     <tr><td class="product-name">ACMER P2</td><td>33W</td><td>420 × 400 mm</td><td>849 €</td><td class="rating">7.6/10</td></tr>
                 </tbody>
@@ -1658,7 +1882,7 @@ article strong {
         </section>
 
         <section>
-            <article class="product-review">
+            <div class="product-review">
                 <div class="product-review-content">
                     <h2 id="1-xtool-d1-pro-20w-testsieger-1093">1. xTool D1 Pro 20W - Testsieger (1.093 €)</h2>
                     <div class="product-specs">
@@ -1671,13 +1895,13 @@ article strong {
                     <p>Die Creative Space-Software ist benutzerfreundlicher als die Konkurrenz und ermöglicht intuitive Bedienung auch für Anfänger. Mit einer Schneidgeschwindigkeit von 600 mm/s ist die xTool nicht die schnellste (Atomstack ist gleich schnell), aber die Kombination mit der Software und dem größeren Arbeitsbereich (432×406mm) macht den Unterschied. Der eingebaute Flammsensor bietet zusätzliche Sicherheit, die nur wenige Konkurrenten haben.</p>
                     <p>Unser Praxistest zeigte: Mit 1.093 € ist der <a href="https://www.xtool.com/pages/d1-announcement" class="product-link" rel="nofollow" target="_blank">xTool D1 Pro</a> 20W 50€ teurer als die Atomstack, aber die bessere Software und der Kundensupport rechtfertigen das Premium. Über 6 Wochen hinweg führten wir 87 Gravuren und 34 Schnitte durch - kein einziger Fehler, null Ausfallzeiten. Die Genauigkeit betrug durchschnittlich ±0.2mm, was für die meisten Hobbyanwendungen mehr als ausreichend ist.</p>
                     <div class="pros-cons">
-                        <div class="pros"><h3>Vorteile</h3><ul><li>Hervorragende Creative Space Software</li><li>Größte Arbeitsfläche im Test (432×406mm)</li><li>Integrierter Flammsensor für Sicherheit</li><li>LightBurn kompatibel</li><li>Ausgezeichneter Kundensupport</li><li>Genauigkeit ±0.2mm im Test bestätigt</li></ul></div>
+                        <div class="pros"><h3>Vorteile</h3><ul><li>Hervorragende Creative Space Software</li><li>Größte Arbeitsfläche im Test (432×406mm)</li><li>Integrierter Flammsensor für Sicherheit</li><li><a href="https://lightburnsoftware.com/" class="product-link" rel="nofollow" target="_blank">LightBurn</a> kompatibel</li><li>Ausgezeichneter Kundensupport</li><li>Genauigkeit ±0.2mm im Test bestätigt</li></ul></div>
                         <div class="cons"><h3>Nachteile</h3><ul><li>Air Assist separat für 79€ erforderlich</li><li>20W könnten für sehr dicke Materialien knapp sein</li><li>Kühlsystem läuft regelmäßig</li><li>Höherpreisig als Atomstack S30 Pro</li><li>Lieferung kann 4-6 Wochen dauern</li><li>Zubehör teilweise teuer</li></ul></div>
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <article class="product-review">
+            <div class="product-review">
                 <div class="product-review-content">
                     <h2 id="2-atomstack-s30-pro-33w-preis-leistungs-könig-569">2. Atomstack S30 Pro 33W - Preis-Leistungs-König (569 €)</h2>
                     <div class="product-specs">
@@ -1700,9 +1924,9 @@ article strong {
                       <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
                     </div>
                 </div>
-            </article>
+            </div>
 
-            <article class="product-review">
+            <div class="product-review">
                 <div class="product-review-content">
                     <h2 id="3-sculpfun-s30-ultra-33w-größte-arbeitsfläche-699">3. Sculpfun S30 Ultra 33W - Größte Arbeitsfläche (699 €)</h2>
                     <div class="product-specs">
@@ -1724,13 +1948,13 @@ article strong {
                       <div style="margin-top:8px; font-size:10px; color:#555; font-family:'JetBrains Mono',monospace;">* Affiliate-Link — für dich kein Aufpreis</div>
                     </div>
                 </div>
-            </article>
+            </div>
         </section>
 
         <section class="buying-guide">
             <h2 id="kaufberatung-worauf-achten-im-preis-leistungs-vergleich">Kaufberatung - Worauf achten im Preis-Leistungs-Vergleich?</h2>
             <div class="budget-categories">
-                <article class="budget-card">
+                <div class="budget-card">
                     <div class="budget-card-content">
                         <div class="budget-label">Budget-Tipp</div>
                         <div class="budget-price">Unter 300€</div>
@@ -1738,8 +1962,8 @@ article strong {
                         <p>Die beste Wahl für Anfänger mit kleinerem Budget. Two Trees TS2 mit 10W für nur 399 € ist unglaublich preiswert - mit 450×450mm Arbeitsfläche und solider Verarbeitung. Die Leistung reicht für Holzgravuren und einfache Schnitte bis 8mm. Ortur LM3 kostet 580 € und bietet 20W Leistung mit 400×400mm Arbeitsfläche.</p>
                         <p>Unser Test: Two Trees TS2 brauchte 6 Wochen zuverlässigen Betrieb ohne Fehler. Perfekt für Einsteiger, die erst herausfinden wollen, ob Lasergravieren überhaupt das richtige Hobby ist.</p>
                     </div>
-                </article>
-                <article class="budget-card">
+                </div>
+                <div class="budget-card">
                     <div class="budget-card-content">
                         <div class="budget-label">Sweet Spot</div>
                         <div class="budget-price">300€ - 400€</div>
@@ -1747,8 +1971,8 @@ article strong {
                         <p>In diesem Preisbereich bieten Sie beste Performance. Der Atomstack S30 Pro für 569 € ist unser Favorit hier mit 33W Laserleistung und integriertem Air Assist. Creality Falcon2 Pro für 549 € ist auch solide mit 22W, bietet aber weniger Leistung. Die 33W des Atomstack ermöglichen 15mm Schnitte in Sperrholz - damit können Sie professionelle Projekte umsetzen.</p>
                         <p>Im Test: <a href="https://atomstack.com/products/atomstack-s30-pro?ref=laserlotse" class="product-link" rel="nofollow" target="_blank">Atomstack S30 Pro</a> zeigte über 6 Wochen Perfektion mit 156 Operationen. Air Assist ist bereits integriert - der Atomstack ist also sofort einsatzbereit, anders als der xTool, wo man 79€ für Air Assist extra bezahlt.</p>
                     </div>
-                </article>
-                <article class="budget-card">
+                </div>
+                <div class="budget-card">
                     <div class="budget-card-content">
                         <div class="budget-label">Best Overall</div>
                         <div class="budget-price">400€ - 500€</div>
@@ -1756,7 +1980,7 @@ article strong {
                         <p>Mit 1.093 € ist der xTool D1 Pro 20W unser klarer Testsieger. Die Kombination aus hervorragender Software (Creative Space), 432×406mm Arbeitsfläche und zuverlässigen 20W reicht für professionelle Hobbyprojekte. Der integrierte Flammsensor bietet zusätzliche Sicherheit, die bei Budget-Modellen fehlt. LightBurn-Kompatibilität eröffnet weitere Möglichkeiten.</p>
                         <p>Test-Fazit: 87 Gravuren, 34 Schnitte, 6 Wochen - null Fehler. Die Software macht diese Maschine zu unserem Favoriten für Anfänger. Sie zahlen 50€ Aufpreis zur Atomstack, bekommen dafür aber Software, die Sie lieben werden.</p>
                     </div>
-                </article>
+                </div>
             </div>
                 </div>
 

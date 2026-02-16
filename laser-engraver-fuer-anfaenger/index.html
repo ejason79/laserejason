@@ -1535,6 +1535,230 @@ article strong {
   }
 }
 
+
+/* ═══════ CONTENT OVERFLOW PREVENTION ═══════ */
+.content-main * {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.content-main table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.content-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Product review cards inside content */
+.product-review {
+  margin: 24px 0;
+  padding: 0;
+}
+
+.product-review-content {
+  padding: 0;
+}
+
+.budget-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.budget-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.budget-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--laser-red);
+  margin-bottom: 4px;
+}
+
+.budget-price {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--laser-amber);
+  margin-bottom: 8px;
+}
+
+.pros-cons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.pros, .cons {
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.pros {
+  background: rgba(34, 197, 94, 0.05);
+  border: 1px solid rgba(34, 197, 94, 0.15);
+}
+
+.cons {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.15);
+}
+
+.pros h3, .cons h3 {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.pros h3 { color: #22c55e; }
+.cons h3 { color: #ef4444; }
+
+.pros ul, .cons ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pros li, .cons li {
+  padding: 3px 0 3px 18px;
+  position: relative;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.pros li::before {
+  content: '+';
+  position: absolute;
+  left: 0;
+  color: #22c55e;
+  font-weight: 700;
+}
+
+.cons li::before {
+  content: '−';
+  position: absolute;
+  left: 0;
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* Spec grid in product reviews */
+.spec-item {
+  display: flex;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 0.85rem;
+}
+
+.spec-item .spec-label {
+  color: var(--text-muted);
+  min-width: 120px;
+}
+
+.spec-item .spec-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ═══════ PRODUCT LINK STYLING (dark → orange gradient hover) ═══════ */
+a.product-link,
+article a[href*="amzn.to"],
+article a[href*="xtool.com"],
+article a[href*="atomstack.com"],
+article a[href*="sculpfun.com"],
+article a[href*="creality.com"],
+article a[href*="algolaser.com"],
+article a[href*="ortur.tech"],
+article a[href*="twotrees"],
+article a[href*="laserpecker"],
+article a[href*="omtechlaser"] {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+  background: linear-gradient(90deg, var(--text-primary), var(--laser-orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position: 0% 0%;
+  -webkit-text-fill-color: transparent;
+}
+
+a.product-link::after,
+article a[href*="amzn.to"]::after,
+article a[href*="xtool.com"]::after,
+article a[href*="atomstack.com"]::after,
+article a[href*="sculpfun.com"]::after,
+article a[href*="creality.com"]::after,
+article a[href*="algolaser.com"]::after,
+article a[href*="ortur.tech"]::after,
+article a[href*="twotrees"]::after,
+article a[href*="laserpecker"]::after,
+article a[href*="omtechlaser"]::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--laser-red), var(--laser-amber));
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+
+a.product-link:hover,
+article a[href*="amzn.to"]:hover,
+article a[href*="xtool.com"]:hover,
+article a[href*="atomstack.com"]:hover,
+article a[href*="sculpfun.com"]:hover,
+article a[href*="creality.com"]:hover,
+article a[href*="algolaser.com"]:hover,
+article a[href*="ortur.tech"]:hover,
+article a[href*="twotrees"]:hover,
+article a[href*="laserpecker"]:hover,
+article a[href*="omtechlaser"]:hover {
+  background-position: 100% 0%;
+  -webkit-text-fill-color: transparent;
+}
+
+a.product-link:hover::after,
+article a[href*="amzn.to"]:hover::after,
+article a[href*="xtool.com"]:hover::after,
+article a[href*="atomstack.com"]:hover::after,
+article a[href*="sculpfun.com"]:hover::after,
+article a[href*="creality.com"]:hover::after,
+article a[href*="algolaser.com"]:hover::after,
+article a[href*="ortur.tech"]:hover::after,
+article a[href*="twotrees"]:hover::after,
+article a[href*="laserpecker"]:hover::after,
+article a[href*="omtechlaser"]:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 968px) {
+  .pros-cons, .budget-categories {
+    grid-template-columns: 1fr;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -1648,10 +1872,10 @@ article strong {
           </tr>
         </thead>
         <tbody>
-          <tr><td class="table-model">xTool D1 Pro 20W</td><td class="table-price">1.093 €</td><td class="table-rating">9.2/10</td><td>Beste Software, Top Community</td></tr>
-          <tr><td class="table-model">Creality Falcon2 Pro</td><td class="table-price">549 €</td><td class="table-rating">8.4/10</td><td>Budget-freundlich mit Air Assist</td></tr>
-          <tr><td class="table-model">Ortur LM3</td><td class="table-price">580 €</td><td class="table-rating">8.2/10</td><td>Großes Preis-Leistungs-Verhältnis</td></tr>
-          <tr><td class="table-model">Two Trees TS2</td><td class="table-price">399 €</td><td class="table-rating">7.8/10</td><td>Günstigster Einstieg</td></tr>
+          <tr><td class="table-model"><a href="https://www.xtool.com/pages/d1-announcement" class="product-link" rel="nofollow" target="_blank">xTool D1 Pro</a> 20W</td><td class="table-price">1.093 €</td><td class="table-rating">9.2/10</td><td>Beste Software, Top Community</td></tr>
+          <tr><td class="table-model"><a href="https://amzn.to/3ZBtkkO" class="product-link" rel="nofollow sponsored" target="_blank">Creality Falcon2 Pro*</a></td><td class="table-price">549 €</td><td class="table-rating">8.4/10</td><td>Budget-freundlich mit Air Assist</td></tr>
+          <tr><td class="table-model"><a href="https://ortur.tech/" class="product-link" rel="nofollow" target="_blank">Ortur LM3</a></td><td class="table-price">580 €</td><td class="table-rating">8.2/10</td><td>Großes Preis-Leistungs-Verhältnis</td></tr>
+          <tr><td class="table-model"><a href="https://www.twotrees3d.com/" class="product-link" rel="nofollow" target="_blank">Two Trees TS2</a></td><td class="table-price">399 €</td><td class="table-rating">7.8/10</td><td>Günstigster Einstieg</td></tr>
           <tr><td class="table-model">xTool S1 40W</td><td class="table-price">1.699 €</td><td class="table-rating">8.5/10</td><td>Sicherste Option (Klasse 1)</td></tr>
         </tbody>
       </table>
@@ -1661,7 +1885,7 @@ article strong {
       <h3>1. xTool D1 Pro 20W — Unser Testsieger</h3>
       <p><strong>Preis:</strong> 1.093 € | <strong>Typ:</strong> Diodenlaser | <strong>Bewertung:</strong> 9.2/10</p>
       <p>Die xTool D1 Pro 20W ist der goldene Standard für Anfänger. Die xTool Creative Space Software ist intuitiv, die Community hilft bei allen Fragen, und die Qualität der Gravuren ist beeindruckend. Mit einer Arbeitsfläche von 432×406 mm passt es auf jeden Schreibtisch.</p>
-      <p>Die Bedienoberfläche ist so benutzerfreundlich, dass selbst absolute Anfänger innerhalb von 15 Minuten ihre erste Gravur erstellen können. Für fortgeschrittene Nutzer funktioniert auch LightBurn perfekt.</p>
+      <p>Die Bedienoberfläche ist so benutzerfreundlich, dass selbst absolute Anfänger innerhalb von 15 Minuten ihre erste Gravur erstellen können. Für fortgeschrittene Nutzer funktioniert auch <a href="https://lightburnsoftware.com/" class="product-link" rel="nofollow" target="_blank">LightBurn</a> perfekt.</p>
 
       <div style="text-align:center; margin:24px 0; padding:20px; background:#101016; border:1px solid rgba(255,69,0,0.25); border-radius:8px;">
         <a href="https://www.xtool.com/pages/d1-announcement" target="_blank" rel="nofollow sponsored" style="display:inline-flex; align-items:center; gap:10px; font-family:'JetBrains Mono',monospace; font-size:12px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:#fff; background:linear-gradient(135deg,#FF4500,#FF6B35); padding:14px 32px; border-radius:6px; text-decoration:none; box-shadow:0 4px 20px rgba(255,69,0,0.25);">XTOOL D1 PRO 20W — 1.093 € BEI XTOOL KAUFEN* →</a>
@@ -1741,7 +1965,7 @@ article strong {
     <section>
       <h2 id="was-anfänger-beim-kauf-beachten-sollten">Was Anfänger beim Kauf beachten sollten</h2>
       <h3>1. Software-Einstieg — Die Lernkurve</h3>
-      <p><strong>xTool Creative Space</strong> — Leichteste Lernkurve, perfekt für absolute Anfänger. <strong>LightBurn</strong> — Mittlere Lernkurve, professionelle Features. <strong>LaserGRBL</strong> — Einfach, aber limitiert.</p>
+      <p><strong>xTool Creative Space</strong> — Leichteste Lernkurve, perfekt für absolute Anfänger. <strong>LightBurn</strong> — Mittlere Lernkurve, professionelle Features. <strong><a href="https://lasergrbl.com/" class="product-link" rel="nofollow" target="_blank">LaserGRBL</a></strong> — Einfach, aber limitiert.</p>
       <p>Unser Tipp: Starten mit xTool Creative Space oder LightBurn (60€ einmalig). Die 60€ sparen dir Wochen an Frustration.</p>
 
       <h3>2. Sicherheit — Das ist keine Spielerei</h3>
