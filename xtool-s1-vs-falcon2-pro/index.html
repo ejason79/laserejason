@@ -1027,7 +1027,92 @@ article li strong {
   .page-header h1 { font-size: 24px; }
 }
 
-    </style>
+    
+/* ═══════ CTA BUTTON FIX — Override product-link gradient ═══════ */
+.buy-btn,
+.buy-btn-primary,
+.buy-btn-secondary,
+.tldr-button,
+.tldr-button.outline {
+  -webkit-text-fill-color: initial !important;
+  background-clip: initial !important;
+  -webkit-background-clip: initial !important;
+  background-size: initial !important;
+  background-position: initial !important;
+}
+.buy-btn-primary {
+  background: linear-gradient(135deg, var(--laser-red), var(--laser-orange)) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+.buy-btn-primary:hover {
+  background: linear-gradient(135deg, var(--laser-orange), var(--laser-amber)) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 30px rgba(255,69,0,0.3);
+}
+.buy-btn-primary::after {
+  display: none !important;
+}
+.buy-btn-secondary {
+  background: transparent !important;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary) !important;
+  -webkit-text-fill-color: var(--text-secondary) !important;
+}
+.buy-btn-secondary:hover {
+  border-color: var(--laser-orange);
+  color: var(--laser-orange) !important;
+  -webkit-text-fill-color: var(--laser-orange) !important;
+}
+.buy-btn-secondary::after {
+  display: none !important;
+}
+.tldr-button {
+  background: var(--laser-red) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+.tldr-button:hover {
+  background: var(--laser-orange) !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  transform: translateY(-1px);
+}
+.tldr-button::after {
+  display: none !important;
+}
+.tldr-button.outline {
+  background: transparent !important;
+  border: 1px solid var(--laser-red) !important;
+  color: var(--laser-red) !important;
+  -webkit-text-fill-color: var(--laser-red) !important;
+}
+.tldr-button.outline:hover {
+  background: rgba(255,69,0,0.1) !important;
+  color: var(--laser-orange) !important;
+  -webkit-text-fill-color: var(--laser-orange) !important;
+}
+.tldr-button.outline::after {
+  display: none !important;
+}
+
+/* ═══════ SIDEBAR SCROLL FIX ═══════ */
+.content-sidebar {
+  position: sticky;
+  top: 80px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  align-self: start;
+}
+@media (max-width: 968px) {
+  .content-sidebar {
+    position: static;
+    max-height: none;
+  }
+}
+</style>
 </head>
 <body>
 <div id="progressBar" class="progress-bar"></div>
@@ -1366,7 +1451,7 @@ article li strong {
     <div class="sidebar-widget sidebar-author">
       <div class="sidebar-widget-title">Autorin</div>
       <div class="sidebar-author-avatar"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAGQAZADASIAAhEBAxEB/8QAHAAAAAcBAQAAAAAAAAAAAAAAAAECAwQFBgcI/8QARhAAAQMCBAMFBAcGBQMDBQAAAQACAwQRBRIhMQZBUQcTImFxFDKBkSNCUqGxwdEVJGJy4fAWFzNTkggmQzSC8TVUZHOi/8QAGgEBAQEBAQEBAAAAAAAAAAAAAAECAwQFBv/EACgRAQEAAgICAgICAQUBAAAAAAABAhEDIRIxBEEiURQyEyNCUmFxof/aAAwDAQACEQMRAD8A0QRoAJQCjAJQCACUAgACWAiASwEAASgEAEoBAAEoBABKAVAARgIwEoBAQCOyMBKAQEAjsjtZGoCsgBZKshZAVkaOyCArIWRo0BWQRoWQFZGgjQEjQRpsCyCCNDQIII7KmhIilIrIaJsisloigQQkkJyySQhoghIIThCIhENEJBCdISCFYGiEhwTpCQQgZcmnBPuCacEDDwmXKQ4Jl4RTDgmXp9yZeFBZNCWAiaEsBQABLARAJYCAAJQCACUAgACUEAEoBAAEoBCyUAqAAlWQARgKAAI7aI7I7KgkdkdkYCgJCyOyFkAsgjsggJBFrdNTVUUAu94HxQPI1VVPEVBRi9TPDA3rLK1v3FQXdoXDbNHYpDf+G7rfJTa6rRIwsw7tH4aAGXES/wBInW/BOU3H3DlQQBiL2E6DvIntH4WV3DVaRBRqbEqKqjEkNZBK0i4c142TzaiF+jZoj5B4RDgQCOyCAII7IlQaJGggKyFkaKyBKKyWQiIRDZCSQnCEkhA2QkEJwhJKoacE2QnXBIcgZcN025POCbcEDDgmXhSHBMPCKYcmXqQ8Jl4QWTQlAImhLAWQYCWAiASggOyUAiASwFQAEoBABKCaBAJYCIBKAQABKAQCMBAAEYCCNAEaCCmgEEaIm3NAWqQ6Vo3Oyrcfx2DBKUySvAcRoOfw81x/jDjuWX92icO8c275MxPdg8mja/mosm3TuIuOsKwNkjXVDZZ23tBGbuJtz6BcwxntKrqwuFK4U2bQyDWRw8j9Uei55V4k4aZjd2pN9egumI5HzOJzW+rr/fqmrW5qLepx4RPdM9xmlNznkJcfvUObGampcGMNnWuT9lVxjNVUCJo00aARsL81c4XhDp6tx+rewSyRZbTEeJy0LmFxc+VwvufD6lOHiXEquzGOygC4awa26klG+k9qqJI2DxucY2+l9/uKFRCyjBgpznPvPd9o8h6K6idn4sXmbpVVjcxGouCfiSplBxXU0MpNPPh85J90xguPlqFm20Ek0jwb3DgPO5VxQcMyPcTbu4mjV3M/FSyLu10ThjtdnoJmRYlh0ogcLOELr5f4gDt5gLrGDY9h3EFG2rw2pbPGdCBo5p6OG4K8x1dF7K0iKSYeZfZvy1urXhDi/EeGKtsseR0Zd9Iw6d4PPRN6S4x6X9Uay/D3G9Pj0LXwNge63iijnBe31aQFpYZ2VEYfG64OmosQeYPQqyudlLQRoKgII0SAkVrI0CgQQiISiERCukNkJBCcISSEDRCbITpSHIGnJpwTzgmnBAy4Jl6fcmXIGXBMvCfcEy8IqyaEsImhLAWdBQCU0IgEoKgwEsBEAlAIAAlAIBKAQABKsgEoICASrIWRoBZHZAIIAgjRFQAqrx2qfS0b3Ml7omzQ4bi53VhPIIo3PJAAF7krnnFXEeEsw+SCfEL1DhcBkwu13olWMF2j4/JHirY4ZHuiiJsZHFxLgOd/Nc6nr31VTne+5da5VrxbigxCoD2vz" alt="Lisa Kramer"/></div>
-      <div class="sidebar-author-name">Lisa Kramer</div>
+      <a href="../ueber-uns/" style="text-decoration:none;color:inherit;"><div class="sidebar-author-name">Lisa Kramer</div></a>
       <div class="sidebar-author-role">Tech-Redakteurin & Maker</div>
       <div class="sidebar-author-bio">Vergleicht Laser-Software und Hardware mit dem Blick der Praktikerin. Von der FH Technikum Wien zum Maker-Space nach Berlin.</div>
       <a href="../ueber-uns/" class="author-cta">Zum Profil</a>
